@@ -5,32 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>404 // 訊號遺失 - 諾雕 ALE</title>
+    <title>404 // 訊號中斷 - 諾雕 ALE</title>
     <meta name="description" content="404 頁面未找到。">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
-<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #0a0a0f; color: white; padding: 2rem;">
-    <div style="max-width: 600px; border: 1px solid var(--primary-color); padding: 3rem; border-radius: 15px; background: rgba(20,20,25,0.95); box-shadow: 0 0 30px rgba(255, 77, 77, 0.2);">
-        <div style="font-family: 'Orbitron', sans-serif; font-size: 5rem; font-weight: 900; color: var(--primary-color); text-shadow: 0 0 20px rgba(255, 77, 77, 0.6); margin-bottom: 1rem;">
-            404
+<body>
+    <!-- Ambient Top Spotlight (Magic UI Signature) -->
+    <div class="ambient-glow"></div>
+
+    <!-- Floating Glass Pill Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                <span>ALE</span>
+            </a>
         </div>
-        <h1 style="font-family: 'Orbitron', sans-serif; font-size: 1.8rem; letter-spacing: 2px; color: var(--secondary-color); margin-bottom: 1.5rem;">
-            SIGNAL LOST // 訊號中斷
-        </h1>
-        <p style="color: #aaa; line-height: 1.8; margin-bottom: 2rem; font-size: 1.05rem;">
-            抱歉，您所尋找的端點不存在或已被轉移至其他雷射座標。<br>請重新校準路徑並返回首頁。
-        </p>
-        <a href="index.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem; letter-spacing: 2px; font-weight: bold;">
-            [ 重新校準・返回首頁 ]
-        </a>
-    </div>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="products.html">產品一覽</a>
+            <a href="process.html">製作流程</a>
+            <a href="materials.html">材質資料庫</a>
+            <a href="guidelines.html">製圖規範</a>
+            <a href="faq.html">常見問題</a>
+            <a href="booking.html" class="cta-button">接單文字產生器</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
+        </div>
+    </nav>
+
+    <main style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 120px 8% 60px 8%;">
+        <div class="bento-card" style="max-width: 580px; width: 100%; padding: clamp(2rem, 5vw, 3.5rem); text-align: center; position: relative;">
+            <div style="font-family: var(--font-mono); font-size: 5.5rem; font-weight: 900; line-height: 1; color: var(--accent-cyan); text-shadow: 0 0 35px rgba(0, 240, 255, 0.4); margin-bottom: 0.8rem;">
+                404
+            </div>
+
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 0.3rem 0.9rem; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: var(--radius-full); font-size: 0.82rem; font-family: var(--font-mono); color: #f43f5e; margin-bottom: 1.2rem; letter-spacing: 1px;">
+                <i class="fas fa-exclamation-triangle"></i> SIGNAL_LOST // 座標未定義
+            </div>
+
+            <h1 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem;">
+                目標雷射路徑不存在或已被轉移
+            </h1>
+
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2.2rem;">
+                系統無法在目前的坐標軸中定位此頁面。請重新校準光學路徑，返回主頁面繼續探索工藝作品。
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="index.html" class="shimmer-btn" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
+                    <i class="fas fa-home"></i> 重新校準・返回首頁
+                </a>
+                <a href="booking.html" class="ghost-btn" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
+                    <i class="fas fa-bolt"></i> 接單文字產生器
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-brand">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                    <span>ALE</span>
+                </div>
+                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <div style="margin-top: 1.2rem;">
+                    <a href="https://x.com/arnold__laser" target="_blank" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0.45rem 1rem;
+                        background: rgba(255,255,255,0.05);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: var(--radius-full);
+                        color: white;
+                        text-decoration: none;
+                        font-size: 0.88rem;
+                        transition: all 0.2s;
+                    \"><i class="fab fa-twitter"></i> @arnold__laser</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="products.html">產品一覽</a></li>
+                    <li><a href="process.html">製作流程</a></li>
+                    <li><a href="materials.html">材質介紹</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>規範與條款</h4>
+                <ul>
+                    <li><a href="guidelines.html">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="terms.html">服務條款</a></li>
+                    <li><a href="privacy.html">隱私權政策</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        }));
+    </script>
 </body>
 
 </html>

@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>常見問題 (FAQ) - 諾雕 ALE</title>
-    <meta name="description" content="諾雕 ALE 常見問題解答：製作時間、最低起印量、檔案格式、雷雕呈色與售後服務說明。">
+    <meta name="description" content="諾雕 ALE 常見問題解答：客製流程、少量單件製作 (MOQ)、交期時間、支援格式、瑕疵補印規範。">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Ambient Top Spotlight (Magic UI Signature) -->
+    <div class="ambient-glow"></div>
+
+    <!-- Floating Glass Pill Navbar -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
-                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                <span>ALE</span>
             </a>
         </div>
 
@@ -34,261 +39,224 @@
 
         <div class="nav-links">
             <a href="index.html">首頁</a>
-            <a href="products.html">產品一覽</a>
+
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">產品介紹 <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 2px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="product-detail.html?id=priceboard">客製價目牌 (展會必備)</a>
+                    <a href="product-detail.html?id=coaster">軟木杯墊</a>
+                    <a href="product-detail.html?id=keychain">皮革鑰匙圈</a>
+                    <a href="product-detail.html?id=stand">壓克力立牌</a>
+                    <a href="product-detail.html?id=cardcheck">金屬名片 / 工業銘版</a>
+                    <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
+                    <a href="products.html" style="color: var(--accent-cyan); font-weight: 600;">探索完整價目表 &rarr;</a>
+                </div>
+            </div>
+
             <a href="process.html">製作流程</a>
             <a href="materials.html">材質資料庫</a>
             <a href="guidelines.html">製圖規範</a>
             <a href="faq.html" class="active">常見問題</a>
-            <a href="booking.html" class="cta-button">立即預約</a>
-            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
+            <a href="booking.html" class="cta-button">接單文字產生器</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
         </div>
     </nav>
 
     <main>
-        <section style="padding: 130px 10% 80px 10%; min-height: 100vh; background: #0f0f13; color: white;">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <h1 style="font-size: 2.8rem; color: white; font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">
-                    FREQUENTLY ASKED
-                </h1>
-                <p style="color: var(--primary-color); font-size: 1.1rem; letter-spacing: 3px; margin-top: 0.5rem;">
-                    // 常見問題資料庫
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="subpage-badge">
+                <i class="fas fa-question-circle"></i> // FREQUENTLY ASKED QUESTIONS
+            </div>
+            <h1 class="subpage-title">常見問答與委託指南</h1>
+            <p class="subpage-subtitle">
+                整理委託者最常提出的問題，包含起訂量、交期排程、檔案需求與售後保證。
+            </p>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section style="padding: 0 8% 100px 8%; max-width: 900px; margin: 0 auto;">
+
+            <!-- Category 01 -->
+            <div style="margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 1.2rem; color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">
+                    <i class="fas fa-calendar-check"></i> 01 // 訂購流程與交期時間
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-trigger" onclick="toggleFaq(this)">
+                            <span>客製化商品需要多久製作時間？</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            一般單件或少量客製製作時間為雙方確認圖檔排版與款項後的 <strong>3-5 個工作天</strong>（不含國定例假日）。若您有展會即將開幕或緊急贈禮需求，可事先於 Twitter (X) 私訊告知期望日期，工坊將盡力為您調度排程！
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger" onclick="toggleFaq(this)">
+                            <span>可以只做一個嗎？有沒有最低數量限制 (MOQ)？</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            當然可以！我們完全支援「<strong>單件起訂</strong>」的個人化客製，即便是單一個杯墊或名牌，也秉持極致職人精神對待。若為 10 件以上之中小量同款製作，另享有批量折扣優惠。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 02 -->
+            <div style="margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 1.2rem; color: #818cf8; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">
+                    <i class="fas fa-paint-brush"></i> 02 // 檔案格式與成色特性
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-trigger" onclick="toggleFaq(this)">
+                            <span>我不會使用 AI/向量軟體畫圖，可以提供手繪稿或照片嗎？</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            可以的！請盡可能提供清晰、高解析度（300 dpi 以上）且背景單純的黑白線稿照片。我們能協助為您進行基礎數位向量化與對比優化；複雜修圖或繪稿則視需求微收工本費。
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger" onclick="toggleFaq(this)">
+                            <span>雷射雕刻出來的顏色可以指定彩色色號嗎？</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            雷射雕刻為純物理高能量光束燒灼與汽化，呈現出的顏色完全取決於材料本身的物理質變（例如：白橡木呈現焦糖深褐色、壓克力呈現霧白磨砂面、陽極金屬顯露底層鋁原色），無法像 UV 印刷那樣指定 Pantone 彩色色號喔！
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 03 -->
+            <div style="margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 1.2rem; color: #34d399; font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; letter-spacing: 1px;">
+                    <i class="fas fa-truck"></i> 03 // 配送方式與售後保證
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-trigger" onclick="toggleFaq(this)">
+                            <span>配送方式有哪些？支援同人展會現場面交嗎？</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            我們提供 <strong>7-11 / 全家 店到店超商取貨</strong> 以及 <strong>郵局掛號 / 宅配包裹</strong> 寄送。若適逢各大同人動漫展會（如 FF、CWT、Comic Nova 等），亦可於下單備註協調在工坊參展攤位直接面交交付！
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger" onclick="toggleFaq(this)">
+                            <span>收到商品若有內容刻錯或瑕疵如何處理？</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-content">
+                            若因工坊端製作疏失導致雕刻內容與最後雙方確認的數位合成圖不符，或運送途中造成嚴重破損，請於收到包裹 <strong>3 日內</strong> 拍照私訊回報，工坊將無條件全額負擔費用為您重新雕刻並補寄！
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Contact Card -->
+            <div class="bento-card" style="padding: clamp(1.8rem, 3.5vw, 2.5rem); text-align: center; position: relative;">
+                <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 0.8rem;">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">
+                    還有其他客製疑問？
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 500px; margin: 0 auto 1.8rem auto; line-height: 1.6;">
+                    直接透過 Twitter (X) 與主理人私訊討論，或使用一鍵接單文字產生器快速整理需求！
                 </p>
-            </div>
 
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-
-                <!-- Category: Ordering -->
-                <div class="faq-category" style="margin-bottom: 3.5rem;">
-                    <h2 class="category-title" style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.5); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem; letter-spacing: 1px;">
-                        01 // 訂購與交期
-                    </h2>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            客製化商品需要多久製作時間？
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>一般件製作時間為確認圖檔與款項後的 3-5 個工作天（不含國定假日）。若為展會或急件需求，請先私訊告知排程，我們會盡力協助安排。</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            可以只做一個嗎？有沒有最低數量限制 (MOQ)？
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>當然可以！我們專精於個人化客製服務，即使是「單件」作品也全心投入雕刻。同品項大量製作（10件以上）亦提供批發優惠。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category: File Issues -->
-                <div class="faq-category" style="margin-bottom: 3.5rem;">
-                    <h2 class="category-title" style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.5); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem; letter-spacing: 1px;">
-                        02 // 檔案與圖樣準備
-                    </h2>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            我不會使用 AI/向量軟體畫圖，可以提供照片或手繪線稿嗎？
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>可以的！請盡量提供解析度高（300dpi以上）的照片或白底黑線手繪稿，背景越單純雷射對比效果越好。我們也可協助進行基礎排版與簡單去背。</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            雷雕出來的顏色可以指定彩色彩度嗎？
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>雷射雕刻是利用高能量光束燒灼或汽化材質表面，因此呈現出的顏色主要取決於材質本身的物理特性（例如木質呈現深褐焦黑、壓克力呈現磨砂霧白、陽極金屬露出生鋁銀色），無法像UV彩色印刷那樣指定 Pantone 彩色色號喔。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category: Shipping & After-sales -->
-                <div class="faq-category" style="margin-bottom: 3.5rem;">
-                    <h2 class="category-title" style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.5); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem; letter-spacing: 1px;">
-                        03 // 出貨配送與售後保證
-                    </h2>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            配送方式有哪些？
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>我們配合超商取貨（7-11 / 全家）以及郵寄掛號/宅配包裹。若為大型展會（如 FF/CWT），亦可協調於現場攤位直接交付。</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            收到商品若有瑕疵或字刻錯怎麼辦？
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>若因工坊端疏失導致雕刻內容與雙方最後確認的對稿圖檔不符，或運送過程嚴重破損，請於收到貨後 3 日內拍照回報，我們將無條件全額負擔為您重新雕刻補寄！</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- CTA Section -->
-            <div class="faq-cta" style="
-                margin-top: 5rem;
-                background: rgba(255, 255, 255, 0.04);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 20px;
-                padding: 3rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-                max-width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-            ">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);"></div>
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: white;">還有其他客製疑問？</h3>
-                <p style="color: #aaa; margin-bottom: 2rem;">直接與工坊主理人私訊討論，溝通最迅速。</p>
-
-                <div style="display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; justify-content: center;">
-                    <a href="https://x.com/arnold__laser" target="_blank" class="btn btn-primary"
-                        style="padding: 0.9rem 2.2rem; display: flex; align-items: center; gap: 10px; font-weight: bold; text-decoration: none;">
-                        <span>私訊 X (@arnold__laser)</span>
-                        <span style="font-size: 1.2rem;">&rarr;</span>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 1.2rem; flex-wrap: wrap;">
+                    <a href="https://x.com/arnold__laser" target="_blank" class="shimmer-btn" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
+                        <i class="fab fa-twitter"></i> 私訊 X (@arnold__laser)
                     </a>
-
-                    <div style="text-align: center;">
-                        <img src="./static/images/faq_qr.png" alt="QR Code" style="
-                            width: 100px; 
-                            height: 100px; 
-                            border-radius: 10px; 
-                            border: 2px solid var(--secondary-color);
-                            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-                        ">
-                    </div>
+                    <a href="booking.html" class="ghost-btn" style="padding: 0.85rem 2rem; font-size: 0.95rem;">
+                        <i class="fas fa-clipboard-list"></i> 前往接單文字產生器
+                    </a>
                 </div>
             </div>
 
         </section>
     </main>
 
-    <style>
-        .accordion-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .accordion-item:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .accordion-header {
-            width: 100%;
-            padding: 1.4rem;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-align: left;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: inherit;
-        }
-
-        .accordion-header .icon {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--primary-color);
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-header.active .icon {
-            transform: rotate(45deg);
-            color: var(--secondary-color);
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .accordion-content p {
-            padding: 1.4rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.7;
-            margin: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-    </style>
-
     <!-- Footer -->
-    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
-        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+    <footer class="site-footer">
+        <div class="footer-content">
             <div class="footer-column">
-                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
-                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                <div class="footer-brand">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                    <span>ALE</span>
                 </div>
-                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <div style="margin-top: 1.2rem;">
+                    <a href="https://x.com/arnold__laser" target="_blank" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0.45rem 1rem;
+                        background: rgba(255,255,255,0.05);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: var(--radius-full);
+                        color: white;
+                        text-decoration: none;
+                        font-size: 0.88rem;
+                        transition: all 0.2s;
+                    \"><i class="fab fa-twitter"></i> @arnold__laser</a>
+                </div>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: #888; text-decoration: none;">產品一覽</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="process.html" style="color: #888; text-decoration: none;">製作流程</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="faq.html" style="color: var(--secondary-color); text-decoration: none;">常見問題</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="booking.html" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">立即預約下單 &rarr;</a></li>
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="products.html">產品一覽</a></li>
+                    <li><a href="process.html">製作流程</a></li>
+                    <li><a href="materials.html">材質介紹</a></li>
+                    <li><a href="faq.html" style="color: var(--accent-cyan); font-weight: 600;">常見問題</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: #888; text-decoration: none;">製圖規範</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: #888; text-decoration: none;">服務條款</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                <h4>規範與條款</h4>
+                <ul>
+                    <li><a href="guidelines.html">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="terms.html">服務條款</a></li>
+                    <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
-            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
         </div>
     </footer>
 
     <script>
-        const accordions = document.querySelectorAll('.accordion-header');
-        accordions.forEach(acc => {
-            acc.addEventListener('click', function () {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        });
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Optional: close other open items in the same section
+            // document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+            if (!wasActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        }
 
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");

@@ -9,20 +9,25 @@
     <meta name="description" content="諾雕 ALE 服務條款：客製化商品規範、圖檔授權責任、訂單取消與作品展示權限說明。">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Ambient Top Spotlight (Magic UI Signature) -->
+    <div class="ambient-glow"></div>
+
+    <!-- Floating Glass Pill Navbar -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
-                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                <span>ALE</span>
             </a>
         </div>
 
@@ -34,110 +39,154 @@
 
         <div class="nav-links">
             <a href="index.html">首頁</a>
-            <a href="products.html">產品一覽</a>
+
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">產品介紹 <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 2px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="product-detail.html?id=priceboard">客製價目牌 (展會必備)</a>
+                    <a href="product-detail.html?id=coaster">軟木杯墊</a>
+                    <a href="product-detail.html?id=keychain">皮革鑰匙圈</a>
+                    <a href="product-detail.html?id=stand">壓克力立牌</a>
+                    <a href="product-detail.html?id=cardcheck">金屬名片 / 工業銘版</a>
+                    <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
+                    <a href="products.html" style="color: var(--accent-cyan); font-weight: 600;">探索完整價目表 &rarr;</a>
+                </div>
+            </div>
+
             <a href="process.html">製作流程</a>
             <a href="materials.html">材質資料庫</a>
             <a href="guidelines.html">製圖規範</a>
             <a href="faq.html">常見問題</a>
-            <a href="booking.html" class="cta-button">立即預約</a>
-            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
+            <a href="booking.html" class="cta-button">接單文字產生器</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
         </div>
     </nav>
 
     <main>
-        <section class="terms-section" style="padding: 130px 10% 80px 10%; min-height: 80vh;">
-            <div class="terms-container" style="
-                background: var(--card-bg); 
-                border-radius: 20px; 
-                border: var(--glass-border); 
-                padding: 3.5rem; 
-                width: 100%; 
-                max-width: 900px; 
-                margin: 0 auto;
-                backdrop-filter: blur(10px);
-                color: var(--text-color);
-            ">
-                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary-color); text-align: center; font-family: 'Orbitron', sans-serif;">
-                    TERMS OF SERVICE
-                </h1>
-                <h2 style="font-size: 1.2rem; margin-bottom: 2.5rem; text-align: center; color: rgba(255,255,255,0.6); font-weight: 400;">
-                    // 諾雕 ALE 服務條款
-                </h2>
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="subpage-badge">
+                <i class="fas fa-balance-scale"></i> // LEGAL & COMPLIANCE
+            </div>
+            <h1 class="subpage-title">服務條款 (Terms of Service)</h1>
+            <p class="subpage-subtitle">
+                最後更新日期：2026 年 1 月 // 規範客製化商品交付、智慧財產權擔保與訂單權益
+            </p>
+        </section>
 
-                <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.6); text-align: center; font-size: 0.9rem;">最後更新日期：2026年1月</p>
+        <!-- Terms Content Bento Box -->
+        <section style="padding: 0 8% 100px 8%; max-width: 900px; margin: 0 auto;">
+            <div class="bento-card" style="padding: clamp(2rem, 4vw, 3.5rem); line-height: 1.85;">
 
-                <div class="terms-content" style="line-height: 1.9; font-size: 1rem;">
-                    <h3 style="color: var(--secondary-color); margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.3rem;">1. 認知與接受條款</h3>
-                    <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
-                        歡迎使用 諾雕 ALE（以下簡稱「本工坊」）。當您瀏覽本網站或進行客製委託時，即代表您完全理解並同意本條款所有內容。本工坊有權隨時修改條款，修正後公布於本網站即生效。
-                    </p>
-
-                    <h3 style="color: var(--secondary-color); margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.3rem;">2. 客製化商品之特殊規範</h3>
-                    <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
-                        <li style="margin-bottom: 0.8rem;"><strong>鑑賞期排除：</strong>
-                            本工坊提供之商品皆屬於「依消費者要求所為之客製化給付」，根據《消費者保護法》第十九條第一項但書所稱合理例外情事，不適用七日鑑賞期無條件退貨。</li>
-                        <li style="margin-bottom: 0.8rem;"><strong>工藝公差：</strong>
-                            雷射雕刻為高能量光學物理加工，受天然材質（如原木天然紋理、軟木密度孔隙、皮革毛細孔）影響，成品之燒灼色澤深淺與對位可能產生微小公差，此為工藝品之正常特性，非屬瑕疵。</li>
-                    </ul>
-
-                    <h3 style="color: var(--secondary-color); margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.3rem;">3. 圖檔授權與智慧財產權</h3>
-                    <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
-                        <li style="margin-bottom: 0.8rem;"><strong>版權擔保：</strong>
-                            您上傳或提供之所有圖檔（商標、同人繪作、插畫等），您必須保證擁有其合法著作權或完整授權。</li>
-                        <li style="margin-bottom: 0.8rem;"><strong>侵權免責：</strong>
-                            若因您提供的圖檔發生任何第三方智財權爭議，法律責任由委託者全權負責，本工坊不負連帶責任。</li>
-                    </ul>
-
-                    <h3 style="color: var(--secondary-color); margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.3rem;">4. 訂單排程與取消政策</h3>
-                    <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
-                        <li style="margin-bottom: 0.8rem;"><strong>確認後不可取消：</strong>
-                            訂單經您確認合成模擬圖並進入雷雕機台排程製作後，即無法取消或更改圖面內容。</li>
-                        <li style="margin-bottom: 0.8rem;"><strong>品質擔保：</strong>
-                            若因本工坊製作疏失（如刻印文字錯誤、重大破損），我們將無條件為您重新雕刻補寄。</li>
-                    </ul>
-
-                    <h3 style="color: var(--secondary-color); margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.3rem;">5. 作品展示權</h3>
-                    <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
-                        除非您於訂購時特別註明「隱私不公開」，否則本工坊保有將成品拍照、錄影並公開於官方作品集社群（網站、X @arnold__laser）之非營利展示權利。
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-cyan);">1.</span> 認知與接受條款
+                    </h2>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        歡迎使用 諾雕 ALE（以下簡稱「本工坊」）。當您瀏覽本網站、使用接單文字產生器或進行客製委託時，即代表您完全理解並同意本條款所有規範。本工坊保有隨時調整條款之權利，修訂後公布於本網站即行生效。
                     </p>
                 </div>
 
-                <div style="margin-top: 3rem; text-align: center;">
-                    <a href="index.html" class="btn btn-primary" style="padding: 0.8rem 2.5rem; font-weight: bold;">返回首頁</a>
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-cyan);">2.</span> 客製化給付之消保法例外
+                    </h2>
+                    <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.8rem;"><strong style="color: #fff;">• 排除七日無條件退貨：</strong>本工坊所提供之雷雕商品皆屬「依消費者要求所為之客製化給付」，依據《消費者保護法》第十九條第一項但書所稱合理例外情事，排除七日鑑賞期退貨規範。</li>
+                        <li><strong style="color: #fff;">• 天然材料工藝特性：</strong>受原木天然紋理、軟木氣孔密度、皮革毛細孔及天然灼燒深淺影響，成品將具備天然微小色澤差與公差，此為工藝品正常特性，非屬產品瑕疵。</li>
+                    </ul>
                 </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-cyan);">3.</span> 圖檔授權與智慧財產權擔保
+                    </h2>
+                    <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.8rem;"><strong style="color: #fff;">• 著作權保證：</strong>委託者所提供之圖檔（包含企業商標、同人二創插畫、字型等），必須保證擁有合法著作權或已取得原權利人之授權許可。</li>
+                        <li><strong style="color: #fff;">• 侵權責任自負：</strong>若因委託者提供之內容產生任何第三方智慧財產權爭議或訴訟，法律責任全由委託者負責，本工坊不負連帶責任。</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-cyan);">4.</span> 排程製作與品質保證
+                    </h2>
+                    <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.8rem;"><strong style="color: #fff;">• 排程後無法撤銷：</strong>訂單經委託者確認排版模擬圖並進入機台切割雕刻後，即無法撤銷或更改圖稿。</li>
+                        <li><strong style="color: #fff;">• 工坊疏失保證重雕：</strong>若因本工坊疏失導致雕刻內容與最後確認圖不符或重大破損，請於收到包裹 3 日內拍照回報，我們將無條件全額負擔為您重新雕刻補寄。</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-cyan);">5.</span> 作品非營利展示權
+                    </h2>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        除非您於下單時明確備註「隱私不公開」，否則本工坊保有將成品拍照、錄影並公開於官方作品集社群（網站、Twitter @arnold__laser）作為非營利工藝成果展示之權利。
+                    </p>
+                </div>
+
+                <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem;">
+                    <a href="index.html" class="ghost-btn" style="padding: 0.8rem 2.5rem;">
+                        <i class="fas fa-arrow-left"></i> 返回網站首頁
+                    </a>
+                </div>
+
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
-        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+    <footer class="site-footer">
+        <div class="footer-content">
             <div class="footer-column">
-                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
-                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                <div class="footer-brand">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                    <span>ALE</span>
                 </div>
-                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <div style="margin-top: 1.2rem;">
+                    <a href="https://x.com/arnold__laser" target="_blank" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0.45rem 1rem;
+                        background: rgba(255,255,255,0.05);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: var(--radius-full);
+                        color: white;
+                        text-decoration: none;
+                        font-size: 0.88rem;
+                        transition: all 0.2s;
+                    \"><i class="fab fa-twitter"></i> @arnold__laser</a>
+                </div>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: #888; text-decoration: none;">產品一覽</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="booking.html" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">立即預約下單 &rarr;</a></li>
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="products.html">產品一覽</a></li>
+                    <li><a href="process.html">製作流程</a></li>
+                    <li><a href="materials.html">材質介紹</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: #888; text-decoration: none;">製圖規範</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: var(--secondary-color); text-decoration: none;">服務條款</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                <h4>規範與條款</h4>
+                <ul>
+                    <li><a href="guidelines.html">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="terms.html" style="color: var(--accent-cyan); font-weight: 600;">服務條款</a></li>
+                    <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
-            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
         </div>
     </footer>
 

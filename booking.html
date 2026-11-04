@@ -9,20 +9,25 @@
     <meta name="description" content="線上填寫客製化雷射雕刻需求，即時計算金額並產出一鍵複製的接單文字格式，方便透過 DM 或 Email 委託。">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Ambient Top Spotlight (Magic UI Signature) -->
+    <div class="ambient-glow"></div>
+
+    <!-- Floating Glass Pill Navbar -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
-                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                <span>ALE</span>
             </a>
         </div>
 
@@ -34,222 +39,223 @@
 
         <div class="nav-links">
             <a href="index.html">首頁</a>
-            <a href="products.html">產品一覽</a>
+
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">產品介紹 <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 2px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="product-detail.html?id=priceboard">客製價目牌 (展會必備)</a>
+                    <a href="product-detail.html?id=coaster">軟木杯墊</a>
+                    <a href="product-detail.html?id=keychain">皮革鑰匙圈</a>
+                    <a href="product-detail.html?id=stand">壓克力立牌</a>
+                    <a href="product-detail.html?id=cardcheck">金屬名片 / 工業銘版</a>
+                    <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
+                    <a href="products.html" style="color: var(--accent-cyan); font-weight: 600;">探索完整價目表 &rarr;</a>
+                </div>
+            </div>
+
             <a href="process.html">製作流程</a>
             <a href="materials.html">材質資料庫</a>
             <a href="guidelines.html">製圖規範</a>
             <a href="faq.html">常見問題</a>
-            <a href="booking.html" class="active cta-button">立即預約 / 接單文字</a>
-            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
+            <a href="booking.html" class="active cta-button">接單文字產生器</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
         </div>
     </nav>
 
     <main>
-        <section class="booking-section" style="padding: 120px 8% 80px 8%; min-height: 85vh; display: flex; justify-content: center; align-items: flex-start;">
-            <div class="booking-card" style="
-                background: var(--card-bg); 
-                padding: 3rem; 
-                border-radius: 20px; 
-                border: var(--glass-border); 
-                width: 100%; 
-                max-width: 820px; 
-                backdrop-filter: blur(10px);
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="subpage-badge">
+                <i class="fas fa-terminal"></i> // ORDER FORMAT GENERATOR
+            </div>
+            <h1 class="subpage-title">客製雷雕・接單文字產生器</h1>
+            <p class="subpage-subtitle">
+                挑選品項規格與數量，系統即時計算預估金額並產出格式化訂單。<br>
+                產出後可<strong>一鍵複製</strong>，直接前往 Twitter (X) 私訊或 Email 快速委託！
+            </p>
+        </section>
+
+        <!-- Booking Form Container -->
+        <section style="padding: 0 8% 100px 8%; max-width: 900px; margin: 0 auto;">
+            <div style="
+                background: rgba(18, 18, 24, 0.78);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 24px;
+                padding: clamp(1.8rem, 4vw, 3rem);
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
                 position: relative;
             ">
-                <!-- Header -->
-                <div style="text-align: center; margin-bottom: 2.5rem;">
-                    <div style="font-family: 'Orbitron', sans-serif; color: var(--secondary-color); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 5px;">
-                        // ORDER FORMAT GENERATOR
-                    </div>
-                    <h1 style="color: var(--primary-color); font-size: 2.2rem; font-weight: 700; margin: 0;">
-                        客製雷雕委託・接單文字產生器
-                    </h1>
-                    <p style="color: #aaa; margin-top: 10px; font-size: 0.95rem; line-height: 1.6;">
-                        選取品項與數量，系統自動計算金額並產出格式化接單文字。<br>
-                        產出後可<strong>一鍵複製</strong>，直接貼至 Twitter (X) 私訊、LINE 或 Email 委託！
-                    </p>
-                </div>
-
-                <!-- Form Section -->
                 <form id="order-generator-form">
 
                     <!-- Section 1: Customer Info -->
-                    <div style="background: rgba(255, 255, 255, 0.03); padding: 1.8rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.08);">
-                        <h2 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-user-circle"></i> 1. 購買者與聯絡資訊
+                    <div style="background: rgba(255, 255, 255, 0.025); padding: 1.8rem; border-radius: 16px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.07);">
+                        <h2 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                            <span style="color: var(--accent-cyan);"><i class="fas fa-user-circle"></i> 1.</span> 購買者與聯絡資訊
                         </h2>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1rem;">
-                            <div class="form-group">
-                                <label for="buyer-name" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-size: 0.95rem;">
-                                    購買者稱呼 / 暱稱 <span style="color: #ff4d4d;">*</span>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;" class="responsive-grid-2">
+                            <div>
+                                <label for="buyer-name" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                                    購買者稱呼 / 暱稱 <span style="color: #f43f5e;">*</span>
                                 </label>
-                                <input type="text" id="buyer-name" required placeholder="例如：諾先生、小櫻、Arnold"
-                                    style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 0.95rem;">
+                                <input type="text" id="buyer-name" class="magic-input" required placeholder="例如：諾先生、小櫻、Arnold">
                             </div>
 
-                            <div class="form-group">
-                                <label for="buyer-contact" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-size: 0.95rem;">
-                                    聯絡方式 (X帳號 / LINE ID / Email) <span style="color: #ff4d4d;">*</span>
+                            <div>
+                                <label for="buyer-contact" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                                    聯絡方式 (X 帳號 / LINE / Email) <span style="color: #f43f5e;">*</span>
                                 </label>
-                                <input type="text" id="buyer-contact" required placeholder="@帳號、LINE ID 或 Email"
-                                    style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 0.95rem;">
+                                <input type="text" id="buyer-contact" class="magic-input" required placeholder="例如：@arnold_laser / Line ID">
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="shipping-method" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-size: 0.95rem;">
+                        <div>
+                            <label for="shipping-method" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
                                 預計取件或寄送方式 (Delivery Method)
                             </label>
-                            <select id="shipping-method"
-                                style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: #15151a; color: white; box-sizing: border-box; font-size: 0.95rem;">
+                            <select id="shipping-method" class="magic-select">
                                 <option value="7-11 超商取貨 (店到店)">7-11 超商取貨 (店到店)</option>
                                 <option value="全家 超商取貨 (店到店)">全家 超商取貨 (店到店)</option>
                                 <option value="郵局掛號 / 宅配包裹寄送">郵局掛號 / 宅配包裹寄送</option>
-                                <option value="同人展會 (FF/CWT) 現場攤位交付">同人展會 (FF/CWT) 現場攤位交付</option>
+                                <option value="同人展會 (FF/CWT) 現場交付">同人展會 (FF/CWT) 現場交付</option>
                                 <option value="暫不確定 / 私訊討論確認">暫不確定 / 私訊討論確認</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- Section 2: Order Items Builder -->
-                    <div style="background: rgba(255, 255, 255, 0.03); padding: 1.8rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.08);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 10px;">
-                            <h2 style="font-size: 1.2rem; color: var(--secondary-color); margin: 0; display: flex; align-items: center; gap: 8px;">
-                                <i class="fas fa-shopping-cart"></i> 2. 訂購品項與數量清單
+                    <div style="background: rgba(255, 255, 255, 0.025); padding: 1.8rem; border-radius: 16px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.07);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 12px;">
+                            <h2 style="font-size: 1.15rem; color: #ffffff; margin: 0; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                                <span style="color: var(--accent-cyan);"><i class="fas fa-layer-group"></i> 2.</span> 訂購品項與數量清單
                             </h2>
-                            <button type="button" onclick="addNewItemRow()" class="btn"
-                                style="border: 1px solid var(--secondary-color); color: var(--secondary-color); background: rgba(0,255,255,0.08); padding: 0.4rem 0.9rem; border-radius: 6px; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;">
-                                <i class="fas fa-plus"></i> 新增其他品項
+                            <button type="button" onclick="addNewItemRow()" class="ghost-btn" style="padding: 0.45rem 1.1rem; font-size: 0.88rem; color: var(--accent-cyan); border-color: rgba(0, 240, 255, 0.3);">
+                                <i class="fas fa-plus"></i> 新增品項
                             </button>
                         </div>
 
-                        <!-- Items Container -->
-                        <div id="items-container" style="display: flex; flex-direction: column; gap: 1.2rem;">
-                            <!-- Dynamic Row generated here -->
+                        <!-- Dynamic Items Container -->
+                        <div id="items-container" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Rows dynamically populated -->
                         </div>
 
-                        <!-- Total Banner -->
+                        <!-- Total Calculation Banner -->
                         <div style="
-                            margin-top: 1.5rem; 
-                            background: rgba(0, 0, 0, 0.6); 
-                            border: 1px solid var(--secondary-color); 
-                            border-radius: 8px; 
-                            padding: 1.2rem 1.5rem; 
-                            display: flex; 
-                            justify-content: space-between; 
+                            margin-top: 1.5rem;
+                            background: rgba(9, 9, 11, 0.8);
+                            border: 1px solid rgba(0, 240, 255, 0.35);
+                            border-radius: 12px;
+                            padding: 1.2rem 1.6rem;
+                            display: flex;
+                            justify-content: space-between;
                             align-items: center;
-                            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+                            box-shadow: 0 0 25px rgba(0, 240, 255, 0.08);
                         ">
-                            <span style="font-size: 1.1rem; color: #ddd; font-weight: 500;">
+                            <span style="font-size: 1rem; color: var(--text-secondary); font-weight: 500;">
                                 預估總計金額 (ESTIMATED TOTAL)：
                             </span>
-                            <span style="font-size: 1.8rem; font-weight: 900; color: var(--secondary-color); font-family: 'Orbitron', sans-serif;" id="grand-total-display">
+                            <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono);" id="grand-total-display">
                                 NT$ 0 元
                             </span>
                         </div>
                     </div>
 
-                    <!-- Section 3: Notes & Customization -->
-                    <div style="background: rgba(255, 255, 255, 0.03); padding: 1.8rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.08);">
-                        <h2 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-pen-nib"></i> 3. 客製文字與備註需求
+                    <!-- Section 3: Notes & Requirements -->
+                    <div style="background: rgba(255, 255, 255, 0.025); padding: 1.8rem; border-radius: 16px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.07);">
+                        <h2 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                            <span style="color: var(--accent-cyan);"><i class="fas fa-pen-nib"></i> 3.</span> 客製文字與備註需求
                         </h2>
 
-                        <div class="form-group" style="margin-bottom: 1rem;">
-                            <label for="order-notes" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-size: 0.95rem;">
+                        <div style="margin-bottom: 1.2rem;">
+                            <label for="order-notes" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
                                 請填寫欲刻印的文字、字型風格、尺寸要求，或圖檔雲端連結：
                             </label>
-                            <textarea id="order-notes" rows="4" placeholder="例如：
-1. 軟木杯墊需雕刻個人頭像 (圖檔雲端連結：https://drive.google.com/...)
-2. 皮革鑰匙圈刻印文字：ARNOLD 2026 (請使用科技感字體)
-3. 門市收件人電話：0912-345-678 (7-11 科技門市)"
-                                style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 0.95rem; resize: vertical; line-height: 1.6;"></textarea>
+                            <textarea id="order-notes" rows="4" class="magic-textarea" placeholder="例如：&#10;1. 軟木杯墊需雕刻個人頭像 (圖檔雲端連結：https://drive.google.com/...)&#10;2. 皮革鑰匙圈刻印文字：ARNOLD 2026 (請使用科技感字體)&#10;3. 門市收件人電話：0912-345-678 (7-11 科技門市)"></textarea>
                         </div>
 
-                        <div style="display: flex; align-items: center; gap: 8px; color: #aaa; font-size: 0.85rem;">
-                            <input type="checkbox" id="sync-sheet-check" checked style="accent-color: var(--secondary-color); width: 16px; height: 16px;">
+                        <div style="display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.88rem;">
+                            <input type="checkbox" id="sync-sheet-check" checked style="accent-color: var(--accent-cyan); width: 17px; height: 17px; cursor: pointer;">
                             <label for="sync-sheet-check" style="cursor: pointer;">
-                                送出時同時自動傳送一份備份至工坊 Google 試算表（雙重防呆，即使忘記貼 DM 也能在後台保留紀錄）
+                                同時自動將此委託記錄備份至工坊 Google 試算表（雙重防呆，即使忘記發送私訊也有後台紀錄）
                             </label>
                         </div>
                     </div>
 
-                    <!-- Submit Button -->
-                    <button type="submit" id="generate-btn" class="btn btn-primary"
-                        style="width: 100%; padding: 1.1rem; font-size: 1.2rem; font-weight: bold; letter-spacing: 2px; cursor: pointer; border-radius: 8px; display: flex; justify-content: center; align-items: center; gap: 10px;">
-                        <i class="fas fa-bolt"></i> [ 產生可複製接單文字 / GENERATE ORDER TEXT ]
+                    <!-- Generate Button (Magic UI Shimmer) -->
+                    <button type="submit" id="generate-btn" class="shimmer-btn" style="width: 100%; padding: 1.15rem; font-size: 1.15rem; letter-spacing: 1.5px;">
+                        <i class="fas fa-bolt"></i> 產生可複製接單文字 (GENERATE ORDER TEXT)
                     </button>
                 </form>
 
                 <!-- Output Box (Revealed upon generation) -->
                 <div id="output-section" style="
-                    display: none; 
-                    margin-top: 3rem; 
-                    background: #0d0d12; 
-                    border: 2px solid var(--secondary-color); 
-                    border-radius: 15px; 
-                    padding: 2.2rem; 
-                    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+                    display: none;
+                    margin-top: 3rem;
+                    background: rgba(9, 9, 11, 0.95);
+                    border: 1px solid rgba(0, 240, 255, 0.4);
+                    border-radius: 18px;
+                    padding: clamp(1.5rem, 3vw, 2.2rem);
+                    box-shadow: 0 0 35px rgba(0, 240, 255, 0.15);
                     position: relative;
                 ">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 10px;">
-                        <div style="font-family: 'Orbitron', sans-serif; color: var(--secondary-color); font-size: 1.2rem; font-weight: bold;">
-                            <i class="fas fa-check-circle" style="color: #2ecc71;"></i> 接單文字已就緒！
+                        <div style="font-family: var(--font-mono); color: var(--accent-cyan); font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-check-circle" style="color: #10b981;"></i> 接單文字已就緒！
                         </div>
-                        <div style="color: #aaa; font-size: 0.85rem;">
+                        <div style="color: var(--text-secondary); font-size: 0.88rem;">
                             點選下方按鈕一鍵複製，直接前往私訊或郵件貼上
                         </div>
                     </div>
 
                     <!-- Monospace Raw Text Output -->
-                    <textarea id="output-textarea" readonly rows="12" style="
-                        width: 100%; 
-                        background: rgba(0, 0, 0, 0.85); 
-                        border: 1px solid rgba(255, 255, 255, 0.2); 
-                        border-radius: 8px; 
-                        padding: 1.2rem; 
-                        color: #a8ff78; 
-                        font-family: 'Courier New', Courier, monospace; 
-                        font-size: 0.95rem; 
-                        line-height: 1.6; 
-                        box-sizing: border-box; 
+                    <textarea id="output-textarea" readonly rows="11" style="
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0.7);
+                        border: 1px solid rgba(255, 255, 255, 0.12);
+                        border-radius: 10px;
+                        padding: 1.2rem;
+                        color: #34d399;
+                        font-family: var(--font-mono);
+                        font-size: 0.95rem;
+                        line-height: 1.7;
+                        box-sizing: border-box;
                         resize: vertical;
                         margin-bottom: 1.5rem;
                     "></textarea>
 
                     <!-- Quick Action Buttons -->
-                    <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 12px; margin-bottom: 1rem;">
+                    <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 12px; margin-bottom: 1rem;" class="responsive-grid-3">
                         <!-- Primary Copy Button -->
-                        <button type="button" id="copy-text-btn" onclick="copyOrderText()" class="btn btn-primary"
-                            style="padding: 0.9rem; font-weight: bold; font-size: 1.05rem; letter-spacing: 1px; display: flex; justify-content: center; align-items: center; gap: 8px; cursor: pointer; border-radius: 6px;">
+                        <button type="button" id="copy-text-btn" onclick="copyOrderText()" class="shimmer-btn" style="padding: 0.95rem; font-size: 1rem;">
                             <i class="fas fa-copy"></i> <span id="copy-btn-text">一鍵複製接單文字</span>
                         </button>
 
                         <!-- Twitter/X DM Button -->
-                        <a href="https://x.com/arnold__laser" target="_blank" class="btn"
-                            style="border: 1px solid #1da1f2; color: #1da1f2; background: rgba(29, 161, 242, 0.1); padding: 0.9rem; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 6px;">
+                        <a href="https://x.com/arnold__laser" target="_blank" class="ghost-btn" style="justify-content: center; font-size: 0.92rem;">
                             <i class="fab fa-twitter"></i> 前往 X 私訊
                         </a>
 
                         <!-- Direct Email Button -->
-                        <a id="email-client-btn" href="#" class="btn"
-                            style="border: 1px solid var(--secondary-color); color: var(--secondary-color); background: rgba(0, 255, 255, 0.08); padding: 0.9rem; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 6px;">
+                        <a id="email-client-btn" href="#" class="ghost-btn" style="justify-content: center; font-size: 0.92rem;">
                             <i class="fas fa-envelope"></i> 以 Email 寄送
                         </a>
                     </div>
 
                     <!-- Toast Feedback -->
                     <div id="copy-toast" style="
-                        display: none; 
-                        background: rgba(46, 204, 113, 0.9); 
-                        color: black; 
-                        font-weight: bold; 
-                        text-align: center; 
-                        padding: 0.6rem; 
-                        border-radius: 6px; 
+                        display: none;
+                        background: rgba(16, 185, 129, 0.92);
+                        color: #000000;
+                        font-weight: 700;
+                        text-align: center;
+                        padding: 0.75rem;
+                        border-radius: 8px;
                         margin-top: 10px;
-                        font-size: 0.95rem;
+                        font-size: 0.92rem;
+                        box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
                     ">
                         ✔ 訂單文字已成功複製至剪貼簿！可直接貼到 DM 或 Email 中送出！
                     </div>
@@ -260,35 +266,55 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
-        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+    <footer class="site-footer">
+        <div class="footer-content">
             <div class="footer-column">
-                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
-                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                <div class="footer-brand">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                    <span>ALE</span>
                 </div>
-                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <div style="margin-top: 1.2rem;">
+                    <a href="https://x.com/arnold__laser" target="_blank" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0.45rem 1rem;
+                        background: rgba(255,255,255,0.05);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: var(--radius-full);
+                        color: white;
+                        text-decoration: none;
+                        font-size: 0.88rem;
+                        transition: all 0.2s;
+                    "><i class="fab fa-twitter"></i> @arnold__laser</a>
+                </div>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: #888; text-decoration: none;">產品一覽</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="process.html" style="color: #888; text-decoration: none;">製作流程</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="materials.html" style="color: #888; text-decoration: none;">材質介紹</a></li>
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="products.html">產品一覽</a></li>
+                    <li><a href="process.html">製作流程</a></li>
+                    <li><a href="materials.html">材質介紹</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: #888; text-decoration: none;">製圖規範</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: #888; text-decoration: none;">服務條款</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                <h4>規範與條款</h4>
+                <ul>
+                    <li><a href="guidelines.html">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="terms.html">服務條款</a></li>
+                    <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
-            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
         </div>
     </footer>
 
@@ -324,15 +350,15 @@
             row.id = `item-row-${currentId}`;
             row.className = 'item-row';
             row.style = `
-                background: rgba(0, 0, 0, 0.4); 
-                border: 1px solid rgba(255, 255, 255, 0.15); 
-                border-radius: 10px; 
-                padding: 1.2rem; 
-                display: grid; 
-                grid-template-columns: 2fr 1.5fr 1fr 1fr auto; 
-                gap: 12px; 
+                background: rgba(12, 12, 16, 0.7);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 12px;
+                padding: 1.2rem;
+                display: grid;
+                grid-template-columns: 2fr 1.5fr 1fr 1fr auto;
+                gap: 12px;
                 align-items: center;
-                transition: border-color 0.3s;
+                transition: border-color 0.2s;
             `;
 
             // 1. 商品選單
@@ -344,26 +370,26 @@
 
             row.innerHTML = `
                 <div>
-                    <label style="display: block; font-size: 0.8rem; color: #888; margin-bottom: 4px;">商品品項</label>
-                    <select class="item-prod-select" onchange="onProductSelectChange(${currentId})" style="width: 100%; padding: 0.65rem; border-radius: 6px; border: 1px solid #444; background: #1a1a22; color: white; font-size: 0.9rem;">
+                    <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">商品品項</label>
+                    <select class="item-prod-select magic-select" onchange="onProductSelectChange(${currentId})" style="padding: 0.65rem;">
                         ${prodOptions}
                     </select>
                 </div>
                 <div>
-                    <label style="display: block; font-size: 0.8rem; color: #888; margin-bottom: 4px;">款式規格</label>
-                    <select class="item-var-select" onchange="calculateTotals()" style="width: 100%; padding: 0.65rem; border-radius: 6px; border: 1px solid #444; background: #1a1a22; color: white; font-size: 0.9rem;">
+                    <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">款式規格</label>
+                    <select class="item-var-select magic-select" onchange="calculateTotals()" style="padding: 0.65rem;">
                     </select>
                 </div>
                 <div>
-                    <label style="display: block; font-size: 0.8rem; color: #888; margin-bottom: 4px;">件數 (數量)</label>
-                    <input type="number" class="item-qty" min="1" max="999" value="1" oninput="calculateTotals()" style="width: 100%; padding: 0.65rem; border-radius: 6px; border: 1px solid #444; background: #1a1a22; color: white; font-size: 0.9rem; text-align: center;">
+                    <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">件數 (數量)</label>
+                    <input type="number" class="item-qty magic-input" min="1" max="999" value="1" oninput="calculateTotals()" style="padding: 0.65rem; text-align: center;">
                 </div>
                 <div style="text-align: right;">
-                    <label style="display: block; font-size: 0.8rem; color: #888; margin-bottom: 4px;">小計</label>
-                    <div class="item-subtotal" style="font-weight: bold; color: var(--secondary-color); font-size: 1rem; padding-top: 6px;">NT$ 0</div>
+                    <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">小計</label>
+                    <div class="item-subtotal" style="font-weight: 700; color: var(--accent-cyan); font-family: var(--font-mono); font-size: 1.05rem; padding-top: 6px;">NT$ 0</div>
                 </div>
                 <div style="padding-top: 18px;">
-                    <button type="button" onclick="removeItemRow(${currentId})" class="delete-btn" style="background: transparent; border: none; color: #ff4d4d; font-size: 1.1rem; cursor: pointer; padding: 5px 8px; border-radius: 4px;" title="移除此品項">
+                    <button type="button" onclick="removeItemRow(${currentId})" class="delete-btn" style="background: transparent; border: none; color: #f43f5e; font-size: 1.1rem; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: all 0.2s;" title="移除此品項">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </div>
@@ -454,23 +480,20 @@
                 subtotalElem.innerText = subtotal > 0 ? `NT$ ${subtotal}` : '依需求報價';
             });
 
-            document.getElementById('grand-total-display').innerText = `NT$ ${grandTotal} 元`;
-            return grandTotal;
+            document.getElementById('grand-total-display').innerText = grandTotal > 0 ? `NT$ ${grandTotal} 元` : '依需求另行報價';
         }
 
-        // 頁面載入時解析 URL 參數
-        window.addEventListener('DOMContentLoaded', () => {
+        // 頁面載入初始化：先加入一行，並讀取 URL 參數自動選取
+        document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
-            const pParam = params.get('product');
-            const vParam = params.get('variant');
+            const targetProd = params.get('product') || params.get('item');
+            const targetVar = params.get('variant');
 
-            // 預設加一項
-            addNewItemRow(pParam, vParam);
+            addNewItemRow(targetProd, targetVar);
         });
 
-        // 表單送出：生成接單文字
-        const form = document.getElementById('order-generator-form');
-        form.addEventListener('submit', (e) => {
+        // 監聽表單送出 -> 產出接單文字
+        document.getElementById('order-generator-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
             const buyerName = document.getElementById('buyer-name').value.trim();
@@ -482,7 +505,7 @@
             let itemsLines = [];
             let totalAmount = 0;
 
-            rows.forEach((r, idx) => {
+            rows.forEach(r => {
                 const prodSelect = r.querySelector('.item-prod-select');
                 const varSelect = r.querySelector('.item-var-select');
                 const qtyInput = r.querySelector('.item-qty');
@@ -490,13 +513,13 @@
                 const prodId = prodSelect.value;
                 const product = AVAILABLE_PRODUCTS.find(p => p.id === prodId);
                 const prodName = product ? product.name : '客製商品';
-                const variant = varSelect.value ? `(${varSelect.value})` : '';
+                const variant = varSelect.value || '';
                 const qty = Math.max(1, parseInt(qtyInput.value) || 1);
-                const unitPrice = getItemUnitPrice(product, varSelect.value);
+
+                const unitPrice = getItemUnitPrice(product, variant);
                 const subtotal = unitPrice * qty;
                 totalAmount += subtotal;
 
-                // 產出指定格式：OOO XX件 單價XX 總價XX
                 const unitText = unitPrice > 0 ? `NT$ ${unitPrice}` : '待報價';
                 const subText = subtotal > 0 ? `NT$ ${subtotal}` : '待報價';
                 itemsLines.push(`${prodName} ${variant} ${qty}件 單價${unitText} 總價${subText}`);
@@ -577,12 +600,12 @@ ${notes ? notes : '無額外備註'}`.trim();
             @media (max-width: 768px) {
                 .item-row {
                     grid-template-columns: 1fr !important;
-                    gap: 8px !important;
+                    gap: 10px !important;
                 }
-                div[style*="grid-template-columns: 1fr 1fr"] {
+                .responsive-grid-2 {
                     grid-template-columns: 1fr !important;
                 }
-                div[style*="grid-template-columns: 1.5fr 1fr 1fr"] {
+                .responsive-grid-3 {
                     grid-template-columns: 1fr !important;
                 }
             }

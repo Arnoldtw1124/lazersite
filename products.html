@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>產品與價目表 - 諾雕 ALE</title>
+    <title>產品與客製價目表 - 諾雕 ALE</title>
     <meta name="description" content="諾雕 ALE 客製化雷雕品項一覽：軟木杯墊、皮革鑰匙圈、展會價目牌、壓克力立牌、金屬名片、寵物名牌。">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Ambient Glow -->
+    <div class="ambient-glow"></div>
+
+    <!-- Floating Glass Pill Navbar -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
-                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
+                <span>ALE</span>
             </a>
         </div>
 
@@ -39,204 +44,226 @@
             <a href="materials.html">材質資料庫</a>
             <a href="guidelines.html">製圖規範</a>
             <a href="faq.html">常見問題</a>
-            <a href="booking.html" class="cta-button">立即預約</a>
+            <a href="booking.html" class="cta-button">接單文字產生器</a>
             <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
         </div>
     </nav>
 
     <main>
-        <section class="services" style="padding-top: 130px; min-height: 80vh;">
-            <div style="text-align: center; margin-bottom: 3.5rem;">
-                <h1 style="font-size: 2.8rem; color: var(--text-color); font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">
-                    PRODUCT CATALOG
-                </h1>
-                <p style="color: var(--secondary-color); font-size: 1.1rem; letter-spacing: 1px; margin-top: 0.5rem;">
-                    // 產品與客製價目表
+        <section class="bento-section" style="padding-top: 140px; min-height: 85vh;">
+            <div class="section-header">
+                <span class="section-tag">// PRODUCT CATALOG & PRICING</span>
+                <h1 class="section-title">全品項規格與價目表</h1>
+                <p class="section-desc">
+                    支援單件起印與小量批發，點擊各品項可查看細部規格，或直接前往接單產生器計算金額。
                 </p>
             </div>
 
-            <!-- Products Grid Container -->
-            <div class="service-grid" id="products-container">
-                <!-- Rendered dynamically by static/js/products.js, fallback static cards below -->
-                
-                <!-- Priceboard -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden; border: 1px solid var(--secondary-color);">
-                    <div style="width: 100%; height: 220px; background-color: rgba(255,255,255,0.05); overflow: hidden; position: relative;">
-                        <img src="./static/images/priceboard_mockup.png" alt="客製化雷雕價目牌" style="width: 100%; height: 100%; object-fit: cover;">
-                        <div style="position: absolute; top: 12px; right: 12px; background: rgba(46, 204, 113, 0.9); color: black; font-weight: bold; font-size: 0.8rem; padding: 4px 10px; border-radius: 4px;">
-                            先行者優惠
-                        </div>
+            <!-- Bento Product Grid -->
+            <div class="bento-grid">
+
+                <!-- 1. Priceboard (Featured 8-col) -->
+                <div class="bento-card col-span-8 border-beam-card">
+                    <span class="pill-badge" style="background: rgba(0, 240, 255, 0.15); color: var(--accent-cyan); border-color: rgba(0, 240, 255, 0.3);">
+                        HOT // 展會熱銷首選
+                    </span>
+                    <div class="bento-img-wrap" style="height: 300px;">
+                        <img src="./static/images/priceboard_mockup.png" alt="客製化雷雕價目牌">
                     </div>
-                    <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem; color: white;">【展會專用】客製化雷雕價目牌</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); flex-grow: 1; line-height: 1.6;">
-                            同人展 (FF/CWT) 與市集攤位必備！告別軟爛紙張，白橡木紋雷雕打造專業門面。防潑水、高對比、支援 QR Code。
-                        </p>
-                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1.5rem;">
-                            NT$ 200 <span style="font-size: 1.1rem; color: #777; text-decoration: line-through; margin-left: 8px;">NT$ 350</span>
+                    <div class="bento-body">
+                        <div style="color: var(--accent-cyan); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            EXHIBITION ESSENTIAL
                         </div>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="product-detail.html?id=priceboard" class="btn" style="flex: 1; text-align: center; border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">查看規格</a>
-                            <a href="booking.html?product=【展會專用】客製化雷雕價目牌" class="btn btn-primary" style="flex: 1; text-align: center; padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">立即預約</a>
+                        <h3 class="bento-title">【展會專用】客製化雷雕價目牌</h3>
+                        <p class="bento-desc">
+                            同人展 (FF/CWT) 與市集攤位必備！白橡木紋防潑水、硬挺不彎曲，支援高精度 QR Code 雕刻與菜單價目排版。
+                        </p>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 15px; margin-top: auto;">
+                            <div class="bento-price" style="margin-top: 0;">
+                                NT$ 200 <span class="old-price">NT$ 350</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="product-detail.html?id=priceboard" class="ghost-btn" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">
+                                    查看規格
+                                </a>
+                                <a href="booking.html?product=【展會專用】客製化雷雕價目牌" class="shimmer-btn" style="padding: 0.5rem 1.4rem; font-size: 0.9rem;">
+                                    立即預約
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Coaster -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden;">
-                    <div style="width: 100%; height: 220px; background-color: rgba(255,255,255,0.05); overflow: hidden;">
-                        <img src="./static/images/coaster_default.png" alt="軟木杯墊" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- 2. Coaster (4-col) -->
+                <div class="bento-card col-span-4">
+                    <span class="pill-badge">天然軟木</span>
+                    <div class="bento-img-wrap" style="height: 240px;">
+                        <img src="./static/images/coaster_default.png" alt="軟木杯墊">
                     </div>
-                    <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary-color);">軟木杯墊</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); flex-grow: 1; line-height: 1.6;">
-                            天然軟木材質，厚實堅固且具備優異隔熱與吸水效果。提供凹槽款 (100mm)、圓形款 (98mm) 與方形款 (98mm)。
-                        </p>
-                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1.5rem;">
-                            NT$ 150 起
+                    <div class="bento-body">
+                        <div style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            NATURAL CORK
                         </div>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="product-detail.html?id=coaster" class="btn" style="flex: 1; text-align: center; border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">查看規格</a>
-                            <a href="booking.html?product=軟木杯墊" class="btn btn-primary" style="flex: 1; text-align: center; padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">立即預約</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Keychain -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden;">
-                    <div style="width: 100%; height: 220px; background-color: rgba(255,255,255,0.05); overflow: hidden;">
-                        <img src="./static/images/leather_keychain.jpg" alt="皮革鑰匙圈" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary-color);">皮革鑰匙圈</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); flex-grow: 1; line-height: 1.6;">
-                            精選質感皮革與高強度金屬扣環，可刻印個人名字、英文字句或專屬紀念日期。
-                        </p>
-                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1.5rem;">
-                            NT$ 150 起
-                        </div>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="product-detail.html?id=keychain" class="btn" style="flex: 1; text-align: center; border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">查看規格</a>
-                            <a href="booking.html?product=皮革鑰匙圈" class="btn btn-primary" style="flex: 1; text-align: center; padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">立即預約</a>
+                        <h3 class="bento-title">天然軟木杯墊</h3>
+                        <p class="bento-desc">厚實天然軟木，具備優異隔熱與溢水吸收特性，提供凹槽款 (100mm)、圓形與方形款。</p>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; margin-top: auto;">
+                            <div class="bento-price" style="margin-top: 0;">NT$ 150 <span style="font-size: 0.85rem; color: #888; font-weight: normal;">起</span></div>
+                            <div style="display: flex; gap: 8px;">
+                                <a href="product-detail.html?id=coaster" class="ghost-btn" style="padding: 0.45rem 1rem; font-size: 0.85rem;">規格</a>
+                                <a href="booking.html?product=軟木杯墊" class="shimmer-btn" style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">預約</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Stand -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden;">
-                    <div style="width: 100%; height: 220px; background-color: rgba(255,255,255,0.05); overflow: hidden;">
-                        <img src="./static/images/mat_acrylic_engraved.png" alt="壓克力立牌" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- 3. Keychain (4-col) -->
+                <div class="bento-card col-span-4">
+                    <div class="bento-img-wrap" style="height: 220px;">
+                        <img src="./static/images/leather_keychain.jpg" alt="皮革鑰匙圈">
                     </div>
-                    <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary-color);">壓克力立牌</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); flex-grow: 1; line-height: 1.6;">
-                            高透光光學壓克力精密切割與雷射深淺雕刻，適合動漫角色、偶像應援、名牌展示，附可拆式底座。
-                        </p>
-                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1.5rem;">
-                            NT$ 450 起
+                    <div class="bento-body">
+                        <div style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            LEATHER GOODS
                         </div>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="product-detail.html?id=stand" class="btn" style="flex: 1; text-align: center; border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">查看規格</a>
-                            <a href="booking.html?product=壓克力立牌" class="btn btn-primary" style="flex: 1; text-align: center; padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">立即預約</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cardcheck -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden;">
-                    <div style="width: 100%; height: 220px; background-color: rgba(255,255,255,0.05); overflow: hidden;">
-                        <img src="./static/images/mat_metal_raw_v2.png" alt="金屬名片/銘版" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary-color);">金屬名片 / 工業銘版</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); flex-grow: 1; line-height: 1.6;">
-                            陽極處理金屬鋁卡與不鏽鋼，呈現極致俐落工業風格。適合高端商務人士、VIP卡或設備銘版使用。
-                        </p>
-                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1.5rem;">
-                            NT$ 300 起
-                        </div>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="product-detail.html?id=cardcheck" class="btn" style="flex: 1; text-align: center; border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">查看規格</a>
-                            <a href="booking.html?product=金屬名片/銘版" class="btn btn-primary" style="flex: 1; text-align: center; padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">立即預約</a>
+                        <h3 class="bento-title">植鞣皮革鑰匙圈</h3>
+                        <p class="bento-desc">精選皮革與強化五金扣環，深層刻印個人代號或紀念文字，隨身攜帶獨特手作溫度。</p>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; margin-top: auto;">
+                            <div class="bento-price" style="margin-top: 0;">NT$ 150 <span style="font-size: 0.85rem; color: #888; font-weight: normal;">起</span></div>
+                            <div style="display: flex; gap: 8px;">
+                                <a href="product-detail.html?id=keychain" class="ghost-btn" style="padding: 0.45rem 1rem; font-size: 0.85rem;">規格</a>
+                                <a href="booking.html?product=皮革鑰匙圈" class="shimmer-btn" style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">預約</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tag -->
-                <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden;">
-                    <div style="width: 100%; height: 220px; background-color: rgba(255,255,255,0.05); overflow: hidden;">
-                        <img src="./static/images/mat_metal_engraved_v2.png" alt="寵物名牌" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- 4. Stand (4-col) -->
+                <div class="bento-card col-span-4">
+                    <div class="bento-img-wrap" style="height: 220px;">
+                        <img src="./static/images/mat_acrylic_engraved.png" alt="壓克力立牌">
                     </div>
-                    <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 style="font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary-color);">寵物名牌 / 金屬吊牌</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); flex-grow: 1; line-height: 1.6;">
-                            304不鏽鋼與厚植鞣革，耐用且輕便。深層雷射雕刻毛孩名字與聯絡電話，防止走失，字跡不褪色。
-                        </p>
-                        <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 1.5rem;">
-                            NT$ 200 起
+                    <div class="bento-body">
+                        <div style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            ACRYLIC CRAFT
                         </div>
-                        <div style="display: flex; gap: 10px;">
-                            <a href="product-detail.html?id=tag" class="btn" style="flex: 1; text-align: center; border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">查看規格</a>
-                            <a href="booking.html?product=寵物名牌" class="btn btn-primary" style="flex: 1; text-align: center; padding: 0.6rem; text-decoration: none; border-radius: 6px; font-weight: bold;">立即預約</a>
+                        <h3 class="bento-title">光學級壓克力立牌</h3>
+                        <p class="bento-desc">高透光壓克力精密切割，邊緣鑽石鏡面拋光，適合角色周邊或展示名牌，附專用底座。</p>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; margin-top: auto;">
+                            <div class="bento-price" style="margin-top: 0;">NT$ 450 <span style="font-size: 0.85rem; color: #888; font-weight: normal;">起</span></div>
+                            <div style="display: flex; gap: 8px;">
+                                <a href="product-detail.html?id=stand" class="ghost-btn" style="padding: 0.45rem 1rem; font-size: 0.85rem;">規格</a>
+                                <a href="booking.html?product=壓克力立牌" class="shimmer-btn" style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">預約</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Custom Request Card -->
-                <div class="card" style="border: 1px dashed var(--primary-color); display: flex; flex-direction: column; justify-content: space-between; padding: 2.5rem; background: rgba(0, 255, 255, 0.03);">
+                <!-- 5. Cardcheck (4-col) -->
+                <div class="bento-card col-span-4">
+                    <div class="bento-img-wrap" style="height: 220px;">
+                        <img src="./static/images/mat_metal_raw_v2.png" alt="金屬名片">
+                    </div>
+                    <div class="bento-body">
+                        <div style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            ANODIZED METAL
+                        </div>
+                        <h3 class="bento-title">陽極金屬名片 / 銘版</h3>
+                        <p class="bento-desc">陽極處理鋁合金與不鏽鋼，呈現極致俐落工業科技美學，字跡高對比永久不磨損。</p>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; margin-top: auto;">
+                            <div class="bento-price" style="margin-top: 0;">NT$ 300 <span style="font-size: 0.85rem; color: #888; font-weight: normal;">起</span></div>
+                            <div style="display: flex; gap: 8px;">
+                                <a href="product-detail.html?id=cardcheck" class="ghost-btn" style="padding: 0.45rem 1rem; font-size: 0.85rem;">規格</a>
+                                <a href="booking.html?product=金屬名片 / 工業銘版" class="shimmer-btn" style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">預約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Tag (6-col) -->
+                <div class="bento-card col-span-6">
+                    <div class="bento-img-wrap" style="height: 220px;">
+                        <img src="./static/images/mat_metal_engraved_v2.png" alt="寵物名牌">
+                    </div>
+                    <div class="bento-body">
+                        <div style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            PET & HARDWARE TAG
+                        </div>
+                        <h3 class="bento-title">寵物名牌 / 金屬吊牌</h3>
+                        <p class="bento-desc">304不鏽鋼深層微米雕刻，毛孩姓名電話永久清晰防走失，附高硬度扣環。</p>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; margin-top: auto;">
+                            <div class="bento-price" style="margin-top: 0;">NT$ 200 <span style="font-size: 0.85rem; color: #888; font-weight: normal;">起</span></div>
+                            <div style="display: flex; gap: 8px;">
+                                <a href="product-detail.html?id=tag" class="ghost-btn" style="padding: 0.45rem 1rem; font-size: 0.85rem;">規格</a>
+                                <a href="booking.html?product=寵物名牌 / 金屬吊牌" class="shimmer-btn" style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">預約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Custom Inquiry (6-col Special Bento) -->
+                <div class="bento-card col-span-6" style="padding: 2.2rem; background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(99, 102, 241, 0.08)); border-color: rgba(0, 240, 255, 0.3);">
                     <div>
-                        <div style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem;"><i class="fas fa-tools"></i></div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-color);">特殊客製 / 大量批發需求</h3>
-                        <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); line-height: 1.7;">
-                            想要雕刻自己的私物？需要特定木種、陽極金屬特殊尺寸？或是展覽/同人社團大量製作？歡迎直接預約討論，我們將為您評估報價。
+                        <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div style="color: var(--accent-cyan); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.4rem;">
+                            CUSTOM INQUIRY
+                        </div>
+                        <h3 class="bento-title">特殊材質 / 私物代客雷雕</h3>
+                        <p class="bento-desc">
+                            有自備的特殊木料、金屬刀具、3C鍵盤外殼，或是展會大量客製需求？歡迎直接透過接單文字產生器或 X 私訊與我們討論。
                         </p>
                     </div>
-                    <div>
-                        <a href="booking.html?product=特殊客製需求" class="btn btn-primary"
-                            style="display: block; width: 100%; text-align: center; padding: 0.8rem; font-size: 1.1rem;">
+                    <div style="margin-top: auto;">
+                        <a href="booking.html?product=特殊客製需求" class="shimmer-btn" style="width: 100%; justify-content: center;">
                             前往諮詢客製 &rarr;
                         </a>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
-        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+    <footer class="site-footer">
+        <div class="footer-content">
             <div class="footer-column">
                 <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
-                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 44px; width: 44px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);">
+                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: white; font-weight: 700;">ALE</span>
                 </div>
-                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; font-size: 0.92rem;">
+                    銘刻光與金屬的界線 // 專注於同人展會、創作者與個人品牌的客製雷射雕刻工坊。
+                </p>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: var(--secondary-color); text-decoration: none;">產品一覽</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="process.html" style="color: #888; text-decoration: none;">製作流程</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="materials.html" style="color: #888; text-decoration: none;">材質介紹</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="booking.html" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">立即預約下單 &rarr;</a></li>
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="products.html">產品一覽</a></li>
+                    <li><a href="process.html">製作流程</a></li>
+                    <li><a href="materials.html">材質介紹</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
+
             <div class="footer-column">
-                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: #888; text-decoration: none;">製圖規範</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: #888; text-decoration: none;">服務條款</a></li>
-                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                <h4>規範與條款</h4>
+                <ul>
+                    <li><a href="guidelines.html">製圖規範</a></li>
+                    <li><a href="terms.html">服務條款</a></li>
+                    <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
-            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
         </div>
     </footer>
 
-    <script src="./static/js/products.js"></script>
     <script>
         const hamburger = document.querySelector(".hamburger");
         const navLinks = document.querySelector(".nav-links");
