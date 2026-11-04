@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>材質資料庫 - 諾雕 ALE</title>
+    <meta name="description" content="諾雕 ALE 材質資料庫：金屬、壓克力、植纖板、軟木雕刻前後效果即時對比。">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
+                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+            </a>
+        </div>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="products.html">產品一覽</a>
+            <a href="process.html">製作流程</a>
+            <a href="materials.html" class="active">材質資料庫</a>
+            <a href="guidelines.html">製圖規範</a>
+            <a href="faq.html">常見問題</a>
+            <a href="booking.html" class="cta-button">立即預約</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <section style="padding: 130px 10% 80px 10%; min-height: 100vh; background: #121216;">
+            <div style="text-align: center; margin-bottom: 3.5rem;">
+                <h1 style="font-size: 2.8rem; color: white; font-family: 'Orbitron', sans-serif; letter-spacing: 2px;">
+                    MATERIAL MATRIX
+                </h1>
+                <p style="color: var(--secondary-color); font-size: 1.1rem; letter-spacing: 1px; margin-top: 0.5rem;">
+                    // 工藝材質資料庫 (懸停滑鼠可預覽雷雕前後對比)
+                </p>
+            </div>
+
+            <!-- Filters -->
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3.5rem; flex-wrap: wrap;">
+                <button onclick="filterMaterials('all')" class="filter-btn active">全部 (ALL)</button>
+                <button onclick="filterMaterials('metal')" class="filter-btn">金屬 (METAL)</button>
+                <button onclick="filterMaterials('acrylic')" class="filter-btn">壓克力 (ACRYLIC)</button>
+                <button onclick="filterMaterials('paper')" class="filter-btn">木質/植纖 (WOOD/FIBER)</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="material-grid">
+                <!-- Metal Card -->
+                <div class="material-card" data-category="metal">
+                    <div class="img-container">
+                        <img src="./static/images/mat_metal_raw_v2.png" class="img-raw" alt="金屬未雕刻前">
+                        <img src="./static/images/mat_metal_engraved_v2.png" class="img-engraved" alt="金屬雷雕後效果">
+                        <div class="glow-border"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>陽極金屬漆面 (Painted Metal)</h3>
+                        <p>適用厚度: 0.5mm - 2.0mm</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="rarity">工業級工藝</span>
+                            <a href="booking.html?product=金屬名片 / 工業銘版" class="craft-btn">[ 立即製作 &rarr; ]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acrylic Card -->
+                <div class="material-card" data-category="acrylic">
+                    <div class="img-container">
+                        <img src="./static/images/mat_acrylic_raw.png" class="img-raw" alt="壓克力未雕刻前">
+                        <img src="./static/images/mat_acrylic_engraved.png" class="img-engraved" alt="壓克力雷雕後效果">
+                        <div class="glow-border"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>光學透光壓克力 (Translucent Acrylic)</h3>
+                        <p>適用厚度: 3.0mm / 5.0mm</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="rarity" style="color: var(--secondary-color); border-color: var(--secondary-color);">光學級</span>
+                            <a href="booking.html?product=壓克力立牌" class="craft-btn">[ 立即製作 &rarr; ]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper / Fiber Card -->
+                <div class="material-card" data-category="paper">
+                    <div class="img-container">
+                        <img src="./static/images/mat_paper_raw.png" class="img-raw" alt="白橡木植纖板未雕刻前">
+                        <img src="./static/images/mat_paper_engraved.png" class="img-engraved" alt="白橡木植纖板雷雕後效果">
+                        <div class="glow-border"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>防潑水白橡木植纖板 (Fiber Board)</h3>
+                        <p>適用厚度: 2.85mm (硬挺不彎曲)</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="rarity" style="color: #2ecc71; border-color: #2ecc71;">展會特仕</span>
+                            <a href="booking.html?product=【展會專用】客製化雷雕價目牌" class="craft-btn">[ 立即製作 &rarr; ]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cork Card -->
+                <div class="material-card" data-category="paper">
+                    <div class="img-container">
+                        <img src="./static/images/coaster_default.png" class="img-raw" alt="天然軟木未雕刻前">
+                        <img src="./static/images/coaster_groove.png" class="img-engraved" alt="軟木雷雕後效果">
+                        <div class="glow-border"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>天然軟木 (Natural Cork)</h3>
+                        <p>適用厚度: 5.0mm / 10.0mm (防燙吸水)</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="rarity" style="color: #f39c12; border-color: #f39c12;">天然環保</span>
+                            <a href="booking.html?product=軟木杯墊" class="craft-btn">[ 立即製作 &rarr; ]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Styles for Material Cards -->
+    <style>
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .material-card {
+            background: rgba(20, 20, 25, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+        }
+
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .img-container {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: #000;
+        }
+
+        .img-raw,
+        .img-engraved {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+        }
+
+        .img-engraved {
+            opacity: 0;
+        }
+
+        .material-card:hover .img-engraved {
+            opacity: 1;
+        }
+
+        .glow-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 0 0 rgba(255, 77, 77, 0);
+            transition: box-shadow 0.3s ease;
+            pointer-events: none;
+        }
+
+        .material-card:hover .glow-border {
+            box-shadow: inset 0 0 20px 2px rgba(255, 77, 77, 0.5);
+        }
+
+        .card-info {
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        }
+
+        .card-info h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .card-info p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .rarity {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ff4d4d;
+            border: 1px solid #ff4d4d;
+            text-transform: uppercase;
+        }
+
+        .craft-btn {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+
+        .craft-btn:hover {
+            color: white;
+            background: var(--secondary-color);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
+        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+            <div class="footer-column">
+                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
+                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                </div>
+                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+            </div>
+            <div class="footer-column">
+                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: #888; text-decoration: none;">產品一覽</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="process.html" style="color: #888; text-decoration: none;">製作流程</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="materials.html" style="color: var(--secondary-color); text-decoration: none;">材質介紹</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="booking.html" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">立即預約下單 &rarr;</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: #888; text-decoration: none;">製圖規範</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: #888; text-decoration: none;">服務條款</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
+            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterMaterials(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText.includes('全部'))) {
+                    btn.classList.add('active');
+                }
+            });
+
+            const cards = document.querySelectorAll('.material-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        }));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>送印與製圖規範 - 諾雕 ALE</title>
+    <meta name="description" content="諾雕 ALE 檔案製作指南：接受格式 (AI, PDF, SVG, JPG, PNG)、解析度要求、文字轉外框與正確線稿範例。">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
+                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+            </a>
+        </div>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="products.html">產品一覽</a>
+            <a href="process.html">製作流程</a>
+            <a href="materials.html">材質資料庫</a>
+            <a href="guidelines.html" class="active">製圖規範</a>
+            <a href="faq.html">常見問題</a>
+            <a href="booking.html" class="cta-button">立即預約</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section style="
+            position: relative;
+            height: 50vh;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('./static/images/guidelines_hero.png') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        ">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); z-index: 1;"></div>
+            <div style="position: relative; z-index: 2;">
+                <h1 style="font-size: 3.2rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: white; text-shadow: 0 0 20px rgba(255, 77, 77, 0.8); font-family: 'Orbitron', sans-serif;">
+                    FILE GUIDELINES
+                </h1>
+                <p style="font-size: 1.3rem; font-weight: 300; color: rgba(255, 255, 255, 0.9); letter-spacing: 2px;">
+                    // 檔案製作指南・精準度源自規範
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div style="background: #0f0f13; color: white; padding: 70px 10%;">
+
+            <!-- File Formats Section -->
+            <section style="margin-bottom: 80px; text-align: center;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 2.5rem; color: var(--primary-color);">接受之檔案格式</h2>
+
+                <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.5rem;">
+                    <img src="./static/images/guidelines_icons.png" alt="支援格式: AI, PDF, SVG, JPG, PNG" style="
+                        max-width: 100%;
+                        height: auto;
+                        max-height: 280px;
+                        border: 1px solid rgba(255, 77, 77, 0.3);
+                        border-radius: 15px;
+                        box-shadow: 0 0 20px rgba(255, 77, 77, 0.15);
+                    ">
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; max-width: 850px; margin: 0 auto;">
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #ff4d4d; margin-bottom: 0.5rem;">AI / SVG</h3>
+                        <p style="font-size: 0.9rem; color: #ccc;">向量格式最佳 (無限放大不失真)</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #ff4d4d; margin-bottom: 0.5rem;">PDF</h3>
+                        <p style="font-size: 0.9rem; color: #ccc;">可保留文字向量路徑與設定</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #ff4d4d; margin-bottom: 0.5rem;">JPG / PNG</h3>
+                        <p style="font-size: 0.9rem; color: #ccc;">高解析度黑白線條圖稿 (300dpi+)</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #ff4d4d; margin-bottom: 0.5rem;">DXF / CAD</h3>
+                        <p style="font-size: 0.9rem; color: #ccc;">工程圖與精準比例線稿</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Do's and Don'ts Section -->
+            <section style="margin-bottom: 80px;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 3rem; text-align: center; color: var(--primary-color);">正確 vs 錯誤範例</h2>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 900px; margin: 0 auto;">
+                    <!-- Do's -->
+                    <div style="background: rgba(0, 255, 0, 0.05); border: 2px solid #00cc00; border-radius: 15px; padding: 2rem; text-align: center;">
+                        <h3 style="color: #00cc00; font-size: 1.8rem; margin-bottom: 1.2rem;">✔ 正確範例 (RECOMMENDED)</h3>
+                        <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 10px; margin-bottom: 1.2rem; background: white;">
+                            <img src="./static/images/guidelines_good.png" alt="正確範例" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <p style="color: white; font-size: 1.05rem; line-height: 1.6;">
+                            純黑白高對比線稿<br>
+                            邊緣銳利清晰、無漸層、無灰階噪點
+                        </p>
+                    </div>
+
+                    <!-- Don'ts -->
+                    <div style="background: rgba(255, 0, 0, 0.05); border: 2px solid #ff3333; border-radius: 15px; padding: 2rem; text-align: center;">
+                        <h3 style="color: #ff3333; font-size: 1.8rem; margin-bottom: 1.2rem;">✘ 錯誤範例 (AVOID)</h3>
+                        <div style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 10px; margin-bottom: 1.2rem;">
+                            <img src="./static/images/guidelines_bad.png" alt="錯誤範例" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <p style="color: white; font-size: 1.05rem; line-height: 1.6;">
+                            模糊低解析度截圖<br>
+                            彩色漸層、陰影過多或未轉外框
+                        </p>
+                    </div>
+                </div>
+
+                <style>
+                    @media (max-width: 768px) {
+                        div[style*="grid-template-columns: 1fr 1fr"] {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+            </section>
+
+            <!-- Specs Text Section -->
+            <section style="background: rgba(255, 255, 255, 0.04); border-radius: 15px; padding: 2.5rem 3rem; max-width: 850px; margin: 0 auto; border-left: 5px solid var(--secondary-color);">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; color: white;">詳細雕刻規格要求</h3>
+                <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 2.2;">
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                        <span style="color: var(--secondary-color); margin-right: 12px; font-size: 1.2rem;">➤</span>
+                        <span>圖片解析度建議設置 <strong>300 dpi 或以上</strong>，以確保雷射雕刻的細微細節。</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                        <span style="color: var(--secondary-color); margin-right: 12px; font-size: 1.2rem;">➤</span>
+                        <span>線條寬度 (Stroke weight) 請大於 <strong>0.1mm (約 0.28pt)</strong>，過細線條雷射可能無法順利成像。</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                        <span style="color: var(--secondary-color); margin-right: 12px; font-size: 1.2rem;">➤</span>
+                        <span>若圖稿包含文字，請務必 <strong>建立外框 (Create Outlines)</strong>，避免開檔時缺字或跑版。</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start;">
+                        <span style="color: var(--secondary-color); margin-right: 12px; font-size: 1.2rem;">➤</span>
+                        <span>若使用點陣圖 (JPG/PNG)，建議去除背景並轉為 <strong>高對比黑白圖案 (Pure Black & White)</strong>。</span>
+                    </li>
+                </ul>
+            </section>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="booking.html" class="btn btn-primary" style="padding: 1rem 3.5rem; font-size: 1.15rem; font-weight: bold; letter-spacing: 2px;">
+                    [ 已確認規範，立即線上預約 &rarr; ]
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
+        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+            <div class="footer-column">
+                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
+                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                </div>
+                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+            </div>
+            <div class="footer-column">
+                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: #888; text-decoration: none;">產品一覽</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="process.html" style="color: #888; text-decoration: none;">製作流程</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="materials.html" style="color: #888; text-decoration: none;">材質介紹</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="booking.html" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">立即預約下單 &rarr;</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: var(--secondary-color); text-decoration: none;">製圖規範</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: #888; text-decoration: none;">服務條款</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
+            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        }));
+    </script>
+</body>
+
+</html>

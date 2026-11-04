@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>預約雷雕服務 - 諾雕 ALE</title>
+    <meta name="description" content="線上預約客製化雷射雕刻服務，填寫需求並上傳圖檔，即時寫入系統對稿。">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Outfit:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 40px; margin-right: 10px; border-radius: 4px;">
+                <span style="font-family: 'Orbitron', sans-serif;">ALE</span>
+            </a>
+        </div>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="products.html">產品一覽</a>
+            <a href="process.html">製作流程</a>
+            <a href="materials.html">材質資料庫</a>
+            <a href="guidelines.html">製圖規範</a>
+            <a href="faq.html">常見問題</a>
+            <a href="booking.html" class="active cta-button">立即預約</a>
+            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X"><i class="fab fa-twitter"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="booking-section" style="padding: 120px 10% 80px 10%; min-height: 80vh; display: flex; justify-content: center; align-items: center;">
+            <div class="booking-card" style="
+                background: var(--card-bg); 
+                padding: 3rem; 
+                border-radius: 20px; 
+                border: var(--glass-border); 
+                width: 100%; 
+                max-width: 650px; 
+                backdrop-filter: blur(10px);
+                position: relative;
+            ">
+                <!-- Header -->
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <div style="font-family: 'Orbitron', sans-serif; color: var(--secondary-color); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 5px;">
+                        // INITIATE PROJECT
+                    </div>
+                    <h1 style="color: var(--primary-color); font-size: 2.2rem; font-weight: 700; margin: 0;">
+                        預約客製雷雕服務
+                    </h1>
+                    <p style="color: #aaa; margin-top: 10px; font-size: 0.95rem;">
+                        送出後將由工坊專人透過 Email 或 LINE 與您核對合成模擬圖與排程。
+                    </p>
+                </div>
+
+                <!-- Success Box (Initially Hidden) -->
+                <div id="success-box" style="
+                    display: none;
+                    background: rgba(46, 204, 113, 0.1);
+                    border: 1px solid #2ecc71;
+                    padding: 2.5rem 2rem;
+                    border-radius: 12px;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                ">
+                    <div style="font-size: 3.5rem; color: #2ecc71; margin-bottom: 1rem;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 style="color: #2ecc71; margin-bottom: 1rem; font-size: 1.8rem;">預約訊號傳送成功！</h2>
+                    <p style="color: rgba(255,255,255,0.9); line-height: 1.8; margin-bottom: 1.5rem;" id="success-msg">
+                        感謝您的預約，系統已成功記錄您的需求！我們將在 24 小時內與您聯繫確認設計排版與報價。
+                    </p>
+                    <div id="order-summary" style="background: rgba(0,0,0,0.5); padding: 1.2rem; border-radius: 8px; text-align: left; font-size: 0.95rem; color: #ccc; margin-bottom: 1.5rem; line-height: 1.7;">
+                    </div>
+                    <a href="index.html" class="btn" style="border: 1px solid var(--secondary-color); color: var(--secondary-color); padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block;">
+                        返回首頁
+                    </a>
+                </div>
+
+                <!-- Booking Form -->
+                <form id="booking-form">
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-weight: 500;">
+                            稱呼 / 暱稱 (Name / Nickname) <span style="color: #ff4d4d;">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="例如：諾先生、小櫻、Arnold"
+                            style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-weight: 500;">
+                            電子郵件 (Email) <span style="color: #ff4d4d;">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="example@gmail.com"
+                            style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="contact" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-weight: 500;">
+                            聯絡方式 (LINE ID / 手機號碼) <span style="color: #ff4d4d;">*</span>
+                        </label>
+                        <input type="text" id="contact" name="contact" required placeholder="LINE ID 或電話號碼 (方便對稿傳送模擬圖)"
+                            style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="product" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-weight: 500;">
+                            商品品項 (Product Selection) <span style="color: #ff4d4d;">*</span>
+                        </label>
+                        <select id="product" name="product" required
+                            style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: #15151a; color: white; box-sizing: border-box; font-size: 1rem;"
+                            onchange="handleProductChange()">
+                            <option value="" disabled selected>請選擇欲客製的品項</option>
+                            <option value="【展會專用】客製化雷雕價目牌">【展會專用】客製化雷雕價目牌 (NT$ 200)</option>
+                            <option value="軟木杯墊">軟木杯墊 (NT$ 150 起)</option>
+                            <option value="皮革鑰匙圈">皮革鑰匙圈 (NT$ 150 起)</option>
+                            <option value="壓克力立牌">壓克力立牌 (NT$ 450 起)</option>
+                            <option value="金屬名片 / 工業銘版">金屬名片 / 工業銘版 (NT$ 300 起)</option>
+                            <option value="寵物名牌 / 金屬吊牌">寵物名牌 / 金屬吊牌 (NT$ 200 起)</option>
+                            <option value="特殊客製需求">特殊客製需求 (私訊另行報價)</option>
+                        </select>
+                    </div>
+
+                    <!-- Dynamic Variant Section -->
+                    <div id="variant-group" class="form-group" style="margin-bottom: 1.5rem; display: none;">
+                        <label for="variant" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-weight: 500;">
+                            指定款式 (Style / Variant)
+                        </label>
+                        <select id="variant" name="variant"
+                            style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: #15151a; color: white; box-sizing: border-box; font-size: 1rem;">
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="notes" style="display: block; margin-bottom: 0.5rem; color: #ddd; font-weight: 500;">
+                            客製內容與需求備註 (Engraving Text / Notes)
+                        </label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="請填寫欲雕刻的文字、字體偏好、尺寸要求，若圖檔超過 5MB 也可在此貼上 Google 雲端硬碟連結。"
+                            style="width: 100%; padding: 0.9rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0, 0, 0, 0.5); color: white; box-sizing: border-box; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <!-- Upload Section -->
+                    <div class="form-group" style="margin-bottom: 2rem; background: rgba(255, 255, 255, 0.03); padding: 1.5rem; border-radius: 10px; border: 1px dashed rgba(255,255,255,0.25);">
+                        <label for="file" style="display: block; margin-bottom: 0.6rem; color: var(--secondary-color); font-weight: bold;">
+                            📂 上傳雷雕圖檔 (可選)
+                        </label>
+                        <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png,.ai,.pdf,.svg"
+                            style="margin-bottom: 0.8rem; color: rgba(255,255,255,0.8); width: 100%;">
+                        <small style="display: block; color: #888; line-height: 1.5;">
+                            支援格式：AI, PDF, SVG (向量檔最佳) 或 PNG, JPG 高解析黑白線稿。<br>
+                            檔案將安全傳輸至 Google 雲端硬碟。檔案較大亦可先送出預約，稍後於 LINE 傳送。
+                        </small>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-btn" class="btn btn-primary"
+                        style="width: 100%; padding: 1.1rem; font-size: 1.15rem; font-weight: bold; letter-spacing: 2px; cursor: pointer; border-radius: 8px;">
+                        [ 確認送出預約 / TRANSMIT ORDER ]
+                    </button>
+                </form>
+
+                <!-- Help Notice -->
+                <div style="margin-top: 2rem; text-align: center; color: #666; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;">
+                    有急件或特殊合作洽詢？歡迎透過 
+                    <a href="https://x.com/arnold__laser" target="_blank" style="color: var(--secondary-color); text-decoration: none;">X (Twitter) 私訊 @arnold__laser</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="background-color: #000000; border-top: 1px solid var(--secondary-color); padding: 4rem 10%; color: #888;">
+        <div class="footer-content" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; max-width: 1200px; margin: 0 auto;">
+            <div class="footer-column">
+                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                    <img src="./static/images/logo.jpg" alt="諾雕 ALE" style="height: 50px; border-radius: 4px;">
+                    <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white;">ALE</span>
+                </div>
+                <p style="color: #888; margin-bottom: 1.5rem;">銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務</p>
+            </div>
+            <div class="footer-column">
+                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">快速導覽</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><a href="index.html" style="color: #888; text-decoration: none;">首頁</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="products.html" style="color: #888; text-decoration: none;">產品一覽</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="process.html" style="color: #888; text-decoration: none;">製作流程</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="materials.html" style="color: #888; text-decoration: none;">材質介紹</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 style="color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">規範與條款</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><a href="guidelines.html" style="color: #888; text-decoration: none;">製圖規範</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="terms.html" style="color: #888; text-decoration: none;">服務條款</a></li>
+                    <li style="margin-bottom: 0.6rem;"><a href="privacy.html" style="color: #888; text-decoration: none;">隱私權政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 3rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem;">
+            <p>&copy; 2024-2026 諾雕 ALE. All rights reserved. Hosted with GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- Products Data Script -->
+    <script src="./static/js/products.js"></script>
+
+    <script>
+        /**
+         * =========================================================================
+         * Google Apps Script Web App 接收端點 (GOOGLE_SCRIPT_URL)
+         * =========================================================================
+         * 當您部署好 Google Apps Script 之後，請將您的 Web App URL 填入下方引號中。
+         * 例如：'https://script.google.com/macros/s/AKfycb.../exec'
+         * =========================================================================
+         */
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxv-mle-uSkDbYFH5zJXwUNqd8y7yMZ5z1Vt7cug_q3_8iIZuq-aP_fuAx2zhV4f84K/exec';
+
+        // 預設品項與款式對照
+        const PRODUCT_VARIANTS = {
+            '軟木杯墊': ['凹槽款 (直徑100mm)', '圓形款 (直徑98mm)', '方形款 (直徑98mm)'],
+            '壓克力立牌': ['標準卡扣底座 (3mm)', '厚板卡扣底座 (5mm)'],
+            '金屬名片 / 工業銘版': ['深邃黑', '鈦金銀', '科技金'],
+            '皮革鑰匙圈': ['經典黑色', '復古棕色']
+        };
+
+        function handleProductChange() {
+            const productSelect = document.getElementById('product');
+            const selectedVal = productSelect.value;
+            const variantGroup = document.getElementById('variant-group');
+            const variantSelect = document.getElementById('variant');
+
+            // 尋找對應款式
+            let variants = PRODUCT_VARIANTS[selectedVal];
+
+            if (!variants) {
+                // 嘗試從 PRODUCTS_DATA 尋找
+                const allProds = getAllProducts();
+                const matched = allProds.find(p => p.name === selectedVal || selectedVal.includes(p.name));
+                if (matched && matched.variants && matched.variants.length > 0) {
+                    variants = matched.variants.map(v => v.name);
+                }
+            }
+
+            if (variants && variants.length > 0) {
+                variantGroup.style.display = 'block';
+                variantSelect.innerHTML = '<option value="" disabled selected>請選擇指定款式</option>';
+                variants.forEach(v => {
+                    const opt = document.createElement('option');
+                    opt.value = v;
+                    opt.innerText = v;
+                    variantSelect.appendChild(opt);
+                });
+            } else {
+                variantGroup.style.display = 'none';
+                variantSelect.innerHTML = '';
+            }
+        }
+
+        // 頁面載入時根據 Query Params 自動選取
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const pParam = params.get('product');
+            const vParam = params.get('variant');
+            const aParam = params.get('addon');
+
+            if (pParam) {
+                const productSelect = document.getElementById('product');
+                for (let i = 0; i < productSelect.options.length; i++) {
+                    if (productSelect.options[i].value.includes(pParam) || pParam.includes(productSelect.options[i].value)) {
+                        productSelect.selectedIndex = i;
+                        handleProductChange();
+                        break;
+                    }
+                }
+            }
+
+            if (vParam) {
+                const variantSelect = document.getElementById('variant');
+                for (let i = 0; i < variantSelect.options.length; i++) {
+                    if (variantSelect.options[i].value.includes(vParam)) {
+                        variantSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            if (aParam) {
+                const notes = document.getElementById('notes');
+                notes.value = `【預約加購】${aParam}\n` + notes.value;
+            }
+        });
+
+        // 檔案轉 Base64 輔助函式
+        function fileToBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = error => reject(error);
+            });
+        }
+
+        // 表單送出監聽
+        const form = document.getElementById('booking-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // 按鈕切換為連線中
+            submitBtn.disabled = true;
+            submitBtn.innerText = '📡 [ 正在連線寫入資料庫... / TRANSMITTING ]';
+            submitBtn.style.opacity = '0.7';
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+            const product = document.getElementById('product').value;
+            const variantSelect = document.getElementById('variant');
+            const variant = variantSelect && variantSelect.value ? variantSelect.value : '無特定款式';
+            const notes = document.getElementById('notes').value.trim();
+
+            const fileInput = document.getElementById('file');
+            let fileData = null;
+            let fileName = null;
+            let fileType = null;
+
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                if (file.size > 8 * 1024 * 1024) {
+                    alert('檔案超過 8MB 限制，請直接在備註欄提供 Google Drive 雲端連結，或送出後於 LINE 傳送。');
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = '[ 確認送出預約 / TRANSMIT ORDER ]';
+                    submitBtn.style.opacity = '1';
+                    return;
+                }
+                try {
+                    fileData = await fileToBase64(file);
+                    fileName = file.name;
+                    fileType = file.type;
+                } catch (err) {
+                    console.error('File conversion error:', err);
+                }
+            }
+
+            const payload = {
+                timestamp: new Date().toISOString(),
+                name: name,
+                email: email,
+                contact: contact,
+                product: product,
+                variant: variant,
+                notes: notes,
+                fileData: fileData,
+                fileName: fileName,
+                fileType: fileType
+            };
+
+            try {
+                if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL.startsWith('https://script.google.com/')) {
+                    // 送出至 Google Apps Script (使用 no-cors 避免跨網域預檢問題)
+                    await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'text/plain;charset=utf-8'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                } else {
+                    console.warn('GOOGLE_SCRIPT_URL 尚未設定，已模擬送出成功。');
+                }
+
+                // 成功回饋
+                form.style.display = 'none';
+                const successBox = document.getElementById('success-box');
+                const orderSummary = document.getElementById('order-summary');
+                
+                orderSummary.innerHTML = `
+                    <p style="margin: 4px 0;"><strong>訂購項目：</strong> ${product} (${variant})</p>
+                    <p style="margin: 4px 0;"><strong>顧客姓名：</strong> ${name}</p>
+                    <p style="margin: 4px 0;"><strong>電子郵件：</strong> ${email}</p>
+                    <p style="margin: 4px 0;"><strong>聯絡方式：</strong> ${contact}</p>
+                    ${notes ? `<p style="margin: 4px 0;"><strong>需求備註：</strong> ${notes}</p>` : ''}
+                    ${fileName ? `<p style="margin: 4px 0;"><strong>附件檔案：</strong> ${fileName}</p>` : ''}
+                `;
+                
+                successBox.style.display = 'block';
+                window.scrollTo({ top: successBox.offsetTop - 100, behavior: 'smooth' });
+
+            } catch (err) {
+                console.error('Submission error:', err);
+                alert('連線傳輸時發生狀況，請檢查網路連線或稍後再試。亦可直接透過 X 私訊聯絡我們。');
+                submitBtn.disabled = false;
+                submitBtn.innerText = '[ 確認送出預約 / TRANSMIT ORDER ]';
+                submitBtn.style.opacity = '1';
+            }
+        });
+
+        // Hamburger mobile toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        }));
+    </script>
+</body>
+
+</html>
