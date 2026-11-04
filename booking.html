@@ -5,110 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>預約接單產生器 - 諾雕 ALE</title>
-    <meta name="description" content="線上填寫客製化雷射雕刻需求，即時計算金額並產出一鍵複製的接單文字格式，方便透過 DM 或 Email 委託。">
+    <title>線上試算與接單文字產生器 - 諾雕 ALE 客製工坊</title>
+    <meta name="description" content="線上填寫客製化雷射雕刻需求，即時計算金額並產出一鍵複製的接單文字格式，方便透過 X (Twitter) 私訊或 Email 委託。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Ambient Top Spotlight (Magic UI Signature) -->
-    <div class="ambient-glow"></div>
-
-    <!-- Floating Glass Pill Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
-                <span>ALE</span>
-            </a>
-        </div>
-
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <div class="nav-links">
-            <a href="index.html">首頁</a>
-
-            <div class="dropdown">
-                <a href="products.html" class="dropbtn">產品介紹 <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 2px;"></i></a>
-                <div class="dropdown-content">
-                    <a href="product-detail.html?id=priceboard">客製價目牌 (展會必備)</a>
-                    <a href="product-detail.html?id=coaster">軟木杯墊</a>
-                    <a href="product-detail.html?id=keychain">皮革鑰匙圈</a>
-                    <a href="product-detail.html?id=stand">壓克力立牌</a>
-                    <a href="product-detail.html?id=cardcheck">金屬名片 / 工業銘版</a>
-                    <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
-                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
-                    <a href="products.html" style="color: var(--accent-cyan); font-weight: 600;">探索完整價目表 &rarr;</a>
+    <!-- 專業頂部導覽列 -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-brand">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE 工坊">
+                <div class="brand-text">
+                    <span class="brand-name">諾雕 ALE</span>
+                    <span class="brand-tagline">客製雷射雕刻工坊</span>
                 </div>
-            </div>
+            </a>
 
-            <a href="process.html">製作流程</a>
-            <a href="materials.html">材質資料庫</a>
-            <a href="guidelines.html">製圖規範</a>
-            <a href="faq.html">常見問題</a>
-            <a href="booking.html" class="active cta-button">接單文字產生器</a>
-            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">首頁</a>
+
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link">商品價目表 <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="product-detail.html?id=priceboard">【展會必備】客製雷雕價目牌</a>
+                        <a href="product-detail.html?id=coaster">天然吸水軟木杯墊</a>
+                        <a href="product-detail.html?id=keychain">植鞣皮革鑰匙圈</a>
+                        <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
+                        <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
+                        <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                    </div>
+                </div>
+
+                <a href="process.html" class="nav-link">委託流程</a>
+                <a href="materials.html" class="nav-link">材質實品</a>
+                <a href="guidelines.html" class="nav-link">送印規範</a>
+                <a href="faq.html" class="nav-link">常見問題</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="booking.html" class="header-cta-btn">
+                    <i class="fas fa-calculator"></i> 線上試算・接單文字
+                </a>
+                <a href="https://x.com/arnold__laser" target="_blank" class="header-social-link" title="追蹤 X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <button class="hamburger" aria-label="切換選單">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <main>
-        <!-- Subpage Header -->
+        <!-- 頁面標頭 (Subpage Hero) -->
         <section class="subpage-hero">
             <div class="subpage-badge">
-                <i class="fas fa-terminal"></i> // ORDER FORMAT GENERATOR
+                <i class="fas fa-calculator"></i> ORDER FORMAT GENERATOR
             </div>
-            <h1 class="subpage-title">客製雷雕・接單文字產生器</h1>
+            <h1 class="subpage-title">客製委託・線上試算與接單文字產生器</h1>
             <p class="subpage-subtitle">
-                挑選品項規格與數量，系統即時計算預估金額並產出格式化訂單。<br>
-                產出後可<strong>一鍵複製</strong>，直接前往 Twitter (X) 私訊或 Email 快速委託！
+                挑選品項規格與數量，系統自動計算預估金額並產出標準接單文字。<br>
+                產出後可<strong>一鍵複製</strong>，直接貼至 Twitter (X) 私訊、LINE 或 Email 快速委託！
             </p>
         </section>
 
-        <!-- Booking Form Container -->
-        <section style="padding: 0 8% 100px 8%; max-width: 900px; margin: 0 auto;">
+        <!-- 試算表單主體 (TimTech 重點 5: 結帳流程極簡化，欄位明確少負擔) -->
+        <section style="padding: 0 1.5rem 6rem 1.5rem; max-width: 900px; margin: 0 auto;">
             <div style="
-                background: rgba(18, 18, 24, 0.78);
-                backdrop-filter: blur(25px);
-                -webkit-backdrop-filter: blur(25px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 24px;
+                background: var(--bg-surface);
+                border: var(--border-card);
+                border-radius: var(--radius-lg);
                 padding: clamp(1.8rem, 4vw, 3rem);
-                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
                 position: relative;
             ">
                 <form id="order-generator-form">
 
-                    <!-- Section 1: Customer Info -->
-                    <div style="background: rgba(255, 255, 255, 0.025); padding: 1.8rem; border-radius: 16px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.07);">
-                        <h2 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px; font-weight: 600;">
-                            <span style="color: var(--accent-cyan);"><i class="fas fa-user-circle"></i> 1.</span> 購買者與聯絡資訊
+                    <!-- 步驟 1: 購買者與聯絡資訊 -->
+                    <div style="background: var(--bg-subtle); padding: 1.6rem; border-radius: var(--radius-md); margin-bottom: 2rem; border: var(--border-subtle);">
+                        <h2 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px; font-weight: 700;">
+                            <span style="color: var(--accent-gold);"><i class="fas fa-user-circle"></i> 1.</span> 購買者與聯絡資訊
                         </h2>
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;" class="responsive-grid-2">
                             <div>
                                 <label for="buyer-name" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-                                    購買者稱呼 / 暱稱 <span style="color: #f43f5e;">*</span>
+                                    購買者稱呼 / 暱稱 <span style="color: var(--accent-rose);">*</span>
                                 </label>
                                 <input type="text" id="buyer-name" class="magic-input" required placeholder="例如：諾先生、小櫻、Arnold">
                             </div>
 
                             <div>
                                 <label for="buyer-contact" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-                                    聯絡方式 (X 帳號 / LINE / Email) <span style="color: #f43f5e;">*</span>
+                                    聯絡方式 (X 帳號 / LINE ID / Email) <span style="color: var(--accent-rose);">*</span>
                                 </label>
-                                <input type="text" id="buyer-contact" class="magic-input" required placeholder="例如：@arnold_laser / Line ID">
+                                <input type="text" id="buyer-contact" class="magic-input" required placeholder="例如：@arnold__laser / LINE ID">
                             </div>
                         </div>
 
@@ -120,89 +122,91 @@
                                 <option value="7-11 超商取貨 (店到店)">7-11 超商取貨 (店到店)</option>
                                 <option value="全家 超商取貨 (店到店)">全家 超商取貨 (店到店)</option>
                                 <option value="郵局掛號 / 宅配包裹寄送">郵局掛號 / 宅配包裹寄送</option>
-                                <option value="同人展會 (FF/CWT) 現場交付">同人展會 (FF/CWT) 現場交付</option>
+                                <option value="同人展會 (FF/CWT) 現場攤位交付">同人展會 (FF/CWT) 現場攤位交付</option>
                                 <option value="暫不確定 / 私訊討論確認">暫不確定 / 私訊討論確認</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Section 2: Order Items Builder -->
-                    <div style="background: rgba(255, 255, 255, 0.025); padding: 1.8rem; border-radius: 16px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.07);">
+                    <!-- 步驟 2: 訂購品項與數量清單 -->
+                    <div style="background: var(--bg-subtle); padding: 1.6rem; border-radius: var(--radius-md); margin-bottom: 2rem; border: var(--border-subtle);">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 12px;">
-                            <h2 style="font-size: 1.15rem; color: #ffffff; margin: 0; display: flex; align-items: center; gap: 10px; font-weight: 600;">
-                                <span style="color: var(--accent-cyan);"><i class="fas fa-layer-group"></i> 2.</span> 訂購品項與數量清單
+                            <h2 style="font-size: 1.15rem; color: #ffffff; margin: 0; display: flex; align-items: center; gap: 8px; font-weight: 700;">
+                                <span style="color: var(--accent-gold);"><i class="fas fa-shopping-cart"></i> 2.</span> 訂購品項與數量清單
                             </h2>
-                            <button type="button" onclick="addNewItemRow()" class="ghost-btn" style="padding: 0.45rem 1.1rem; font-size: 0.88rem; color: var(--accent-cyan); border-color: rgba(0, 240, 255, 0.3);">
-                                <i class="fas fa-plus"></i> 新增品項
+                            <button type="button" onclick="addNewItemRow()" class="btn-secondary" style="padding: 0.45rem 1rem; font-size: 0.88rem; color: var(--accent-gold); border-color: var(--accent-gold-border);">
+                                <i class="fas fa-plus"></i> 新增其他品項
                             </button>
                         </div>
 
-                        <!-- Dynamic Items Container -->
+                        <!-- 動態品項容器 -->
                         <div id="items-container" style="display: flex; flex-direction: column; gap: 1rem;">
-                            <!-- Rows dynamically populated -->
+                            <!-- 由 JS 動態注入 -->
                         </div>
 
-                        <!-- Total Calculation Banner -->
+                        <!-- 預估總計金額條 -->
                         <div style="
                             margin-top: 1.5rem;
-                            background: rgba(9, 9, 11, 0.8);
-                            border: 1px solid rgba(0, 240, 255, 0.35);
-                            border-radius: 12px;
+                            background: #111215;
+                            border: 1px solid var(--accent-gold-border);
+                            border-radius: var(--radius-sm);
                             padding: 1.2rem 1.6rem;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            box-shadow: 0 0 25px rgba(0, 240, 255, 0.08);
                         ">
                             <span style="font-size: 1rem; color: var(--text-secondary); font-weight: 500;">
                                 預估總計金額 (ESTIMATED TOTAL)：
                             </span>
-                            <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono);" id="grand-total-display">
+                            <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading);" id="grand-total-display">
                                 NT$ 0 元
                             </span>
                         </div>
                     </div>
 
-                    <!-- Section 3: Notes & Requirements -->
-                    <div style="background: rgba(255, 255, 255, 0.025); padding: 1.8rem; border-radius: 16px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.07);">
-                        <h2 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 10px; font-weight: 600;">
-                            <span style="color: var(--accent-cyan);"><i class="fas fa-pen-nib"></i> 3.</span> 客製文字與備註需求
+                    <!-- 步驟 3: 客製備註與需求 -->
+                    <div style="background: var(--bg-subtle); padding: 1.6rem; border-radius: var(--radius-md); margin-bottom: 2rem; border: var(--border-subtle);">
+                        <h2 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px; font-weight: 700;">
+                            <span style="color: var(--accent-gold);"><i class="fas fa-pen-nib"></i> 3.</span> 客製文字與備註需求
                         </h2>
 
                         <div style="margin-bottom: 1.2rem;">
                             <label for="order-notes" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
                                 請填寫欲刻印的文字、字型風格、尺寸要求，或圖檔雲端連結：
                             </label>
-                            <textarea id="order-notes" rows="4" class="magic-textarea" placeholder="例如：&#10;1. 軟木杯墊需雕刻個人頭像 (圖檔雲端連結：https://drive.google.com/...)&#10;2. 皮革鑰匙圈刻印文字：ARNOLD 2026 (請使用科技感字體)&#10;3. 門市收件人電話：0912-345-678 (7-11 科技門市)"></textarea>
+                            <textarea id="order-notes" rows="4" class="magic-textarea" placeholder="例如：
+1. 軟木杯墊需雕刻個人頭像 (圖檔雲端連結：https://drive.google.com/...)
+2. 皮革鑰匙圈刻印文字：ARNOLD 2026 (請使用手寫草寫體)
+3. 門市收件人電話：0912-345-678 (7-11 科技門市)"></textarea>
                         </div>
 
                         <div style="display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.88rem;">
-                            <input type="checkbox" id="sync-sheet-check" checked style="accent-color: var(--accent-cyan); width: 17px; height: 17px; cursor: pointer;">
+                            <input type="checkbox" id="sync-sheet-check" checked style="accent-color: var(--accent-gold); width: 17px; height: 17px; cursor: pointer;">
                             <label for="sync-sheet-check" style="cursor: pointer;">
-                                同時自動將此委託記錄備份至工坊 Google 試算表（雙重防呆，即使忘記發送私訊也有後台紀錄）
+                                送出時同時自動將訂單備份至工坊試算表（雙重防呆，即使忘記發送私訊也有後台紀錄）
                             </label>
                         </div>
                     </div>
 
-                    <!-- Generate Button (Magic UI Shimmer) -->
-                    <button type="submit" id="generate-btn" class="shimmer-btn" style="width: 100%; padding: 1.15rem; font-size: 1.15rem; letter-spacing: 1.5px;">
-                        <i class="fas fa-bolt"></i> 產生可複製接單文字 (GENERATE ORDER TEXT)
+                    <!-- 送出按鈕 -->
+                    <button type="submit" id="generate-btn" class="btn-primary" style="width: 100%; padding: 1.15rem; font-size: 1.15rem;">
+                        <i class="fas fa-check-circle"></i> 產生可複製接單文字 (GENERATE ORDER TEXT)
                     </button>
                 </form>
 
-                <!-- Output Box (Revealed upon generation) -->
+                <!-- 產出文字結果區塊 (送出後展開) -->
                 <div id="output-section" style="
                     display: none;
                     margin-top: 3rem;
-                    background: rgba(9, 9, 11, 0.95);
-                    border: 1px solid rgba(0, 240, 255, 0.4);
-                    border-radius: 18px;
+                    background: #0e0f12;
+                    border: 1px solid var(--accent-gold);
+                    border-radius: var(--radius-md);
                     padding: clamp(1.5rem, 3vw, 2.2rem);
-                    box-shadow: 0 0 35px rgba(0, 240, 255, 0.15);
+                    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
                     position: relative;
                 ">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 10px;">
-                        <div style="font-family: var(--font-mono); color: var(--accent-cyan); font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                        <div style="color: var(--accent-gold); font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 8px;">
                             <i class="fas fa-check-circle" style="color: #10b981;"></i> 接單文字已就緒！
                         </div>
                         <div style="color: var(--text-secondary); font-size: 0.88rem;">
@@ -210,12 +214,12 @@
                         </div>
                     </div>
 
-                    <!-- Monospace Raw Text Output -->
+                    <!-- 等寬文字輸出框 -->
                     <textarea id="output-textarea" readonly rows="11" style="
                         width: 100%;
-                        background: rgba(0, 0, 0, 0.7);
-                        border: 1px solid rgba(255, 255, 255, 0.12);
-                        border-radius: 10px;
+                        background: #07080a;
+                        border: 1px solid rgba(255, 255, 255, 0.15);
+                        border-radius: var(--radius-sm);
                         padding: 1.2rem;
                         color: #34d399;
                         font-family: var(--font-mono);
@@ -226,36 +230,35 @@
                         margin-bottom: 1.5rem;
                     "></textarea>
 
-                    <!-- Quick Action Buttons -->
+                    <!-- 快捷行動按鈕組 -->
                     <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 12px; margin-bottom: 1rem;" class="responsive-grid-3">
-                        <!-- Primary Copy Button -->
-                        <button type="button" id="copy-text-btn" onclick="copyOrderText()" class="shimmer-btn" style="padding: 0.95rem; font-size: 1rem;">
+                        <!-- 一鍵複製按鈕 -->
+                        <button type="button" id="copy-text-btn" onclick="copyOrderText()" class="btn-primary" style="padding: 0.95rem; font-size: 1rem;">
                             <i class="fas fa-copy"></i> <span id="copy-btn-text">一鍵複製接單文字</span>
                         </button>
 
-                        <!-- Twitter/X DM Button -->
-                        <a href="https://x.com/arnold__laser" target="_blank" class="ghost-btn" style="justify-content: center; font-size: 0.92rem;">
-                            <i class="fab fa-twitter"></i> 前往 X 私訊
+                        <!-- Twitter/X DM 按鈕 -->
+                        <a href="https://x.com/arnold__laser" target="_blank" class="btn-secondary" style="justify-content: center; font-size: 0.92rem;">
+                            <i class="fab fa-twitter"></i> 前往 X 私訊貼上
                         </a>
 
-                        <!-- Direct Email Button -->
-                        <a id="email-client-btn" href="#" class="ghost-btn" style="justify-content: center; font-size: 0.92rem;">
+                        <!-- Direct Email 按鈕 -->
+                        <a id="email-client-btn" href="#" class="btn-secondary" style="justify-content: center; font-size: 0.92rem;">
                             <i class="fas fa-envelope"></i> 以 Email 寄送
                         </a>
                     </div>
 
-                    <!-- Toast Feedback -->
+                    <!-- 複製成功提示 -->
                     <div id="copy-toast" style="
                         display: none;
-                        background: rgba(16, 185, 129, 0.92);
+                        background: #10b981;
                         color: #000000;
                         font-weight: 700;
                         text-align: center;
                         padding: 0.75rem;
-                        border-radius: 8px;
+                        border-radius: var(--radius-sm);
                         margin-top: 10px;
                         font-size: 0.92rem;
-                        box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
                     ">
                         ✔ 訂單文字已成功複製至剪貼簿！可直接貼到 DM 或 Email 中送出！
                     </div>
@@ -271,9 +274,9 @@
             <div class="footer-column">
                 <div class="footer-brand">
                     <img src="./static/images/logo.jpg" alt="諾雕 ALE">
-                    <span>ALE</span>
+                    <span>諾雕 ALE</span>
                 </div>
-                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <p>專注細節的客製化雷射雕刻工坊。結合手作溫度與工業級加工精度，為創作者與個人品牌打造高品質實體周邊。</p>
                 <div style="margin-top: 1.2rem;">
                     <a href="https://x.com/arnold__laser" target="_blank" style="
                         display: inline-flex;
@@ -287,7 +290,7 @@
                         text-decoration: none;
                         font-size: 0.88rem;
                         transition: all 0.2s;
-                    "><i class="fab fa-twitter"></i> @arnold__laser</a>
+                    \"><i class="fab fa-twitter"></i> @arnold__laser</a>
                 </div>
             </div>
 
@@ -295,18 +298,18 @@
                 <h4>快速導覽</h4>
                 <ul>
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="products.html">產品一覽</a></li>
-                    <li><a href="process.html">製作流程</a></li>
-                    <li><a href="materials.html">材質介紹</a></li>
-                    <li><a href="faq.html">常見問題</a></li>
-                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
+                    <li><a href="products.html">商品價目表</a></li>
+                    <li><a href="process.html">委託流程說明</a></li>
+                    <li><a href="materials.html">材質實品展示</a></li>
+                    <li><a href="faq.html">常見問答 (FAQ)</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h4>規範與條款</h4>
                 <ul>
-                    <li><a href="guidelines.html">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="guidelines.html">送印與製圖規範</a></li>
                     <li><a href="terms.html">服務條款</a></li>
                     <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
@@ -314,7 +317,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Hosted on GitHub Pages.</p>
         </div>
     </footer>
 
@@ -322,25 +325,21 @@
     <script src="./static/js/products.js"></script>
 
     <script>
-        /**
-         * Google Apps Script Web App 接收端點 (若需要背景同步 Google 試算表)
-         */
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxv-mle-uSkDbYFH5zJXwUNqd8y7yMZ5z1Vt7cug_q3_8iIZuq-aP_fuAx2zhV4f84K/exec';
 
         // 預設品項清單
         const AVAILABLE_PRODUCTS = [
             { id: 'priceboard', name: '【展會專用】客製化雷雕價目牌', default_price: 200, variants: ['標準直立款 (NT$ 200)', '附壓克力專用底座款 (NT$ 250)'] },
-            { id: 'coaster', name: '軟木杯墊', default_price: 150, variants: ['凹槽款 (直徑100mm)', '圓形款 (直徑98mm)', '方形款 (直徑98mm)'] },
-            { id: 'keychain', name: '皮革鑰匙圈', default_price: 150, variants: ['曜石黑色', '復古棕色'] },
-            { id: 'stand', name: '壓克力立牌', default_price: 450, variants: ['3mm 光學標準款 (NT$ 450)', '5mm 重磅厚板款 (NT$ 550)'] },
-            { id: 'cardcheck', name: '金屬名片 / 工業銘版', default_price: 300, variants: ['深邃黑 (陽極鋁)', '鈦金銀 (拉絲鋼)', '科技金 (陽極鋁)'] },
+            { id: 'coaster', name: '天然軟木杯墊', default_price: 150, variants: ['凹槽款 (直徑100mm)', '圓形款 (直徑98mm)', '方形款 (直徑98mm)'] },
+            { id: 'keychain', name: '植鞣皮革鑰匙圈', default_price: 150, variants: ['曜石黑色', '復古棕色'] },
+            { id: 'stand', name: '光學級壓克力立牌', default_price: 450, variants: ['3mm 光學標準款 (NT$ 450)', '5mm 重磅厚板款 (NT$ 550)'] },
+            { id: 'cardcheck', name: '陽極金屬名片 / 工業銘版', default_price: 300, variants: ['深邃黑 (陽極鋁)', '鈦金銀 (拉絲鋼)', '科技金 (陽極鋁)'] },
             { id: 'tag', name: '寵物名牌 / 金屬吊牌', default_price: 200, variants: ['304 不鏽鋼鏡面款', '植鞣皮革雙面縫線款 (NT$ 250)'] },
-            { id: 'custom', name: '特殊客製需求', default_price: 0, variants: ['依需求討論後另行報價'] }
+            { id: 'custom', name: '特殊材質 / 私物代刻', default_price: 0, variants: ['依需求討論後另行報價'] }
         ];
 
         let itemCount = 0;
 
-        // 新增品項行
         function addNewItemRow(preSelectedProd = null, preSelectedVar = null) {
             itemCount++;
             const currentId = itemCount;
@@ -350,10 +349,10 @@
             row.id = `item-row-${currentId}`;
             row.className = 'item-row';
             row.style = `
-                background: rgba(12, 12, 16, 0.7);
+                background: #121317;
                 border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 12px;
-                padding: 1.2rem;
+                border-radius: 10px;
+                padding: 1.1rem;
                 display: grid;
                 grid-template-columns: 2fr 1.5fr 1fr 1fr auto;
                 gap: 12px;
@@ -361,7 +360,6 @@
                 transition: border-color 0.2s;
             `;
 
-            // 1. 商品選單
             let prodOptions = '';
             AVAILABLE_PRODUCTS.forEach(p => {
                 const selected = (preSelectedProd && (p.name.includes(preSelectedProd) || preSelectedProd.includes(p.name))) ? 'selected' : '';
@@ -386,10 +384,10 @@
                 </div>
                 <div style="text-align: right;">
                     <label style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px;">小計</label>
-                    <div class="item-subtotal" style="font-weight: 700; color: var(--accent-cyan); font-family: var(--font-mono); font-size: 1.05rem; padding-top: 6px;">NT$ 0</div>
+                    <div class="item-subtotal" style="font-weight: 700; color: var(--accent-gold); font-family: var(--font-heading); font-size: 1.05rem; padding-top: 6px;">NT$ 0</div>
                 </div>
                 <div style="padding-top: 18px;">
-                    <button type="button" onclick="removeItemRow(${currentId})" class="delete-btn" style="background: transparent; border: none; color: #f43f5e; font-size: 1.1rem; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: all 0.2s;" title="移除此品項">
+                    <button type="button" onclick="removeItemRow(${currentId})" class="delete-btn" style="background: transparent; border: none; color: #f43f5e; font-size: 1.1rem; cursor: pointer; padding: 6px 10px; border-radius: 6px;" title="移除此品項">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </div>
@@ -400,7 +398,6 @@
             checkRemoveButtons();
         }
 
-        // 商品切換時更新款式與單價
         function onProductSelectChange(rowId, preSelectedVar = null) {
             const row = document.getElementById(`item-row-${rowId}`);
             if (!row) return;
@@ -426,7 +423,6 @@
             calculateTotals();
         }
 
-        // 移除品項
         function removeItemRow(rowId) {
             const row = document.getElementById(`item-row-${rowId}`);
             if (row) {
@@ -436,7 +432,6 @@
             }
         }
 
-        // 檢查是否只剩一項，若只剩一項隱藏刪除按鈕
         function checkRemoveButtons() {
             const rows = document.querySelectorAll('.item-row');
             rows.forEach(r => {
@@ -447,7 +442,6 @@
             });
         }
 
-        // 解析單價 (若款式名稱含 NT$ 則取款式價，否則取產品預設價)
         function getItemUnitPrice(productObj, variantStr) {
             if (!productObj) return 0;
             if (variantStr && variantStr.includes('NT$')) {
@@ -457,7 +451,6 @@
             return productObj.default_price || 0;
         }
 
-        // 即時計算小計與總額
         function calculateTotals() {
             const rows = document.querySelectorAll('.item-row');
             let grandTotal = 0;
@@ -483,7 +476,6 @@
             document.getElementById('grand-total-display').innerText = grandTotal > 0 ? `NT$ ${grandTotal} 元` : '依需求另行報價';
         }
 
-        // 頁面載入初始化：先加入一行，並讀取 URL 參數自動選取
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const targetProd = params.get('product') || params.get('item');
@@ -538,22 +530,18 @@ ${itemsLines.join('\n')}
 客製備註
 ${notes ? notes : '無額外備註'}`.trim();
 
-            // 顯示文字區塊
             const outputSec = document.getElementById('output-section');
             const outputTextarea = document.getElementById('output-textarea');
             outputTextarea.value = orderText;
             outputSec.style.display = 'block';
 
-            // 設定 Email 快速連結
             const emailBtn = document.getElementById('email-client-btn');
             const subject = encodeURIComponent(`【諾雕 ALE 雷雕委託】購買者 ${buyerName} 的訂單`);
             const body = encodeURIComponent(orderText);
             emailBtn.href = `mailto:?subject=${subject}&body=${body}`;
 
-            // 平滑滾動至輸出區
             outputSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            // 可選：若勾選同步 Google Sheets 備份
             if (document.getElementById('sync-sheet-check').checked && GOOGLE_SCRIPT_URL) {
                 fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -572,11 +560,10 @@ ${notes ? notes : '無額外備註'}`.trim();
             }
         });
 
-        // 一鍵複製接單文字
         function copyOrderText() {
             const textarea = document.getElementById('output-textarea');
             textarea.select();
-            textarea.setSelectionRange(0, 99999); // 手機相容
+            textarea.setSelectionRange(0, 99999);
 
             navigator.clipboard.writeText(textarea.value).then(() => {
                 const copyBtnText = document.getElementById('copy-btn-text');
@@ -594,7 +581,7 @@ ${notes ? notes : '無額外備註'}`.trim();
             });
         }
 
-        // Mobile Responsive Stack Fix for Items
+        // Mobile Responsive
         const style = document.createElement('style');
         style.innerHTML = `
             @media (max-width: 768px) {
@@ -602,26 +589,25 @@ ${notes ? notes : '無額外備註'}`.trim();
                     grid-template-columns: 1fr !important;
                     gap: 10px !important;
                 }
-                .responsive-grid-2 {
-                    grid-template-columns: 1fr !important;
-                }
-                .responsive-grid-3 {
+                .responsive-grid-2, .responsive-grid-3 {
                     grid-template-columns: 1fr !important;
                 }
             }
         `;
         document.head.appendChild(style);
 
-        // Hamburger mobile toggle
+        // Mobile Nav
         const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+        const mainNav = document.querySelector(".main-nav");
+
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
-            navLinks.classList.toggle("active");
+            mainNav.classList.toggle("active");
         });
-        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+
+        document.querySelectorAll(".main-nav a").forEach(n => n.addEventListener("click", () => {
             hamburger.classList.remove("active");
-            navLinks.classList.remove("active");
+            mainNav.classList.remove("active");
         }));
     </script>
 </body>

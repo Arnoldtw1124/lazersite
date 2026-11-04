@@ -5,207 +5,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>製作流程 - 諾雕 ALE</title>
-    <meta name="description" content="諾雕 ALE 5 大客製化雷雕製作流程：接單溝通、設計模擬、精準雷雕、細緻後處理、包裝交付。">
+    <title>客製化製作流程 - 諾雕 ALE 雷雕工坊</title>
+    <meta name="description" content="諾雕 ALE 5 大客製化雷雕製作流程：接單溝通、真實材質合成模擬、精準雷雕、細緻後處理、拍照對稿與包裝交付。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Ambient Top Spotlight (Magic UI Signature) -->
-    <div class="ambient-glow"></div>
-
-    <!-- Floating Glass Pill Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
-                <span>ALE</span>
-            </a>
-        </div>
-
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <div class="nav-links">
-            <a href="index.html">首頁</a>
-
-            <div class="dropdown">
-                <a href="products.html" class="dropbtn">產品介紹 <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 2px;"></i></a>
-                <div class="dropdown-content">
-                    <a href="product-detail.html?id=priceboard">客製價目牌 (展會必備)</a>
-                    <a href="product-detail.html?id=coaster">軟木杯墊</a>
-                    <a href="product-detail.html?id=keychain">皮革鑰匙圈</a>
-                    <a href="product-detail.html?id=stand">壓克力立牌</a>
-                    <a href="product-detail.html?id=cardcheck">金屬名片 / 工業銘版</a>
-                    <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
-                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
-                    <a href="products.html" style="color: var(--accent-cyan); font-weight: 600;">探索完整價目表 &rarr;</a>
+    <!-- 專業頂部導覽列 -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-brand">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE 工坊">
+                <div class="brand-text">
+                    <span class="brand-name">諾雕 ALE</span>
+                    <span class="brand-tagline">客製雷射雕刻工坊</span>
                 </div>
-            </div>
+            </a>
 
-            <a href="process.html" class="active">製作流程</a>
-            <a href="materials.html">材質資料庫</a>
-            <a href="guidelines.html">製圖規範</a>
-            <a href="faq.html">常見問題</a>
-            <a href="booking.html" class="cta-button">接單文字產生器</a>
-            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">首頁</a>
+
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link">商品價目表 <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="product-detail.html?id=priceboard">【展會必備】客製雷雕價目牌</a>
+                        <a href="product-detail.html?id=coaster">天然吸水軟木杯墊</a>
+                        <a href="product-detail.html?id=keychain">植鞣皮革鑰匙圈</a>
+                        <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
+                        <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
+                        <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                    </div>
+                </div>
+
+                <a href="process.html" class="nav-link active">委託流程</a>
+                <a href="materials.html" class="nav-link">材質實品</a>
+                <a href="guidelines.html" class="nav-link">送印規範</a>
+                <a href="faq.html" class="nav-link">常見問題</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="booking.html" class="header-cta-btn">
+                    <i class="fas fa-calculator"></i> 線上試算・接單文字
+                </a>
+                <a href="https://x.com/arnold__laser" target="_blank" class="header-social-link" title="追蹤 X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <button class="hamburger" aria-label="切換選單">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <main>
-        <!-- Subpage Header -->
+        <!-- 頁面標頭 (Subpage Hero) -->
         <section class="subpage-hero">
             <div class="subpage-badge">
-                <i class="fas fa-layer-group"></i> // CRAFT WORKFLOW
+                <i class="fas fa-layer-group"></i> CRAFT WORKFLOW
             </div>
             <h1 class="subpage-title">職人工藝・客製化製作流程</h1>
             <p class="subpage-subtitle">
-                從初始概念溝通、數位光學模擬，到微米級雷射雕刻與質感封裝，為您把關每一個關鍵細節。
+                從需求溝通、真實材質合成模擬圖對稿，到微米雕刻與包裝交付，每一個環節都為您透明把關。
             </p>
         </section>
 
-        <!-- Process Bento Cards List -->
-        <section style="padding: 0 8% 100px 8%; max-width: 1050px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem;">
+        <!-- 流程卡片列表 -->
+        <section style="padding: 0 1.5rem 6rem 1.5rem; max-width: 1050px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem;">
 
             <!-- Phase 1 -->
-            <div class="bento-card" style="padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;">
-                <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+            <div style="background: var(--bg-surface); border: var(--border-card); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;" class="responsive-step">
+                <div style="border-radius: 12px; overflow: hidden; border: var(--border-subtle); background: #000;">
                     <img src="./static/images/consultation.png" alt="接單諮詢" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 0.25rem 0.8rem; background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.25); border-radius: var(--radius-full); font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-cyan); margin-bottom: 0.8rem;">
-                        PHASE 01 // 需求確認
-                    </div>
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
-                        接單諮詢與版權把關
+                    <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: var(--accent-gold-light); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        步驟 01 // 需求確認
+                    </span>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
+                        需求確認與版權把關
                     </h2>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; font-family: var(--font-mono); margin-bottom: 1rem;">
-                        INQUIRY & COPYRIGHT SCREENING
-                    </p>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                        <strong style="color: #fff;">核心目標：</strong>快速確認品項可行性、交期與細節，並嚴格把關版權風險。
+                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+                        <strong>核心重點：</strong>確認品項規格、數量與交付日期，並嚴格確認原創授權。
                     </p>
                     <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--accent-cyan); margin-right: 8px;"></i><strong>品項規格：</strong>確認客製基底（軟木/皮革/壓克力/金屬）、數量與希望交付日期。</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-shield-alt" style="color: #f59e0b; margin-right: 8px;"></i><strong>版權確認 (重要)：</strong>我們尊重原創者，僅接受您擁有著作權或授權之圖稿，恕不接受無授權同人或官方侵權商標。</li>
-                        <li><i class="fas fa-lightbulb" style="color: var(--accent-cyan); margin-right: 8px;"></i><strong>小撇步：</strong>提供高對比黑白單色線稿 (AI, SVG, PNG) 能呈現最極致的雕刻銳利度。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>品項規格：</strong>確認客製基底（軟木/皮革/壓克力/金屬）、數量與希望送達日期。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-shield-alt" style="color: #f59e0b; margin-right: 8px;"></i><strong>版權堅持：</strong>我們尊重創作者著作權，僅接受您擁有版權或獲合法授權之圖檔，恕不承接未經授權之官方商標或同人盜圖。</li>
+                        <li><i class="fas fa-lightbulb" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>小撇步：</strong>提供高對比黑白單色線稿 (AI, SVG, PNG) 能呈現最極致的雕刻銳利度。</li>
                     </ul>
                 </div>
             </div>
 
             <!-- Phase 2 -->
-            <div class="bento-card" style="padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;">
+            <div style="background: var(--bg-surface); border: var(--border-card); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;" class="responsive-step">
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 0.25rem 0.8rem; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: var(--radius-full); font-size: 0.8rem; font-family: var(--font-mono); color: #818cf8; margin-bottom: 0.8rem;">
-                        PHASE 02 // 數位模擬
-                    </div>
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
-                        數位排版與合成模擬
+                    <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: var(--accent-gold-light); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        步驟 02 // 模擬對稿
+                    </span>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
+                        真實材質數位合成對稿
                     </h2>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; font-family: var(--font-mono); margin-bottom: 1rem;">
-                        DIGITAL PROOF & CAM TUNING
-                    </p>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                        <strong style="color: #fff;">核心目標：</strong>讓您在雕刻前清晰「預覽」成品比例，消弭視覺預期落差。
+                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+                        <strong>核心重點：</strong>在開工雕刻前讓您清晰「預覽」成品比例，消弭視覺落差。
                     </p>
                     <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-desktop" style="color: #818cf8; margin-right: 8px;"></i><strong>真實材質合成圖：</strong>將您的向量圖樣合成至實際材質（軟木孔隙、皮革紋路或金屬反射）提供線圖確認。</li>
-                        <li><i class="fas fa-sliders-h" style="color: #818cf8; margin-right: 8px;"></i><strong>CAM 參數精算：</strong>依據材質吸光率與焦距，精細設定雷射能量、點陣密度與走刀速度。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-desktop" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>真實材質照片合成：</strong>將您的線條圖樣合成於實際材料（軟木孔隙、皮革紋理或金屬反光）上，私訊回傳給您確認。</li>
+                        <li><i class="fas fa-sliders-h" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>功率參數預算：</strong>依據材料厚度與吸光特性，精細微調雷射輸出功率與雕刻深度。</li>
                     </ul>
                 </div>
-                <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                <div style="border-radius: 12px; overflow: hidden; border: var(--border-subtle); background: #000;">
                     <img src="./static/images/design.png" alt="設計與模擬" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
             </div>
 
             <!-- Phase 3 -->
-            <div class="bento-card" style="padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;">
-                <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+            <div style="background: var(--bg-surface); border: var(--border-card); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;" class="responsive-step">
+                <div style="border-radius: 12px; overflow: hidden; border: var(--border-subtle); background: #000;">
                     <img src="./static/images/production.png" alt="製作與雷雕" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 0.25rem 0.8rem; background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.25); border-radius: var(--radius-full); font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-cyan); margin-bottom: 0.8rem;">
-                        PHASE 03 // 精密加工
-                    </div>
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
-                        光學治具定位與精準雷雕
+                    <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: var(--accent-gold-light); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        步驟 03 // 精密加工
+                    </span>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
+                        治具定位與高精雷雕加工
                     </h2>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; font-family: var(--font-mono); margin-bottom: 1rem;">
-                        MICRO-PRECISION LASER ENGRAVING
-                    </p>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                        <strong style="color: #fff;">核心目標：</strong>職人校準工藝，確保 0.01mm 級的同軸聚焦與銳利線條。
+                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+                        <strong>核心重點：</strong>專業開模治具校準，確保同軸光斑完美居中。
                     </p>
                     <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-crosshairs" style="color: var(--accent-cyan); margin-right: 8px;"></i><strong>專用固定治具：</strong>量身訂製開模治具固定工件，確保絕對平整，無熱變形。</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-bullseye" style="color: var(--accent-cyan); margin-right: 8px;"></i><strong>弱光紅外線預覽：</strong>在不傷材料的前提下實機預覽邊界外框，保證居中對齊。</li>
-                        <li><i class="fas fa-eye" style="color: var(--accent-cyan); margin-right: 8px;"></i><strong>全程人工監控：</strong>逐件把關焦黑度與層次深度，呈現深邃焦糖感。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-crosshairs" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>專用固定治具：</strong>量身打造夾具固定工件，確保材料絕對平整、無熱翹曲。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-bullseye" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>紅外線邊界預覽：</strong>在不傷材料的前提下實機預覽邊界外框，保證圖案精準置中。</li>
+                        <li><i class="fas fa-eye" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>全程人工監控：</strong>逐件把關焦黑度與層次深度，呈現深邃焦糖手感。</li>
                     </ul>
                 </div>
             </div>
 
             <!-- Phase 4 -->
-            <div class="bento-card" style="padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;">
+            <div style="background: var(--bg-surface); border: var(--border-card); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;" class="responsive-step">
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 0.25rem 0.8rem; background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: var(--radius-full); font-size: 0.8rem; font-family: var(--font-mono); color: #c084fc; margin-bottom: 0.8rem;">
-                        PHASE 04 // 細膩質檢
-                    </div>
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
-                        細緻後處理與除味工序
+                    <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: var(--accent-gold-light); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        步驟 04 // 細膩質檢
+                    </span>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
+                        後處理拂塵與除味工序
                     </h2>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; font-family: var(--font-mono); margin-bottom: 1rem;">
-                        POST-PROCESSING & QUALITY AUDIT
-                    </p>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                        <strong style="color: #fff;">核心目標：</strong>掃除加工焦塵與雜質，昇華手感與觸覺質感。
+                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+                        <strong>核心重點：</strong>清除加工焦塵與雜質，昇華手感與觸覺質感。
                     </p>
                     <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-brush" style="color: #c084fc; margin-right: 8px;"></i><strong>微孔粉塵清除：</strong>軟木使用專業軟毛刷清理微孔黑灰，皮革使用保養級專用拭布拂去碳化痕。</li>
-                        <li><i class="fas fa-wind" style="color: #c084fc; margin-right: 8px;"></i><strong>恆溫通風除味：</strong>雕刻完成後置於專用通風防塵架，散去天然灼燒木質煙燻氣味。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-brush" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>微孔粉塵清除：</strong>軟木使用專業軟毛刷清理微孔黑灰，皮革使用保養級專用拭布拂去碳化痕。</li>
+                        <li><i class="fas fa-wind" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>通風除味：</strong>雕刻完成後置於專用通風防塵架，散去天然灼燒木質煙燻氣味。</li>
                     </ul>
                 </div>
-                <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                <div style="border-radius: 12px; overflow: hidden; border: var(--border-subtle); background: #000;">
                     <img src="./static/images/post_processing.png" alt="後處理" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
             </div>
 
             <!-- Phase 5 -->
-            <div class="bento-card" style="padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;">
-                <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+            <div style="background: var(--bg-surface); border: var(--border-card); border-radius: var(--radius-lg); padding: clamp(1.8rem, 3.5vw, 2.5rem); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: center;" class="responsive-step">
+                <div style="border-radius: 12px; overflow: hidden; border: var(--border-subtle); background: #000;">
                     <img src="./static/images/packaging.png" alt="包裝與交付" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 0.25rem 0.8rem; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-full); font-size: 0.8rem; font-family: var(--font-mono); color: #34d399; margin-bottom: 0.8rem;">
-                        PHASE 05 // 極致開箱
-                    </div>
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
-                        防震包裝與安全交付
+                    <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: var(--accent-gold-light); padding: 0.2rem 0.65rem; border-radius: var(--radius-sm); margin-bottom: 0.8rem;">
+                        步驟 05 // 安全交付
+                    </span>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">
+                        實品拍照回傳與防震包裝
                     </h2>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; font-family: var(--font-mono); margin-bottom: 1rem;">
-                        SECURE PACKAGING & EXPEDITION
-                    </p>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                        <strong style="color: #fff;">核心目標：</strong>賦予作品完美的最後一哩路，送抵您的手中。
+                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem;">
+                        <strong>核心重點：</strong>封箱前拍照回傳，讓您親眼確認完工品質。
                     </p>
                     <ul style="list-style: none; padding-left: 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; margin-bottom: 1.8rem;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-box" style="color: #34d399; margin-right: 8px;"></i><strong>科技感保護封套：</strong>牛皮紙質密封或抗靜電霧面氣泡防震包裝，兼具安全與前衛美感。</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-certificate" style="color: #34d399; margin-right: 8px;"></i><strong>工坊銘謝小卡：</strong>隨件附上工坊卡與保養建議，增添儀式感。</li>
-                        <li><i class="fas fa-camera" style="color: #34d399; margin-right: 8px;"></i><strong>出貨前拍照回傳：</strong>封箱前拍照傳送至私訊，確認無誤後寄出或於展會面交。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-camera" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>出貨前拍照確認：</strong>每筆訂單完成後拍照回傳至私訊，確認無誤後隨即寄送。</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-box" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>防震防刮保護：</strong>氣泡防震與厚磅紙質封套，避免物流路途中刮傷。</li>
+                        <li><i class="fas fa-certificate" style="color: var(--accent-gold); margin-right: 8px;"></i><strong>售後承諾：</strong>若因工坊端疏失致成品不符，3 日內聯繫無條件全額重做補寄！</li>
                     </ul>
 
-                    <a href="booking.html" class="shimmer-btn" style="width: 100%;">
-                        <i class="fas fa-bolt"></i> 了解流程，立即開啟委託接單
+                    <a href="booking.html" class="btn-primary" style="width: 100%; padding: 1rem;">
+                        <i class="fas fa-calculator"></i> 了解流程，立即開啟線上試算接單
                     </a>
                 </div>
             </div>
@@ -219,9 +208,9 @@
             <div class="footer-column">
                 <div class="footer-brand">
                     <img src="./static/images/logo.jpg" alt="諾雕 ALE">
-                    <span>ALE</span>
+                    <span>諾雕 ALE</span>
                 </div>
-                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <p>專注細節的客製化雷射雕刻工坊。結合手作溫度與工業級加工精度，為創作者與個人品牌打造高品質實體周邊。</p>
                 <div style="margin-top: 1.2rem;">
                     <a href="https://x.com/arnold__laser" target="_blank" style="
                         display: inline-flex;
@@ -243,18 +232,18 @@
                 <h4>快速導覽</h4>
                 <ul>
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="products.html">產品一覽</a></li>
-                    <li><a href="process.html" style="color: var(--accent-cyan); font-weight: 600;">製作流程</a></li>
-                    <li><a href="materials.html">材質介紹</a></li>
-                    <li><a href="faq.html">常見問題</a></li>
-                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
+                    <li><a href="products.html">商品價目表</a></li>
+                    <li><a href="process.html" style="color: var(--accent-gold); font-weight: 600;">委託流程說明</a></li>
+                    <li><a href="materials.html">材質實品展示</a></li>
+                    <li><a href="faq.html">常見問答 (FAQ)</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h4>規範與條款</h4>
                 <ul>
-                    <li><a href="guidelines.html">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="guidelines.html">送印與製圖規範</a></li>
                     <li><a href="terms.html">服務條款</a></li>
                     <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
@@ -262,20 +251,43 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Hosted on GitHub Pages.</p>
         </div>
     </footer>
 
+    <!-- 手機版常駐行動列 -->
+    <div class="mobile-sticky-bar">
+        <div class="mobile-sticky-container">
+            <a href="booking.html" class="mobile-sticky-btn-primary">
+                <i class="fas fa-calculator"></i> 線上試算 / 接單文字
+            </a>
+            <a href="https://x.com/arnold__laser" target="_blank" class="mobile-sticky-btn-secondary">
+                <i class="fab fa-twitter"></i> 私訊 X
+            </a>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 768px) {
+            .responsive-step {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+        }
+    </style>
+
     <script>
         const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+        const mainNav = document.querySelector(".main-nav");
+
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
-            navLinks.classList.toggle("active");
+            mainNav.classList.toggle("active");
         });
-        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+
+        document.querySelectorAll(".main-nav a").forEach(n => n.addEventListener("click", () => {
             hamburger.classList.remove("active");
-            navLinks.classList.remove("active");
+            mainNav.classList.remove("active");
         }));
     </script>
 </body>

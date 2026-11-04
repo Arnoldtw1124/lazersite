@@ -5,138 +5,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>送印與製圖規範 - 諾雕 ALE</title>
+    <title>送印與製圖規範 - 諾雕 ALE 客製工坊</title>
     <meta name="description" content="諾雕 ALE 檔案製作指南：接受格式 (AI, PDF, SVG, JPG, PNG)、解析度要求、文字轉外框與正確線稿範例。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-    <!-- Ambient Top Spotlight (Magic UI Signature) -->
-    <div class="ambient-glow"></div>
-
-    <!-- Floating Glass Pill Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="./static/images/logo.jpg" alt="諾雕 ALE">
-                <span>ALE</span>
-            </a>
-        </div>
-
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <div class="nav-links">
-            <a href="index.html">首頁</a>
-
-            <div class="dropdown">
-                <a href="products.html" class="dropbtn">產品介紹 <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 2px;"></i></a>
-                <div class="dropdown-content">
-                    <a href="product-detail.html?id=priceboard">客製價目牌 (展會必備)</a>
-                    <a href="product-detail.html?id=coaster">軟木杯墊</a>
-                    <a href="product-detail.html?id=keychain">皮革鑰匙圈</a>
-                    <a href="product-detail.html?id=stand">壓克力立牌</a>
-                    <a href="product-detail.html?id=cardcheck">金屬名片 / 工業銘版</a>
-                    <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
-                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
-                    <a href="products.html" style="color: var(--accent-cyan); font-weight: 600;">探索完整價目表 &rarr;</a>
+    <!-- 專業頂部導覽列 -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-brand">
+                <img src="./static/images/logo.jpg" alt="諾雕 ALE 工坊">
+                <div class="brand-text">
+                    <span class="brand-name">諾雕 ALE</span>
+                    <span class="brand-tagline">客製雷射雕刻工坊</span>
                 </div>
-            </div>
+            </a>
 
-            <a href="process.html">製作流程</a>
-            <a href="materials.html">材質資料庫</a>
-            <a href="guidelines.html" class="active">製圖規範</a>
-            <a href="faq.html">常見問題</a>
-            <a href="booking.html" class="cta-button">接單文字產生器</a>
-            <a href="https://x.com/arnold__laser" target="_blank" title="追蹤 X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">首頁</a>
+
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link">商品價目表 <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="product-detail.html?id=priceboard">【展會必備】客製雷雕價目牌</a>
+                        <a href="product-detail.html?id=coaster">天然吸水軟木杯墊</a>
+                        <a href="product-detail.html?id=keychain">植鞣皮革鑰匙圈</a>
+                        <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
+                        <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
+                        <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                    </div>
+                </div>
+
+                <a href="process.html" class="nav-link">委託流程</a>
+                <a href="materials.html" class="nav-link">材質實品</a>
+                <a href="guidelines.html" class="nav-link active">送印規範</a>
+                <a href="faq.html" class="nav-link">常見問題</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="booking.html" class="header-cta-btn">
+                    <i class="fas fa-calculator"></i> 線上試算・接單文字
+                </a>
+                <a href="https://x.com/arnold__laser" target="_blank" class="header-social-link" title="追蹤 X (Twitter)">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <button class="hamburger" aria-label="切換選單">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <main>
-        <!-- Subpage Header -->
+        <!-- 頁面標頭 (Subpage Hero) -->
         <section class="subpage-hero">
             <div class="subpage-badge">
-                <i class="fas fa-file-code"></i> // FILE SPECIFICATIONS
+                <i class="fas fa-file-code"></i> FILE SPECIFICATIONS
             </div>
             <h1 class="subpage-title">送印與製圖規範</h1>
             <p class="subpage-subtitle">
-                精準度源自嚴謹規範。遵循以下向量路徑設定與黑白對比指引，能確保雕刻成品達到最高清晰度。
+                遵循簡單的向量線條與黑白對比指引，能確保雕刻成品達到最高清晰度與銳利細節。
             </p>
         </section>
 
-        <!-- Main Content -->
-        <section style="padding: 0 8% 100px 8%; max-width: 1050px; margin: 0 auto;">
+        <!-- 規範主體 -->
+        <section style="padding: 0 1.5rem 6rem 1.5rem; max-width: 1050px; margin: 0 auto;">
 
-            <!-- File Formats Bento Section -->
+            <!-- 支援檔案格式 -->
             <div style="margin-bottom: 3.5rem;">
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff;">支援檔案格式 (Supported Formats)</h2>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">建議優先提供向量檔 (AI / SVG)，無限放大不失真</p>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff;">支援檔案格式 (Supported Formats)</h2>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">建議優先提供向量檔 (AI / SVG)，線條無限放大不失真</p>
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;">
-                    <div class="bento-card" style="padding: 1.6rem; text-align: center;">
-                        <div style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 0.8rem;"><i class="fas fa-bezier-curve"></i></div>
+                    <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.6rem; text-align: center;">
+                        <div style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 0.8rem;"><i class="fas fa-bezier-curve"></i></div>
                         <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">AI / SVG</h3>
-                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">首選向量格式。線條完美解析，支援超微米雕刻精度。</p>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">首選向量格式。線條完美解析，支援超微米雕刻精度。</p>
                     </div>
 
-                    <div class="bento-card" style="padding: 1.6rem; text-align: center;">
+                    <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.6rem; text-align: center;">
                         <div style="font-size: 2rem; color: #38bdf8; margin-bottom: 0.8rem;"><i class="fas fa-file-pdf"></i></div>
                         <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">PDF (Vector)</h3>
-                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">可完整內嵌向量路徑與字型，跨平台兼容性最高。</p>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">可完整內嵌向量路徑與字型，跨系統相容性最高。</p>
                     </div>
 
-                    <div class="bento-card" style="padding: 1.6rem; text-align: center;">
-                        <div style="font-size: 2rem; color: #818cf8; margin-bottom: 0.8rem;"><i class="fas fa-image"></i></div>
+                    <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.6rem; text-align: center;">
+                        <div style="font-size: 2rem; color: #10b981; margin-bottom: 0.8rem;"><i class="fas fa-image"></i></div>
                         <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">JPG / PNG</h3>
-                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">需 300 dpi 以上純黑白線稿，避免模糊或壓縮雜訊。</p>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">需 300 dpi 以上純黑白線稿，避免模糊或灰色雜訊。</p>
                     </div>
 
-                    <div class="bento-card" style="padding: 1.6rem; text-align: center;">
-                        <div style="font-size: 2rem; color: #c084fc; margin-bottom: 0.8rem;"><i class="fas fa-drafting-compass"></i></div>
+                    <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.6rem; text-align: center;">
+                        <div style="font-size: 2rem; color: #f59e0b; margin-bottom: 0.8rem;"><i class="fas fa-drafting-compass"></i></div>
                         <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem;">DXF / CAD</h3>
-                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">工程銘牌與機構開孔專用，精準支援 1:1 物理尺寸。</p>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">工程銘牌與設備開孔專用，精準支援 1:1 實體尺寸。</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Do's and Don'ts Bento Section -->
+            <!-- 正確 vs 錯誤範例對照 -->
             <div style="margin-bottom: 3.5rem;">
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff;">圖檔對照：推薦範例 vs 避免事項</h2>
+                    <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff;">圖稿對照：推薦範例 vs 避免事項</h2>
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">雷射雕刻為純物理單色燒灼，色彩對比至關重要</p>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;" class="responsive-compare-grid">
                     <!-- Recommended -->
                     <div style="
-                        background: rgba(16, 185, 129, 0.04);
+                        background: rgba(16, 185, 129, 0.05);
                         border: 1px solid rgba(16, 185, 129, 0.35);
-                        border-radius: 20px;
+                        border-radius: var(--radius-md);
                         padding: 1.8rem;
-                        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.05);
                     ">
                         <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.2rem;">
                             <i class="fas fa-check-circle"></i> 正確範例 (RECOMMENDED)
                         </div>
-                        <div style="width: 100%; aspect-ratio: 1/1; max-height: 260px; overflow: hidden; border-radius: 12px; margin-bottom: 1.2rem; background: #ffffff; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 100%; aspect-ratio: 1/1; max-height: 260px; overflow: hidden; border-radius: 10px; margin-bottom: 1.2rem; background: #ffffff; display: flex; align-items: center; justify-content: center;">
                             <img src="./static/images/guidelines_good.png" alt="正確範例" style="max-width: 90%; max-height: 90%; object-fit: contain;">
                         </div>
                         <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.5rem;">高對比純黑白線稿 (Pure B&W)</h4>
                         <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
-                            • 線條邊緣銳利清晰，無羽化漸層<br>
+                            • 線條邊緣銳利清晰，無羽化半透明<br>
                             • 所有文字已建立外框 (Create Outlines)<br>
                             • 背景完全透明或純白，無灰色噪點
                         </p>
@@ -144,21 +147,20 @@
 
                     <!-- Avoid -->
                     <div style="
-                        background: rgba(244, 63, 94, 0.04);
+                        background: rgba(244, 63, 94, 0.05);
                         border: 1px solid rgba(244, 63, 94, 0.35);
-                        border-radius: 20px;
+                        border-radius: var(--radius-md);
                         padding: 1.8rem;
-                        box-shadow: 0 10px 30px rgba(244, 63, 94, 0.05);
                     ">
                         <div style="display: flex; align-items: center; gap: 8px; color: #f43f5e; font-weight: 700; font-size: 1.1rem; margin-bottom: 1.2rem;">
                             <i class="fas fa-times-circle"></i> 避免事項 (AVOID)
                         </div>
-                        <div style="width: 100%; aspect-ratio: 1/1; max-height: 260px; overflow: hidden; border-radius: 12px; margin-bottom: 1.2rem; background: #18181b; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 100%; aspect-ratio: 1/1; max-height: 260px; overflow: hidden; border-radius: 10px; margin-bottom: 1.2rem; background: #14161b; display: flex; align-items: center; justify-content: center;">
                             <img src="./static/images/guidelines_bad.png" alt="錯誤範例" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.5rem;">彩色模糊或漸層截圖</h4>
                         <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
-                            • 低解析度螢幕截圖（放大出現顆粒模糊）<br>
+                            • 低解析度螢幕截圖（放大邊緣鋸齒模糊）<br>
                             • 複雜彩色漸層、發光投影或半透明陰影<br>
                             • 未轉外框之特殊文字（開檔將遺失字型）
                         </p>
@@ -166,24 +168,24 @@
                 </div>
             </div>
 
-            <!-- Detailed Specifications Bento Box -->
-            <div class="bento-card" style="padding: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 3.5rem;">
+            <!-- 詳細工藝規格清單 -->
+            <div style="background: var(--bg-surface); border: var(--border-card); border-radius: var(--radius-md); padding: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 3.5rem;">
                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
-                    <span style="color: var(--accent-cyan); font-size: 1.3rem;"><i class="fas fa-sliders-h"></i></span>
+                    <span style="color: var(--accent-gold); font-size: 1.3rem;"><i class="fas fa-sliders-h"></i></span>
                     <h3 style="font-size: 1.35rem; font-weight: 700; color: #fff;">詳細工藝規格與參數要求</h3>
                 </div>
 
                 <div style="display: flex; flex-direction: column; gap: 1.2rem;">
                     <div style="display: flex; align-items: flex-start; gap: 14px;">
-                        <span style="color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700; font-size: 1rem; padding-top: 2px;">01</span>
+                        <span style="color: var(--accent-gold); font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; padding-top: 1px;">01</span>
                         <div>
                             <strong style="color: #fff; font-size: 0.98rem;">圖片解析度：300 dpi 或以上</strong>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 2px;">若提供點陣圖 (PNG/JPG)，建議以 1:1 實際物理尺寸製作並將解析度設為 300 dpi，避免邊緣鋸齒。</p>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 2px;">若提供點陣圖 (PNG/JPG)，建議以 1:1 實際物理尺寸製作並將解析度設為 300 dpi，避免放大邊緣鋸齒。</p>
                         </div>
                     </div>
 
                     <div style="display: flex; align-items: flex-start; gap: 14px;">
-                        <span style="color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700; font-size: 1rem; padding-top: 2px;">02</span>
+                        <span style="color: var(--accent-gold); font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; padding-top: 1px;">02</span>
                         <div>
                             <strong style="color: #fff; font-size: 0.98rem;">最小線條寬度：0.15 mm (約 0.42 pt)</strong>
                             <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 2px;">為確保雷射光斑能量足夠沉積成色，線稿最細處請大於 0.15mm，過細筆畫可能斷續或無法辨識。</p>
@@ -191,7 +193,7 @@
                     </div>
 
                     <div style="display: flex; align-items: flex-start; gap: 14px;">
-                        <span style="color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700; font-size: 1rem; padding-top: 2px;">03</span>
+                        <span style="color: var(--accent-gold); font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; padding-top: 1px;">03</span>
                         <div>
                             <strong style="color: #fff; font-size: 0.98rem;">文字必須轉外框 (Create Outlines)</strong>
                             <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 2px;">向量檔案中若有文字標題或排版，請於 Illustrator 中全選並按下 <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem;">Ctrl + Shift + O</kbd> 建立外框，確保跨裝置絕不跑版。</p>
@@ -199,19 +201,19 @@
                     </div>
 
                     <div style="display: flex; align-items: flex-start; gap: 14px;">
-                        <span style="color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700; font-size: 1rem; padding-top: 2px;">04</span>
+                        <span style="color: var(--accent-gold); font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; padding-top: 1px;">04</span>
                         <div>
                             <strong style="color: #fff; font-size: 0.98rem;">非原創圖檔授權聲明</strong>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 2px;">諾雕尊重所有創作者著作權。請確認所提供之商標、立繪或插畫具備合法授權或個人委託許可。</p>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-top: 2px;">諾雕尊重所有創作者著作權。請確認所提供之商標、立繪或插畫具備合法著作權或個人委託許可。</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom CTA Banner -->
+            <!-- 底部行動按鈕 -->
             <div style="text-align: center;">
-                <a href="booking.html" class="shimmer-btn" style="padding: 1.1rem 3rem;">
-                    <i class="fas fa-bolt"></i> 檔案已就緒，前往產生接單文字 &rarr;
+                <a href="booking.html" class="btn-primary" style="padding: 1.1rem 3rem;">
+                    <i class="fas fa-calculator"></i> 圖檔已就緒，前往產生接單文字 &rarr;
                 </a>
             </div>
 
@@ -232,9 +234,9 @@
             <div class="footer-column">
                 <div class="footer-brand">
                     <img src="./static/images/logo.jpg" alt="諾雕 ALE">
-                    <span>ALE</span>
+                    <span>諾雕 ALE</span>
                 </div>
-                <p>銘刻光與金屬的界線 // 客製化前衛雷射雕刻服務，支援少量客製與企業量產。</p>
+                <p>專注細節的客製化雷射雕刻工坊。結合手作溫度與工業級加工精度，為創作者與個人品牌打造高品質實體周邊。</p>
                 <div style="margin-top: 1.2rem;">
                     <a href="https://x.com/arnold__laser" target="_blank" style="
                         display: inline-flex;
@@ -256,18 +258,18 @@
                 <h4>快速導覽</h4>
                 <ul>
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="products.html">產品一覽</a></li>
-                    <li><a href="process.html">製作流程</a></li>
-                    <li><a href="materials.html">材質介紹</a></li>
-                    <li><a href="faq.html">常見問題</a></li>
-                    <li><a href="booking.html" style="color: var(--accent-cyan); font-weight: 600;">接單文字產生器 &rarr;</a></li>
+                    <li><a href="products.html">商品價目表</a></li>
+                    <li><a href="process.html">委託流程說明</a></li>
+                    <li><a href="materials.html">材質實品展示</a></li>
+                    <li><a href="faq.html">常見問答 (FAQ)</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 600;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h4>規範與條款</h4>
                 <ul>
-                    <li><a href="guidelines.html" style="color: var(--accent-cyan); font-weight: 600;">製圖規範 (AI/SVG/PNG)</a></li>
+                    <li><a href="guidelines.html" style="color: var(--accent-gold); font-weight: 600;">送印與製圖規範</a></li>
                     <li><a href="terms.html">服務條款</a></li>
                     <li><a href="privacy.html">隱私權政策</a></li>
                 </ul>
@@ -275,20 +277,34 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Powered by GitHub Pages.</p>
+            <p>&copy; 2024-2026 諾雕 ALE Studio. All rights reserved. Hosted on GitHub Pages.</p>
         </div>
     </footer>
 
+    <!-- 手機版常駐行動列 -->
+    <div class="mobile-sticky-bar">
+        <div class="mobile-sticky-container">
+            <a href="booking.html" class="mobile-sticky-btn-primary">
+                <i class="fas fa-calculator"></i> 線上試算 / 接單文字
+            </a>
+            <a href="https://x.com/arnold__laser" target="_blank" class="mobile-sticky-btn-secondary">
+                <i class="fab fa-twitter"></i> 私訊 X
+            </a>
+        </div>
+    </div>
+
     <script>
         const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+        const mainNav = document.querySelector(".main-nav");
+
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
-            navLinks.classList.toggle("active");
+            mainNav.classList.toggle("active");
         });
-        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+
+        document.querySelectorAll(".main-nav a").forEach(n => n.addEventListener("click", () => {
             hamburger.classList.remove("active");
-            navLinks.classList.remove("active");
+            mainNav.classList.remove("active");
         }));
     </script>
 </body>
