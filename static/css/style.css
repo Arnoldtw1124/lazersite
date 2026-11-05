@@ -202,6 +202,8 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    position: relative;
+    z-index: 2;
 }
 
 .nav-link:hover,
@@ -215,10 +217,21 @@ a {
     background: var(--accent-gold-light);
 }
 
-/* 下拉選單 (含無縫隱形橋接器與防閃爍緩衝) */
+/* 下拉選單 (含垂直安全橋接與防遮擋控制) */
 .dropdown {
     position: relative;
     display: inline-block;
+}
+
+/* 垂直懸停安全橋：僅限制在「商品價目表」寬度內向下橋接，嚴禁橫向擴展覆蓋「委託流程」 */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: transparent;
 }
 
 .dropdown .fa-chevron-down {
@@ -232,7 +245,7 @@ a {
 
 .dropdown-content {
     position: absolute;
-    top: calc(100% + 2px);
+    top: calc(100% + 4px);
     left: 0;
     min-width: 250px;
     background: #ffffff;
@@ -244,22 +257,9 @@ a {
     opacity: 0;
     visibility: hidden;
     transform: translateY(6px);
-    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
     pointer-events: none;
 }
-
-/* 隱形懸停橋接區 (Hover Bridge)：徹底解決游標移向選單時因微小間距導致選單閃退消失的問題 */
-.dropdown-content::before {
-    content: "";
-    position: absolute;
-    top: -24px;
-    left: -15px;
-    right: -15px;
-    height: 28px;
-    background: transparent;
-    z-index: -1;
-}
-
 .dropdown-content a {
     color: var(--text-secondary);
     padding: 0.65rem 1.25rem;

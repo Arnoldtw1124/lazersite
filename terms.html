@@ -216,7 +216,16 @@
             dd.addEventListener("mouseleave", () => {
                 timer = setTimeout(() => {
                     dd.classList.remove("open");
-                }, 220);
+                }, 120);
+            });
+        });
+
+        // 游標移入其他主導覽項目時立即收合下拉選單，確保點擊即時無阻礙
+        document.querySelectorAll(".main-nav > a.nav-link").forEach(link => {
+            link.addEventListener("mouseenter", () => {
+                document.querySelectorAll(".dropdown").forEach(dd => {
+                    dd.classList.remove("open");
+                });
             });
         });
 
