@@ -36,12 +36,11 @@
                 <div class="dropdown">
                     <a href="products.html" class="nav-link active">商品價目表 <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
                     <div class="dropdown-content">
-                        <a href="product-detail.html?id=priceboard">【展會必備】客製雷雕價目牌</a>
-                        <a href="product-detail.html?id=coaster">天然吸水軟木杯墊</a>
-                        <a href="product-detail.html?id=keychain">植鞣皮革鑰匙圈</a>
-                        <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
-                        <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
-                        <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                        <a href="product-detail.html?id=coaster">軟木杯墊(10*10)</a>
+                        <a href="product-detail.html?id=diatomite_coaster">珪藻土杯墊(10*10)</a>
+                        <a href="product-detail.html?id=wood_phone_stand">實木手機架(6*6)</a>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 0.4rem 0;">
+                        <a href="products.html" style="color: var(--accent-gold); font-weight: 700;">瀏覽所有 3 款品項 &rarr;</a>
                     </div>
                 </div>
 
@@ -86,7 +85,7 @@
                 <!-- Left Column: Image & Thumbnails Gallery -->
                 <div style="flex: 1; min-width: 320px;">
                     <div style="width: 100%; aspect-ratio: 1/1; max-height: 420px; overflow: hidden; border-radius: 12px; border: var(--border-subtle); position: relative; background: var(--bg-subtle);">
-                        <img id="main-image" src="./static/images/priceboard_mockup.png" alt="商品圖片"
+                        <img id="main-image" src="./static/images/coaster_default.png" alt="商品圖片"
                             style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;">
                     </div>
 
@@ -247,9 +246,9 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        let productId = urlParams.get('id') || 'priceboard';
+        let productId = urlParams.get('id') || 'coaster';
 
-        const product = getProductById(productId) || getProductById('priceboard');
+        const product = getProductById(productId) || getProductById('coaster');
         let selectedVariant = null;
 
         if (product) {
@@ -308,10 +307,12 @@
                 selectedVariant = product.variants[0];
 
                 product.variants.forEach((v, index) => {
+                    const vName = typeof v === 'object' ? v.name : v;
+                    if (index === 0) selectedVariant = vName;
                     const btn = document.createElement('button');
                     btn.type = 'button';
                     btn.className = `variant-pill ${index === 0 ? 'active' : ''}`;
-                    btn.innerText = v;
+                    btn.innerText = vName;
                     btn.style = `
                         padding: 0.55rem 1.1rem;
                         border-radius: var(--radius-sm);
@@ -332,7 +333,7 @@
                         btn.style.borderColor = 'var(--accent-gold)';
                         btn.style.background = 'var(--accent-gold-light)';
                         btn.style.color = 'var(--accent-gold)';
-                        selectedVariant = v;
+                        selectedVariant = vName;
                         updateBookingLink();
                     };
                     container.appendChild(btn);

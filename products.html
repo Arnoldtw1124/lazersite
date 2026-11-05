@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>商品價目表 - 諾雕 ALE 客製雷雕工坊</title>
-    <meta name="description" content="諾雕 ALE 客製化雷雕品項一覽：展會價目牌、天然軟木杯墊、植鞣皮革鑰匙圈、光學壓克力立牌、金屬名片與寵物吊牌。1件即可起印，價格透明。">
+    <meta name="description" content="諾雕 ALE 客製化雷雕品項一覽：軟木杯墊(10*10)、珪藻土杯墊(10*10)、實木手機架(6*6)。單件即可起印，價格透明。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +36,11 @@
                 <div class="dropdown">
                     <a href="products.html" class="nav-link active">商品價目表 <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
                     <div class="dropdown-content">
-                        <a href="product-detail.html?id=priceboard">【展會必備】客製雷雕價目牌</a>
-                        <a href="product-detail.html?id=coaster">天然吸水軟木杯墊</a>
-                        <a href="product-detail.html?id=keychain">植鞣皮革鑰匙圈</a>
-                        <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
-                        <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
-                        <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                        <a href="product-detail.html?id=coaster">軟木杯墊(10*10)</a>
+                        <a href="product-detail.html?id=diatomite_coaster">珪藻土杯墊(10*10)</a>
+                        <a href="product-detail.html?id=wood_phone_stand">實木手機架(6*6)</a>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 0.4rem 0;">
+                        <a href="products.html" style="color: var(--accent-gold); font-weight: 700;">瀏覽所有 3 款品項 &rarr;</a>
                     </div>
                 </div>
 
@@ -79,48 +78,28 @@
                 點選任意商品方框即可進入查看詳細規格、實品照與多件優惠，亦可於內頁一鍵帶入接單文字產生器。
             </p>
 
-            <!-- 分類切換按鈕 (TimTech 重點 3) -->
+            <!-- 分類切換按鈕 -->
             <div class="filter-pills-wrap">
                 <button type="button" onclick="filterCatalog('all', event)" class="filter-pill active">全部品項 (ALL)</button>
-                <button type="button" onclick="filterCatalog('event', event)" class="filter-pill">展會／市集必備</button>
-                <button type="button" onclick="filterCatalog('daily', event)" class="filter-pill">生活實用／禮贈</button>
-                <button type="button" onclick="filterCatalog('hardware', event)" class="filter-pill">光學壓克力／金屬銘版</button>
+                <button type="button" onclick="filterCatalog('coaster', event)" class="filter-pill">吸水杯墊系列</button>
+                <button type="button" onclick="filterCatalog('wood', event)" class="filter-pill">實木桌上配件</button>
             </div>
         </section>
 
-        <!-- 商品清單 (Product Grid：整張方框皆可點擊進入) -->
+        <!-- 商品清單 (Product Grid：整張方框皆可點擊進入，僅顯示三款主力商品) -->
         <section style="padding: 0 1.5rem 6rem 1.5rem; max-width: 1240px; margin: 0 auto;">
             <div class="product-grid" id="catalog-grid">
 
-                <!-- 1. 展會價目牌 -->
-                <a href="product-detail.html?id=priceboard" class="product-card panel" data-cat="event">
+                <!-- 1. 軟木杯墊(10*10) -->
+                <a href="product-detail.html?id=coaster" class="product-card panel" data-cat="coaster">
                     <div class="product-thumb-wrap">
-                        <img src="./static/images/priceboard_mockup.png" alt="客製化雷雕價目牌">
-                        <span class="product-badge-overlay">展會熱銷首選</span>
-                    </div>
-                    <div class="product-body">
-                        <span class="product-category-label">同人展 / 市集擺攤</span>
-                        <h3 class="product-title">【展會專用】客製化雷雕價目牌</h3>
-                        <p class="product-desc">防潑水白橡木植纖板材質，耐磨硬挺不彎曲，清楚呈現攤位品項與 QR Code 結帳碼。</p>
-                        <div class="product-meta-row">
-                            <div class="product-price-block">
-                                <span class="price-hint">先行者特惠</span>
-                                <span class="product-price">NT$ 200</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- 2. 天然軟木杯墊 -->
-                <a href="product-detail.html?id=coaster" class="product-card panel" data-cat="daily">
-                    <div class="product-thumb-wrap">
-                        <img src="./static/images/coaster_default.png" alt="天然軟木杯墊">
-                        <span class="product-badge-overlay">吸水防燙</span>
+                        <img src="./static/images/coaster_default.png" alt="軟木杯墊(10*10)">
+                        <span class="product-badge-overlay">天然吸水防燙</span>
                     </div>
                     <div class="product-body">
                         <span class="product-category-label">天然有機生活品</span>
-                        <h3 class="product-title">天然軟木杯墊</h3>
-                        <p class="product-desc">厚實天然軟木，具備優異隔熱與溢水吸收特性，提供凹槽款 (100mm) 與圓/方形款。</p>
+                        <h3 class="product-title">軟木杯墊(10*10)</h3>
+                        <p class="product-desc">厚實天然高密度軟木，具備優異隔熱與溢水吸收特性，10*10cm 標準尺寸。深雕刻印手感立體，散發天然木質焦香。</p>
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
@@ -130,77 +109,39 @@
                     </div>
                 </a>
 
-                <!-- 3. 植鞣皮革鑰匙圈 -->
-                <a href="product-detail.html?id=keychain" class="product-card panel" data-cat="daily">
+                <!-- 2. 珪藻土杯墊(10*10) -->
+                <a href="product-detail.html?id=diatomite_coaster" class="product-card panel" data-cat="coaster">
                     <div class="product-thumb-wrap">
-                        <img src="./static/images/leather_keychain.jpg" alt="植鞣皮革鑰匙圈">
-                        <span class="product-badge-overlay">溫潤手作感</span>
+                        <img src="./static/images/diatomite_coaster.png" alt="珪藻土杯墊(10*10)">
+                        <span class="product-badge-overlay">瞬吸速乾新品</span>
                     </div>
                     <div class="product-body">
-                        <span class="product-category-label">個人配件 / 紀念</span>
-                        <h3 class="product-title">植鞣皮革鑰匙圈</h3>
-                        <p class="product-desc">精選皮革與強化五金扣環，深層刻印個人代號或紀念文字，隨身攜帶獨特手作溫度。</p>
+                        <span class="product-category-label">吸水石質生活品</span>
+                        <h3 class="product-title">珪藻土杯墊(10*10)</h3>
+                        <p class="product-desc">天然珪藻土材質，擁有微米級天然多孔結構，冷熱飲溢水即刻瞬吸、速乾揮發，告別濕黏桌面。高解析雷雕線條俐落，質感純淨典雅。</p>
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 150 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
+                                <span class="product-price">NT$ 180 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
                         </div>
                     </div>
                 </a>
 
-                <!-- 4. 光學壓克力立牌 -->
-                <a href="product-detail.html?id=stand" class="product-card panel" data-cat="hardware">
+                <!-- 3. 實木手機架(6*6) -->
+                <a href="product-detail.html?id=wood_phone_stand" class="product-card panel" data-cat="wood">
                     <div class="product-thumb-wrap">
-                        <img src="./static/images/mat_acrylic_engraved.png" alt="光學透光壓克力立牌">
-                        <span class="product-badge-overlay">鏡面切面</span>
+                        <img src="./static/images/wood_phone_stand.png" alt="實木手機架(6*6)">
+                        <span class="product-badge-overlay">天然溫潤實木</span>
                     </div>
                     <div class="product-body">
-                        <span class="product-category-label">周邊立牌 / 獎牌</span>
-                        <h3 class="product-title">光學級壓克力立牌</h3>
-                        <p class="product-desc">高透光壓克力精密切割，邊緣鑽石鏡面拋光，適合角色周邊或展示名牌，附專用底座。</p>
+                        <span class="product-category-label">實木桌上配件</span>
+                        <h3 class="product-title">實木手機架(6*6)</h3>
+                        <p class="product-desc">嚴選天然實木精密切割打磨，6*6cm 巧巧掌心便攜尺寸，倒角手感溫潤光滑。斜面凹槽支援市售絕大多數手機與平板直立/橫放，正面可雷雕專屬圖樣、簽名或客製文字。</p>
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 450 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- 5. 金屬名片銘版 -->
-                <a href="product-detail.html?id=cardcheck" class="product-card panel" data-cat="hardware">
-                    <div class="product-thumb-wrap">
-                        <img src="./static/images/mat_metal_raw_v2.png" alt="陽極金屬名片">
-                        <span class="product-badge-overlay">工業陽極</span>
-                    </div>
-                    <div class="product-body">
-                        <span class="product-category-label">商務名片 / 設備銘版</span>
-                        <h3 class="product-title">陽極金屬名片 / 工業銘版</h3>
-                        <p class="product-desc">陽極處理鋁合金與不鏽鋼，呈現極致俐落工業科技美學，字跡高對比永久不磨損。</p>
-                        <div class="product-meta-row">
-                            <div class="product-price-block">
-                                <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 300 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- 6. 寵物名牌吊牌 -->
-                <a href="product-detail.html?id=tag" class="product-card panel" data-cat="daily">
-                    <div class="product-thumb-wrap">
-                        <img src="./static/images/mat_metal_engraved_v2.png" alt="金屬寵物吊牌">
-                        <span class="product-badge-overlay">304不鏽鋼</span>
-                    </div>
-                    <div class="product-body">
-                        <span class="product-category-label">毛孩防走失 / 飾品</span>
-                        <h3 class="product-title">寵物名牌 / 金屬吊牌</h3>
-                        <p class="product-desc">304不鏽鋼深層微米雕刻，毛孩姓名電話永久清晰防走失，附高硬度防脫落扣環。</p>
-                        <div class="product-meta-row">
-                            <div class="product-price-block">
-                                <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 200 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
+                                <span class="product-price">NT$ 180 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
                         </div>
                     </div>
@@ -277,6 +218,20 @@
     </div>
 
     <script>
+        // 下拉選單防閃爍緩衝 (Hover Buffer with Grace Delay)
+        document.querySelectorAll(".dropdown").forEach(dd => {
+            let timer;
+            dd.addEventListener("mouseenter", () => {
+                clearTimeout(timer);
+                dd.classList.add("open");
+            });
+            dd.addEventListener("mouseleave", () => {
+                timer = setTimeout(() => {
+                    dd.classList.remove("open");
+                }, 220);
+            });
+        });
+
         function filterCatalog(category, evt) {
             const pills = document.querySelectorAll('.filter-pill');
             pills.forEach(p => p.classList.remove('active'));
@@ -295,20 +250,6 @@
                 }
             });
         }
-
-                // 下拉選單防閃爍緩衝 (Hover Buffer with Grace Delay)
-        document.querySelectorAll(".dropdown").forEach(dd => {
-            let timer;
-            dd.addEventListener("mouseenter", () => {
-                clearTimeout(timer);
-                dd.classList.add("open");
-            });
-            dd.addEventListener("mouseleave", () => {
-                timer = setTimeout(() => {
-                    dd.classList.remove("open");
-                }, 220);
-            });
-        });
 
         const hamburger = document.querySelector(".hamburger");
         const mainNav = document.querySelector(".main-nav");
