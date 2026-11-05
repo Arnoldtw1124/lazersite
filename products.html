@@ -76,24 +76,24 @@
             <h1 class="subpage-title">全品項規格與價目表</h1>
             <p class="subpage-subtitle">
                 所有品項均支援<strong>單件即可製作 (MOQ 1)</strong>，價格透明、規格清楚。<br>
-                點選商品查看材質細部規格，或直接點選「線上估價」將品項加入接單文字產生器。
+                點選任意商品方框即可進入查看詳細規格、實品照與多件優惠，亦可於內頁一鍵帶入接單文字產生器。
             </p>
 
             <!-- 分類切換按鈕 (TimTech 重點 3) -->
             <div class="filter-pills-wrap">
-                <button onclick="filterCatalog('all')" class="filter-pill active">全部品項 (ALL)</button>
-                <button onclick="filterCatalog('event')" class="filter-pill">展會／市集必備</button>
-                <button onclick="filterCatalog('daily')" class="filter-pill">生活實用／禮贈</button>
-                <button onclick="filterCatalog('hardware')" class="filter-pill">光學壓克力／金屬銘版</button>
+                <button type="button" onclick="filterCatalog('all', event)" class="filter-pill active">全部品項 (ALL)</button>
+                <button type="button" onclick="filterCatalog('event', event)" class="filter-pill">展會／市集必備</button>
+                <button type="button" onclick="filterCatalog('daily', event)" class="filter-pill">生活實用／禮贈</button>
+                <button type="button" onclick="filterCatalog('hardware', event)" class="filter-pill">光學壓克力／金屬銘版</button>
             </div>
         </section>
 
-        <!-- 商品清單 (Product Grid) -->
+        <!-- 商品清單 (Product Grid：整張方框皆可點擊進入) -->
         <section style="padding: 0 1.5rem 6rem 1.5rem; max-width: 1240px; margin: 0 auto;">
             <div class="product-grid" id="catalog-grid">
 
                 <!-- 1. 展會價目牌 -->
-                <div class="product-card" data-cat="event">
+                <a href="product-detail.html?id=priceboard" class="product-card panel" data-cat="event">
                     <div class="product-thumb-wrap">
                         <img src="./static/images/priceboard_mockup.png" alt="客製化雷雕價目牌">
                         <span class="product-badge-overlay">展會熱銷首選</span>
@@ -107,16 +107,13 @@
                                 <span class="price-hint">先行者特惠</span>
                                 <span class="product-price">NT$ 200</span>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="product-detail.html?id=priceboard" class="product-action-btn">查看規格</a>
-                                <a href="booking.html?product=【展會專用】客製化雷雕價目牌" class="header-cta-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">估價</a>
-                            </div>
+                            <span class="product-action-btn">查看規格 ↗</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 2. 天然軟木杯墊 -->
-                <div class="product-card" data-cat="daily">
+                <a href="product-detail.html?id=coaster" class="product-card panel" data-cat="daily">
                     <div class="product-thumb-wrap">
                         <img src="./static/images/coaster_default.png" alt="天然軟木杯墊">
                         <span class="product-badge-overlay">吸水防燙</span>
@@ -128,18 +125,15 @@
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 150 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                <span class="product-price">NT$ 150 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="product-detail.html?id=coaster" class="product-action-btn">查看規格</a>
-                                <a href="booking.html?product=軟木杯墊" class="header-cta-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">估價</a>
-                            </div>
+                            <span class="product-action-btn">查看規格 ↗</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 3. 植鞣皮革鑰匙圈 -->
-                <div class="product-card" data-cat="daily">
+                <a href="product-detail.html?id=keychain" class="product-card panel" data-cat="daily">
                     <div class="product-thumb-wrap">
                         <img src="./static/images/leather_keychain.jpg" alt="植鞣皮革鑰匙圈">
                         <span class="product-badge-overlay">溫潤手作感</span>
@@ -151,18 +145,15 @@
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 150 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                <span class="product-price">NT$ 150 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="product-detail.html?id=keychain" class="product-action-btn">查看規格</a>
-                                <a href="booking.html?product=皮革鑰匙圈" class="header-cta-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">估價</a>
-                            </div>
+                            <span class="product-action-btn">查看規格 ↗</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 4. 光學壓克力立牌 -->
-                <div class="product-card" data-cat="hardware">
+                <a href="product-detail.html?id=stand" class="product-card panel" data-cat="hardware">
                     <div class="product-thumb-wrap">
                         <img src="./static/images/mat_acrylic_engraved.png" alt="光學透光壓克力立牌">
                         <span class="product-badge-overlay">鏡面切面</span>
@@ -174,18 +165,15 @@
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 450 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                <span class="product-price">NT$ 450 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="product-detail.html?id=stand" class="product-action-btn">查看規格</a>
-                                <a href="booking.html?product=壓克力立牌" class="header-cta-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">估價</a>
-                            </div>
+                            <span class="product-action-btn">查看規格 ↗</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 5. 金屬名片銘版 -->
-                <div class="product-card" data-cat="hardware">
+                <a href="product-detail.html?id=cardcheck" class="product-card panel" data-cat="hardware">
                     <div class="product-thumb-wrap">
                         <img src="./static/images/mat_metal_raw_v2.png" alt="陽極金屬名片">
                         <span class="product-badge-overlay">工業陽極</span>
@@ -197,18 +185,15 @@
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 300 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                <span class="product-price">NT$ 300 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="product-detail.html?id=cardcheck" class="product-action-btn">查看規格</a>
-                                <a href="booking.html?product=金屬名片 / 工業銘版" class="header-cta-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">估價</a>
-                            </div>
+                            <span class="product-action-btn">查看規格 ↗</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- 6. 寵物名牌吊牌 -->
-                <div class="product-card" data-cat="daily">
+                <a href="product-detail.html?id=tag" class="product-card panel" data-cat="daily">
                     <div class="product-thumb-wrap">
                         <img src="./static/images/mat_metal_engraved_v2.png" alt="金屬寵物吊牌">
                         <span class="product-badge-overlay">304不鏽鋼</span>
@@ -220,15 +205,12 @@
                         <div class="product-meta-row">
                             <div class="product-price-block">
                                 <span class="price-hint">單件售價</span>
-                                <span class="product-price">NT$ 200 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                <span class="product-price">NT$ 200 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                             </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="product-detail.html?id=tag" class="product-action-btn">查看規格</a>
-                                <a href="booking.html?product=寵物名牌 / 金屬吊牌" class="header-cta-btn" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">估價</a>
-                            </div>
+                            <span class="product-action-btn">查看規格 ↗</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
             </div>
         </section>
@@ -248,15 +230,16 @@
                         display: inline-flex;
                         align-items: center;
                         gap: 8px;
-                        padding: 0.45rem 1rem;
-                        background: rgba(255,255,255,0.05);
-                        border: 1px solid rgba(255,255,255,0.12);
+                        padding: 0.45rem 1.1rem;
+                        background: rgba(255,255,255,0.08);
+                        border: 1px solid rgba(255,255,255,0.18);
                         border-radius: var(--radius-full);
-                        color: white;
+                        color: #ffffff;
                         text-decoration: none;
                         font-size: 0.88rem;
+                        font-weight: 700;
                         transition: all 0.2s;
-                    \"><i class="fab fa-twitter"></i> @arnold__laser</a>
+                    "><i class="fab fa-twitter"></i> @arnold__laser</a>
                 </div>
             </div>
 
@@ -264,11 +247,11 @@
                 <h4>快速導覽</h4>
                 <ul>
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="products.html" style="color: var(--accent-gold); font-weight: 600;">商品價目表</a></li>
+                    <li><a href="products.html" style="color: var(--accent-gold); font-weight: 700;">商品價目表</a></li>
                     <li><a href="process.html">委託流程說明</a></li>
                     <li><a href="materials.html">材質實品展示</a></li>
                     <li><a href="faq.html">常見問答 (FAQ)</a></li>
-                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 600;">接單文字產生器 &rarr;</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 700;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
 
@@ -300,10 +283,14 @@
     </div>
 
     <script>
-        function filterCatalog(category) {
+        function filterCatalog(category, evt) {
             const pills = document.querySelectorAll('.filter-pill');
             pills.forEach(p => p.classList.remove('active'));
-            event.target.classList.add('active');
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            } else if (event && event.target) {
+                event.target.classList.add('active');
+            }
 
             const cards = document.querySelectorAll('#catalog-grid .product-card');
             cards.forEach(card => {
