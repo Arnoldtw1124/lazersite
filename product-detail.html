@@ -353,6 +353,20 @@
         }
 
         // Mobile Nav
+                // 下拉選單防閃爍緩衝 (Hover Buffer with Grace Delay)
+        document.querySelectorAll(".dropdown").forEach(dd => {
+            let timer;
+            dd.addEventListener("mouseenter", () => {
+                clearTimeout(timer);
+                dd.classList.add("open");
+            });
+            dd.addEventListener("mouseleave", () => {
+                timer = setTimeout(() => {
+                    dd.classList.remove("open");
+                }, 220);
+            });
+        });
+
         const hamburger = document.querySelector(".hamburger");
         const mainNav = document.querySelector(".main-nav");
 

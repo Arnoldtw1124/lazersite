@@ -215,24 +215,49 @@ a {
     background: var(--accent-gold-light);
 }
 
-/* 下拉選單 */
+/* 下拉選單 (含無縫隱形橋接器與防閃爍緩衝) */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+.dropdown .fa-chevron-down {
+    transition: transform 0.25s ease;
+}
+
+.dropdown:hover .fa-chevron-down,
+.dropdown.open .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
 .dropdown-content {
-    display: none;
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% + 2px);
     left: 0;
-    min-width: 240px;
+    min-width: 250px;
     background: #ffffff;
     border: var(--border-card);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 16px 40px rgba(90, 60, 30, 0.12);
     padding: 0.6rem 0;
-    z-index: 100;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    pointer-events: none;
+}
+
+/* 隱形懸停橋接區 (Hover Bridge)：徹底解決游標移向選單時因微小間距導致選單閃退消失的問題 */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: -15px;
+    right: -15px;
+    height: 28px;
+    background: transparent;
+    z-index: -1;
 }
 
 .dropdown-content a {
@@ -248,11 +273,16 @@ a {
 .dropdown-content a:hover {
     background: var(--bg-pill);
     color: var(--accent-gold);
-    padding-left: 1.5rem;
+    padding-left: 1.45rem;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown.open .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* 導覽列右側行動呼籲按鈕 */
