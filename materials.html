@@ -75,114 +75,435 @@
             <h1 class="subpage-title">工藝材質資料庫</h1>
             <p class="subpage-subtitle">
                 探索各種材料經高精密雷射作用後的真實物理質感變化。<br>
-                滑鼠懸停於卡片上，即可即時預覽「雕刻前」與「雕刻後」效果對比！
+                從天然實木、竹質、石材、金屬漆面到壓克力與特殊有機材質，單件即可起訂加工。
             </p>
 
             <!-- 篩選器 -->
             <div class="filter-pills-wrap">
-                <button onclick="filterMaterials('all')" class="filter-pill active">全部材質 (ALL)</button>
-                <button onclick="filterMaterials('metal')" class="filter-pill">金屬漆面 (METAL)</button>
-                <button onclick="filterMaterials('acrylic')" class="filter-pill">光學壓克力 (ACRYLIC)</button>
-                <button onclick="filterMaterials('paper')" class="filter-pill">木質 / 植纖板 (WOOD/FIBER)</button>
+                <button onclick="filterMaterials('all', this)" class="filter-pill active">全部材質 (18)</button>
+                <button onclick="filterMaterials('wood', this)" class="filter-pill">木質・竹纖 (5)</button>
+                <button onclick="filterMaterials('synthetics', this)" class="filter-pill">壓克力・矽膠・泡綿 (4)</button>
+                <button onclick="filterMaterials('metal', this)" class="filter-pill">金屬漆面 (2)</button>
+                <button onclick="filterMaterials('mineral', this)" class="filter-pill">頁岩・水泥 (2)</button>
+                <button onclick="filterMaterials('fabric_paper', this)" class="filter-pill">皮革・紙布 (3)</button>
+                <button onclick="filterMaterials('special', this)" class="filter-pill">食品・果皮特殊 (2)</button>
             </div>
         </section>
 
         <!-- 材質卡片網格 -->
         <section style="padding: 0 1.5rem 6rem 1.5rem; max-width: 1240px; margin: 0 auto;">
-            <div class="material-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div class="material-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem;">
 
-                <!-- 1. 金屬 -->
+                <!-- 金屬表面漆層 (刀具) -->
                 <div class="material-bento-card" data-category="metal">
                     <div class="img-container">
-                        <img src="./static/images/mat_metal_raw_v2.png" class="img-raw" alt="金屬未雕刻前">
-                        <img src="./static/images/mat_metal_engraved_v2.png" class="img-engraved" alt="金屬雷雕後效果">
-                        <div class="hover-hint-badge"><i class="fas fa-hand-pointer"></i> 懸停看效果</div>
+                        <img src="./static/images/materials/metal_knife.png" class="img-display" alt="金屬表面漆層 (刀具)" loading="lazy">
                     </div>
                     <div class="card-info">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
-                            <span class="spec-pill" style="color: var(--accent-gold); border-color: var(--accent-gold-border);">工業陽極工藝</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">0.5 - 2.0 mm</span>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">金屬表面處理</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                金屬表面漆層 (刀具)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                高精密雷射精確汽化金屬表面抗蝕黑漆層，顯露出底層銀白金屬線條，手感平整光滑，耐磨防刮。
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                            陽極氧化金屬漆面 (Metal)
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem;">
-                            雷射精準汽化表面陽極黑漆層，顯露底層鋁合金銀白高光線條，手感平整無毛邊，防刮耐磨。
-                        </p>
-                        <a href="booking.html?product=金屬名片 / 工業銘版" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.9rem;">
-                            <i class="fas fa-check"></i> 挑選此材質製作 &rarr;
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
                         </a>
                     </div>
                 </div>
 
-                <!-- 2. 光學壓克力 -->
-                <div class="material-bento-card" data-category="acrylic">
+                <!-- 頁岩 (天然石板) -->
+                <div class="material-bento-card" data-category="mineral">
                     <div class="img-container">
-                        <img src="./static/images/mat_acrylic_raw.png" class="img-raw" alt="壓克力未雕刻前">
-                        <img src="./static/images/mat_acrylic_engraved.png" class="img-engraved" alt="壓克力雷雕後效果">
-                        <div class="hover-hint-badge"><i class="fas fa-hand-pointer"></i> 懸停看效果</div>
+                        <img src="./static/images/materials/slate.png" class="img-display" alt="頁岩 (天然石板)" loading="lazy">
                     </div>
                     <div class="card-info">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
-                            <span class="spec-pill" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">光學級晶透</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">3.0 / 5.0 mm</span>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">天然礦石石板</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                頁岩 (天然石板)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                雷射作用於天然頁岩表層，形成對比鮮明的高雅灰白微凸雕紋，保有原生岩石粗獷紋理與厚實手感。
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                            光學透光壓克力 (Acrylic)
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem;">
-                            外圍鏡面鑽石切面，雕刻表面形成均勻細緻的霧白漫射磨砂面，搭配展場射燈更顯晶瑩剔透。
-                        </p>
-                        <a href="booking.html?product=壓克力立牌" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.9rem;">
-                            <i class="fas fa-check"></i> 挑選此材質製作 &rarr;
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
                         </a>
                     </div>
                 </div>
 
-                <!-- 3. 白橡木植纖板 -->
-                <div class="material-bento-card" data-category="paper">
+                <!-- 1mm 飛機木 (巴爾沙木) -->
+                <div class="material-bento-card" data-category="wood">
                     <div class="img-container">
-                        <img src="./static/images/mat_paper_raw.png" class="img-raw" alt="白橡木植纖板未雕刻前">
-                        <img src="./static/images/mat_paper_engraved.png" class="img-engraved" alt="白橡木植纖板雷雕後效果">
-                        <div class="hover-hint-badge"><i class="fas fa-hand-pointer"></i> 懸停看效果</div>
+                        <img src="./static/images/materials/balsa_wood.png" class="img-display" alt="1mm 飛機木 (巴爾沙木)" loading="lazy">
                     </div>
                     <div class="card-info">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
-                            <span class="spec-pill" style="color: #10b981; border-color: rgba(16, 185, 129, 0.3);">展會必備特仕</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">2.85 mm</span>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">輕木模型工藝</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                1mm 飛機木 (巴爾沙木)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                質地極輕且易於精準加工，雷射細微切縫小、邊緣碳化整潔，適合立體拼裝模型、文創微型結構雕琢。
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                            白橡木植纖板 (Fiber Board)
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem;">
-                            雙面防潑水白橡木木紋，質地硬挺不垂軟。雷雕呈現自然深褐色焦香線條，擺攤價目牌首選。
-                        </p>
-                        <a href="booking.html?product=【展會專用】客製化雷雕價目牌" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.9rem;">
-                            <i class="fas fa-check"></i> 挑選此材質製作 &rarr;
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
                         </a>
                     </div>
                 </div>
 
-                <!-- 4. 天然軟木 -->
-                <div class="material-bento-card" data-category="paper">
+                <!-- 天然軟木 -->
+                <div class="material-bento-card" data-category="wood">
                     <div class="img-container">
-                        <img src="./static/images/coaster_default.png" class="img-raw" alt="天然軟木未雕刻前">
-                        <img src="./static/images/coaster_groove.png" class="img-engraved" alt="軟木雷雕後效果">
-                        <div class="hover-hint-badge"><i class="fas fa-hand-pointer"></i> 懸停看效果</div>
+                        <img src="./static/images/materials/cork.png" class="img-display" alt="天然軟木" loading="lazy">
                     </div>
                     <div class="card-info">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
-                            <span class="spec-pill" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">高密天然抗燙</span>
-                            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">5.0 / 10.0 mm</span>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">天然吸水抗燙</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                天然軟木
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                天然軟木微孔組織散發質樸木質香氣，雷射雕刻呈現溫潤深焦糖色澤，深淺立體感極佳，隔熱吸水必備。
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                            天然高密軟木 (Natural Cork)
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.2rem;">
-                            軟木微孔結構吸水隔熱，深雕刻印手感立體凹凸，散發純天然木質溫暖香氣。
-                        </p>
-                        <a href="booking.html?product=軟木杯墊" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.9rem;">
-                            <i class="fas fa-check"></i> 挑選此材質製作 &rarr;
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 金屬表面漆層 (隨行保溫瓶) -->
+                <div class="material-bento-card" data-category="metal">
+                    <div class="img-container">
+                        <img src="./static/images/materials/metal_bottle.png" class="img-display" alt="金屬表面漆層 (隨行保溫瓶)" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">曲面瓶身工藝</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                金屬表面漆層 (隨行保溫瓶)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                精準去除粉體烤漆或陽極塗層，雕刻線條俐落銳利，完美顯現不鏽鋼金屬原色，打造客製質感隨身杯。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 0.5mm 精密卡紙 -->
+                <div class="material-bento-card" data-category="fabric_paper">
+                    <div class="img-container">
+                        <img src="./static/images/materials/paper_craft.png" class="img-display" alt="0.5mm 精密卡紙" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">高精度紙藝</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                0.5mm 精密卡紙
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                無碳焦黑痕的高速精密刀模級雷射鏤空，可完成繁複微型結構、立體折紙與包裝卡片設計。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 耐熱矽膠餐盒 -->
+                <div class="material-bento-card" data-category="synthetics">
+                    <div class="img-container">
+                        <img src="./static/images/materials/silicone_box.png" class="img-display" alt="耐熱矽膠餐盒" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">耐溫食品級矽膠</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                耐熱矽膠餐盒
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                環保耐溫矽膠表面淺雕印記，線條清晰不脫色、不產生碎屑毛邊，耐水洗且維持食品級衛生安全。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 植鞣天然皮革 -->
+                <div class="material-bento-card" data-category="fabric_paper">
+                    <div class="img-container">
+                        <img src="./static/images/materials/leather.png" class="img-display" alt="植鞣天然皮革" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">植鞣皮革皮件</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                植鞣天然皮革
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                雷雕使皮革表層天然油脂微幅焦化，產生深邃典雅的復古烙印色澤，紋理手感溫厚細膩，隨時間散發光澤。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 黑面塗層密底板 (MDF) -->
+                <div class="material-bento-card" data-category="wood">
+                    <div class="img-container">
+                        <img src="./static/images/materials/mdf_board.png" class="img-display" alt="黑面塗層密底板 (MDF)" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">高密度纖維板</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                黑面塗層密底板 (MDF)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                高密度均質板材結合表面塗層，雷射精細雕刻後呈現木質微黃對比線條，適合文創畫框、小型立板與掛飾。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3mm 厚磅不織布 (毛氈) -->
+                <div class="material-bento-card" data-category="fabric_paper">
+                    <div class="img-container">
+                        <img src="./static/images/materials/felt_fabric.png" class="img-display" alt="3mm 厚磅不織布 (毛氈)" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">高密毛氈織物</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                3mm 厚磅不織布 (毛氈)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                雷射熱熔微封邊緣，切口平整俐落、無須擔心邊緣抽絲或脫線，適合杯墊、隔熱墊與布藝鏤空配件。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 清水模水泥 -->
+                <div class="material-bento-card" data-category="mineral">
+                    <div class="img-container">
+                        <img src="./static/images/materials/cement.png" class="img-display" alt="清水模水泥" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">清水模工藝</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                清水模水泥
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                粗獷質樸的水泥盆器表面經雷射汽化表層微粒，浮現出柔和精巧的白色線稿，極具現代極簡工業美學。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 光學壓克力 (導光夜燈) -->
+                <div class="material-bento-card" data-category="synthetics">
+                    <div class="img-container">
+                        <img src="./static/images/materials/acrylic_lamp.png" class="img-display" alt="光學壓克力 (導光夜燈)" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">光學導光晶透</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                光學壓克力 (導光夜燈)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                高透光光學壓克力板，經精密雷雕後雕刻線條均勻漫射 LED 光源，亮燈時呈現璀璨立體發光線條。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 天然竹木板 -->
+                <div class="material-bento-card" data-category="wood">
+                    <div class="img-container">
+                        <img src="./static/images/materials/bamboo.png" class="img-display" alt="天然竹木板" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">天然竹木紋理</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                天然竹木板
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                天然竹纖維密度高且硬度韌性兼具，雷雕呈現深褐色沈穩炭化質感，散發淡雅東方竹藝氣息。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 烘焙餅乾 (食品印花) -->
+                <div class="material-bento-card" data-category="special">
+                    <div class="img-container">
+                        <img src="./static/images/materials/biscuit.png" class="img-display" alt="烘焙餅乾 (食品印花)" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">食品級雷雕印花</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                烘焙餅乾 (食品印花)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                無接觸式雷射表面微溫烘烤焦化，在餅乾表面直接印製客製化圖案與文字，趣味創意烘焙周邊首選。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2mm 彩色壓克力 -->
+                <div class="material-bento-card" data-category="synthetics">
+                    <div class="img-container">
+                        <img src="./static/images/materials/acrylic_2mm.png" class="img-display" alt="2mm 彩色壓克力" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">彩色切形公仔</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                2mm 彩色壓克力
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                色彩鮮豔的壓克力板經雷射垂直高光切齊，切邊晶亮無毛刺，適合卡榫式組裝立體小動物與角色周邊。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 天然實木印章 -->
+                <div class="material-bento-card" data-category="wood">
+                    <div class="img-container">
+                        <img src="./static/images/materials/wood_stamp.png" class="img-display" alt="天然實木印章" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">天然實木印章</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                天然實木印章
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                質地紮實的硬木印章頂部與刻面，雕刻線條深遂銳利、沾墨蓋印層次分明，手感溫潤厚實。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EVA 高密發泡泡綿 -->
+                <div class="material-bento-card" data-category="synthetics">
+                    <div class="img-container">
+                        <img src="./static/images/materials/eva_foam.png" class="img-display" alt="EVA 高密發泡泡綿" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">高彈高密泡綿</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                EVA 高密發泡泡綿
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                高彈性抗震泡綿表面精準凹刻字形與幾何線條，切面圓潤不變形，常見於運動瑜珈磚、工具收納內襯。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 生鮮果皮 (柑橘表皮) -->
+                <div class="material-bento-card" data-category="special">
+                    <div class="img-container">
+                        <img src="./static/images/materials/fruit_peel.png" class="img-display" alt="生鮮果皮 (柑橘表皮)" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                <span class="spec-pill">生鮮果皮雕刻</span>
+                            </div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                                生鮮果皮 (柑橘表皮)
+                            </h3>
+                            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+                                微米級表皮精細雕琢，僅蒸發果皮外層色素腺體而不傷及內部果肉，創造令人驚豔的節慶品牌驚喜。
+                            </p>
+                        </div>
+                        <a href="booking.html" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.5rem 0.8rem;">
+                            <i class="fas fa-calculator"></i> 挑選材質試算 &rarr;
                         </a>
                     </div>
                 </div>
@@ -197,7 +518,7 @@
             border: var(--border-card);
             border-radius: var(--radius-md);
             overflow: hidden;
-            transition: transform 0.25s ease, border-color 0.25s ease;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -206,53 +527,34 @@
         .material-bento-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent-gold);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 14px 32px rgba(90, 60, 30, 0.12);
         }
 
         .img-container {
             position: relative;
             width: 100%;
-            height: 240px;
+            height: 220px;
             overflow: hidden;
-            background: #0d0e11;
+            background: #fbf9f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .img-raw,
-        .img-engraved {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .img-display {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 0.4s ease;
+            transition: transform 0.35s ease;
+            display: block;
         }
 
-        .img-engraved {
-            opacity: 0;
-        }
-
-        .material-bento-card:hover .img-engraved {
-            opacity: 1;
-        }
-
-        .hover-hint-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(16, 17, 20, 0.85);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: var(--accent-gold);
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 0.65rem;
-            border-radius: var(--radius-full);
-            pointer-events: none;
+        .material-bento-card:hover .img-display {
+            transform: scale(1.04);
         }
 
         .card-info {
-            padding: 1.5rem;
+            padding: 1.3rem 1.4rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -263,10 +565,12 @@
             display: inline-block;
             font-size: 0.78rem;
             font-family: var(--font-mono);
-            padding: 0.2rem 0.6rem;
+            font-weight: 700;
+            padding: 0.22rem 0.65rem;
             border-radius: var(--radius-sm);
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid currentColor;
+            background: rgba(184, 115, 51, 0.08);
+            border: 1px solid rgba(184, 115, 51, 0.22);
+            color: var(--accent-gold);
         }
     </style>
 
@@ -336,10 +640,14 @@
     </div>
 
     <script>
-        function filterMaterials(category) {
+        function filterMaterials(category, btnElement) {
             const buttons = document.querySelectorAll('.filter-pill');
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if (btnElement) {
+                btnElement.classList.add('active');
+            } else if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            }
 
             const cards = document.querySelectorAll('.material-bento-card');
             cards.forEach(card => {
