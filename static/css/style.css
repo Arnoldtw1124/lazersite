@@ -47,9 +47,9 @@
     --shadow-card: 0 12px 32px rgba(85, 55, 30, 0.08);
     --shadow-hover: 0 18px 42px rgba(85, 55, 30, 0.14);
 
-    /* 字型系統 */
-    --font-heading: 'Outfit', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
-    --font-body: 'Outfit', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    /* 字型系統：指定 黑體 - 繁 (Heiti TC) 為第一優先，兼顧跨系統繁體黑體 */
+    --font-heading: "Heiti TC", "黑體-繁", "PingFang TC", "蘋方-繁", "Noto Sans TC", "Microsoft JhengHei", "微軟正黑體", system-ui, -apple-system, sans-serif;
+    --font-body: "Heiti TC", "黑體-繁", "PingFang TC", "蘋方-繁", "Noto Sans TC", "Microsoft JhengHei", "微軟正黑體", system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
     /* 相容性別名 (相容既有頁面內聯樣式) */
@@ -66,6 +66,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button, input, select, textarea, optgroup {
+    font-family: inherit;
 }
 
 html {
