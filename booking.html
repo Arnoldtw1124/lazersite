@@ -36,12 +36,11 @@
                 <div class="dropdown">
                     <a href="products.html" class="nav-link">商品價目表 <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
                     <div class="dropdown-content">
-                        <a href="product-detail.html?id=priceboard">【展會必備】客製雷雕價目牌</a>
-                        <a href="product-detail.html?id=coaster">天然吸水軟木杯墊</a>
-                        <a href="product-detail.html?id=keychain">植鞣皮革鑰匙圈</a>
-                        <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
-                        <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
-                        <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
+                        <a href="product-detail.html?id=coaster">軟木杯墊(10*10)</a>
+                        <a href="product-detail.html?id=diatomite_coaster">珪藻土杯墊(10*10)</a>
+                        <a href="product-detail.html?id=wood_phone_stand">實木手機架(6*6)</a>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 0.4rem 0;">
+                        <a href="products.html" style="color: var(--accent-gold); font-weight: 700;">瀏覽所有 3 款品項 &rarr;</a>
                     </div>
                 </div>
 
@@ -327,15 +326,12 @@
     <script>
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxv-mle-uSkDbYFH5zJXwUNqd8y7yMZ5z1Vt7cug_q3_8iIZuq-aP_fuAx2zhV4f84K/exec';
 
-        // 預設品項清單
+        // 預設品項清單 (工坊主力三品項)
         const AVAILABLE_PRODUCTS = [
-            { id: 'priceboard', name: '【展會專用】客製化雷雕價目牌', default_price: 200, variants: ['標準直立款 (NT$ 200)', '附壓克力專用底座款 (NT$ 250)'] },
-            { id: 'coaster', name: '天然軟木杯墊', default_price: 150, variants: ['凹槽款 (直徑100mm)', '圓形款 (直徑98mm)', '方形款 (直徑98mm)'] },
-            { id: 'keychain', name: '植鞣皮革鑰匙圈', default_price: 150, variants: ['曜石黑色', '復古棕色'] },
-            { id: 'stand', name: '光學級壓克力立牌', default_price: 450, variants: ['3mm 光學標準款 (NT$ 450)', '5mm 重磅厚板款 (NT$ 550)'] },
-            { id: 'cardcheck', name: '陽極金屬名片 / 工業銘版', default_price: 300, variants: ['深邃黑 (陽極鋁)', '鈦金銀 (拉絲鋼)', '科技金 (陽極鋁)'] },
-            { id: 'tag', name: '寵物名牌 / 金屬吊牌', default_price: 200, variants: ['304 不鏽鋼鏡面款', '植鞣皮革雙面縫線款 (NT$ 250)'] },
-            { id: 'custom', name: '特殊材質 / 私物代刻', default_price: 0, variants: ['依需求討論後另行報價'] }
+            { id: 'coaster', name: '軟木杯墊(10*10)', default_price: 150, variants: ['10*10 方形款 (NT$ 150)', '10*10 凹槽款 (NT$ 150)', '直徑10cm 圓形款 (NT$ 150)'] },
+            { id: 'diatomite_coaster', name: '珪藻土杯墊(10*10)', default_price: 180, variants: ['10*10 純淨白款 (NT$ 180)', '10*10 淺石灰款 (NT$ 180)'] },
+            { id: 'wood_phone_stand', name: '實木手機架(6*6)', default_price: 180, variants: ['6*6 天然櫸木原木色 (NT$ 180)', '6*6 沉穩胡桃深木色 (NT$ 180)'] },
+            { id: 'custom', name: '其他特殊客製代刻', default_price: 0, variants: ['依需求討論後另行報價'] }
         ];
 
         let itemCount = 0;
