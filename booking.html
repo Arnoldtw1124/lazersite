@@ -74,8 +74,8 @@
             </div>
             <h1 class="subpage-title">客製委託・線上試算與接單文字產生器</h1>
             <p class="subpage-subtitle">
-                挑選品項規格與數量，系統自動計算預估金額並產出標準接單文字。<br>
-                產出後可<strong>一鍵複製</strong>，直接貼至 Twitter (X) 私訊、LINE 或 Email 快速委託！
+                自由勾選品項規格、試算預估金額。填寫完畢後一鍵產出格式化「接單文字」，<br>
+                直接複製私訊至 X (Twitter) 或 Email，我們將立即為您開立 <strong>7-11 賣貨便專屬賣場</strong>！
             </p>
         </section>
 
@@ -91,10 +91,10 @@
             ">
                 <form id="order-generator-form">
 
-                    <!-- 步驟 1: 購買者與聯絡資訊 -->
+                    <!-- 步驟 1: 購買者與下單渠道 -->
                     <div style="background: var(--bg-subtle); padding: 1.6rem; border-radius: var(--radius-md); margin-bottom: 2rem; border: var(--border-subtle);">
                         <h2 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px; font-weight: 700;">
-                            <span style="color: var(--accent-gold);"><i class="fas fa-user-circle"></i> 1.</span> 購買者與聯絡資訊
+                            <span style="color: var(--accent-gold);"><i class="fas fa-user-circle"></i> 1.</span> 購買者資訊與下單渠道
                         </h2>
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem;" class="responsive-grid-2">
@@ -106,24 +106,32 @@
                             </div>
 
                             <div>
-                                <label for="buyer-contact" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-                                    聯絡方式 (X 帳號 / LINE ID / Email) <span style="color: var(--accent-rose);">*</span>
+                                <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                                    購買渠道 (Purchase Channel)
                                 </label>
-                                <input type="text" id="buyer-contact" class="magic-input" required placeholder="例如：@arnold__laser / LINE ID">
+                                <div style="
+                                    background: var(--bg-pill);
+                                    border: 1px solid var(--accent-gold-border);
+                                    border-radius: var(--radius-sm);
+                                    padding: 0.72rem 1rem;
+                                    color: var(--text-primary);
+                                    font-weight: 700;
+                                    font-size: 0.92rem;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 8px;
+                                ">
+                                    <span style="background: #008000; color: #fff; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 800;">7-11</span>
+                                    <span>7-11 賣貨便（超商取貨付款）</span>
+                                </div>
+                                <input type="hidden" id="shipping-method" value="7-11 賣貨便 (取貨付款)">
                             </div>
                         </div>
 
-                        <div>
-                            <label for="shipping-method" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-                                預計取件或寄送方式 (Delivery Method)
-                            </label>
-                            <select id="shipping-method" class="magic-select">
-                                <option value="7-11 超商取貨 (店到店)">7-11 超商取貨 (店到店)</option>
-                                <option value="全家 超商取貨 (店到店)">全家 超商取貨 (店到店)</option>
-                                <option value="郵局掛號 / 宅配包裹寄送">郵局掛號 / 宅配包裹寄送</option>
-                                <option value="同人展會 (FF/CWT) 現場攤位交付">同人展會 (FF/CWT) 現場攤位交付</option>
-                                <option value="暫不確定 / 私訊討論確認">暫不確定 / 私訊討論確認</option>
-                            </select>
+                        <div style="background: rgba(184, 115, 51, 0.06); border: 1px dashed var(--accent-gold-border); border-radius: var(--radius-sm); padding: 0.85rem 1.1rem; color: var(--text-secondary); font-size: 0.86rem; line-height: 1.6;">
+                            <i class="fas fa-info-circle" style="color: var(--accent-gold);"></i> 
+                            <strong>下單須知：</strong>工坊唯一指定購買渠道為 <strong>7-11 賣貨便</strong>（超商取貨付款，保障買賣雙方）。
+                            產生接單文字並私訊我們確認規格後，工坊將為您開立專屬賣貨便賣場下單！
                         </div>
                     </div>
 
@@ -176,7 +184,7 @@
                             <textarea id="order-notes" rows="4" class="magic-textarea" placeholder="例如：
 1. 軟木杯墊需雕刻個人頭像 (圖檔雲端連結：https://drive.google.com/...)
 2. 皮革鑰匙圈刻印文字：ARNOLD 2026 (請使用手寫草寫體)
-3. 門市收件人電話：0912-345-678 (7-11 科技門市)"></textarea>
+3. 預計取件 7-11 門市：科技門市 (店號 123456)"></textarea>
                         </div>
 
                         <div style="display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.88rem;">
@@ -485,7 +493,6 @@
             e.preventDefault();
 
             const buyerName = document.getElementById('buyer-name').value.trim();
-            const buyerContact = document.getElementById('buyer-contact').value.trim();
             const shipping = document.getElementById('shipping-method').value;
             const notes = document.getElementById('order-notes').value.trim();
 
@@ -513,14 +520,14 @@
                 itemsLines.push(`${prodName} ${variant} ${qty}件 單價${unitText} 總價${subText}`);
             });
 
-            // 組合完整接單格式
+            // 組合完整接單格式 (無冗餘聯絡方式，固定 7-11 賣貨便)
             const orderText = 
 `購買者 ${buyerName}
-聯絡方式 ${buyerContact}
-寄送方式 ${shipping}
+購買渠道 ${shipping}
 
 訂單
-${itemsLines.join('\n')}
+${itemsLines.join('
+')}
 總共 ${totalAmount > 0 ? totalAmount + ' 元' : '依需求另行報價'}
 
 客製備註
@@ -546,7 +553,7 @@ ${notes ? notes : '無額外備註'}`.trim();
                     body: JSON.stringify({
                         timestamp: new Date().toISOString(),
                         name: buyerName,
-                        contact: buyerContact,
+                        contact: '私訊/當前管道',
                         shipping: shipping,
                         product: itemsLines.join(' ; '),
                         notes: notes,
