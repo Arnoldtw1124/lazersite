@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <!-- 專業頂部導覽列 (E-Commerce Header) -->
+    <!-- 頂部導覽列 (E-Commerce Header) -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo-brand">
@@ -62,8 +62,8 @@
                         <a href="product-detail.html?id=stand">光學透光壓克力立牌</a>
                         <a href="product-detail.html?id=cardcheck">陽極金屬名片 / 工業銘版</a>
                         <a href="product-detail.html?id=tag">寵物名牌 / 金屬吊牌</a>
-                        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0;">
-                        <a href="products.html" style="color: var(--accent-gold); font-weight: 600;">瀏覽所有 6 款品項 &rarr;</a>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 0.4rem 0;">
+                        <a href="products.html" style="color: var(--accent-gold); font-weight: 700;">瀏覽所有 6 款品項 &rarr;</a>
                     </div>
                 </div>
 
@@ -91,92 +91,163 @@
     </header>
 
     <main>
-        <!-- Hero Section：清晰的價值主張與明確入口 (TimTech 重點 1) -->
-        <section style="
-            position: relative;
-            padding: clamp(4rem, 8vw, 7rem) 1.5rem clamp(3.5rem, 6vw, 5.5rem);
-            background: linear-gradient(180deg, rgba(16, 17, 20, 0.75) 0%, #101114 100%), #101114;
-            border-bottom: var(--border-subtle);
-            text-align: center;
-            overflow: hidden;
-        ">
-            <video autoplay muted loop playsinline style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                min-width: 100%;
-                min-height: 100%;
-                width: auto;
-                height: auto;
-                z-index: 0;
-                object-fit: cover;
-                opacity: 0.18;
-                filter: contrast(1.1) brightness(0.9);
-                pointer-events: none;
-            ">
-                <source src="./static/videos/hero_bg.mp4" type="video/mp4">
-            </video>
-
-            <div style="position: relative; z-index: 1; max-width: 860px; margin: 0 auto;">
-                <!-- 醒目主打公告 -->
-                <a href="product-detail.html?id=priceboard" style="
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 0.35rem 1rem;
-                    background: var(--accent-gold-light);
-                    border: 1px solid var(--accent-gold-border);
-                    border-radius: var(--radius-full);
-                    color: var(--accent-gold);
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    margin-bottom: 1.8rem;
-                    transition: transform 0.2s;
-                ">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-gold);"></span>
+        <!-- Hero Section (ness9s 二欄佈局：完全無背景影片，溫暖真實工藝感) -->
+        <header class="hero hero-new">
+            <div class="hero-copy">
+                <!-- 展會特仕公告膠囊 -->
+                <a href="product-detail.html?id=priceboard" class="hero-badge-pill">
+                    <span class="badge-dot"></span>
                     <span>2026 同人展會特仕：白橡木紋防潑水價目牌好評熱銷中</span>
                     <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
                 </a>
 
                 <!-- 品牌核心標題 -->
-                <h1 style="
-                    font-size: clamp(2.2rem, 5vw, 3.4rem);
-                    font-weight: 800;
-                    letter-spacing: -0.02em;
-                    line-height: 1.25;
-                    color: #ffffff;
-                    margin-bottom: 1.2rem;
-                ">
-                    專注細節的客製化<br>
-                    <span style="color: var(--accent-gold);">雷射雕刻工坊</span>
-                </h1>
+                <h1 class="hero-brand-title">諾雕 ALE</h1>
+                <h2 class="hero-brand-sub">專注細節的客製化雷射雕刻工坊</h2>
 
-                <!-- 一句話說清楚核心賣點 (TimTech 重點 1) -->
-                <p style="
-                    font-size: clamp(1.05rem, 2vw, 1.25rem);
-                    color: var(--text-secondary);
-                    line-height: 1.7;
-                    margin-bottom: 2.2rem;
-                    max-width: 680px;
-                    margin-left: auto;
-                    margin-right: auto;
-                ">
+                <!-- 核心賣點說明 -->
+                <p class="hero-tagline">
                     <strong>1 件即可起印</strong>・展會攤位・市集週邊・企業禮贈。<br>
-                    堅持真實材料溫潤質感，3-5 工作天快速出貨，免排版軟體也能輕鬆委託。
+                    堅持真實材質溫潤手感，免排版軟體也能輕鬆委託，3-5 工作天內快速交付！
                 </p>
 
-                <!-- 兩大核心入口按鈕 -->
-                <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
-                    <a href="products.html" class="btn-primary" style="font-size: 1.05rem; padding: 0.95rem 2rem;">
-                        <i class="fas fa-shopping-bag"></i> 探索所有商品與價格表
-                    </a>
+                <!-- 業務標籤列 -->
+                <div class="roles-wrap">
+                    <span class="role-pill">少量客製 (MOQ 1)</span>
+                    <span class="role-pill">同人展會出攤 (FF/CWT)</span>
+                    <span class="role-pill">文創市集周邊</span>
+                    <span class="role-pill">實物對稿安心保證</span>
+                </div>
 
-                    <a href="booking.html" class="btn-secondary" style="font-size: 1.05rem; padding: 0.95rem 2rem;">
-                        <i class="fas fa-clipboard-list"></i> 線上試算・產生接單文字
+                <!-- 核心入口按鈕 -->
+                <div class="hero-actions">
+                    <a class="btn" href="products.html">
+                        <i class="fas fa-shopping-bag"></i> 探索所有商品與價格表 &rarr;
+                    </a>
+                    <a class="btn alt" href="booking.html">
+                        <i class="fas fa-clipboard-list"></i> 線上試算・產生接單文字 ✍
                     </a>
                 </div>
+            </div>
+
+            <!-- 右側 Hero 實物視覺展示 (無影片，高清立體展示) -->
+            <div class="hero-art-container">
+                <div class="hero-art-card">
+                    <img class="hero-art" src="./static/images/priceboard_mockup.png" alt="諾雕客製化雷雕價目牌實品展示">
+                    <div class="hero-art-caption">
+                        <span class="art-kicker">FEATURED CRAFT</span>
+                        <strong>展會專用防潑水雷雕價目牌</strong>
+                        <span>雙面白橡木紋・高密度硬挺不垂軟・立體深雕標題與 QR Code</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ness9s 招牌快捷選單列 (QUICK MENU PANEL) -->
+        <div class="wrap quick-wrap">
+            <section class="quick panel" aria-label="快捷功能選單">
+                <b>QUICK MENU</b>
+                <a href="#featured">✨ 展會主打</a>
+                <a href="products.html">📋 全部價目表</a>
+                <a href="#categories">🎨 材質分類</a>
+                <a href="#pricing">💰 熱門定價</a>
+                <a href="#workflow">🛠 委託流程</a>
+                <a href="#about">📖 工坊堅持</a>
+                <a href="materials.html">🪵 材質實品</a>
+                <a href="guidelines.html">📐 送印規範</a>
+                <a href="booking.html">✍ 接單文字產生器</a>
+                <a href="faq.html">❓ 常見問答</a>
+            </section>
+        </div>
+
+        <!-- ness9s 核心非對稱展示網格：主打推薦與迷你品項 -->
+        <section class="wrap section channels-compact" id="featured">
+            <div class="section-head">
+                <div>
+                    <div class="kicker">FEATURED CRAFT & CHANNELS</div>
+                    <h2 class="title">工坊主打與人氣首選</h2>
+                </div>
+                <span class="section-note">HANDCRAFTED & PRECISE</span>
+            </div>
+
+            <div class="channel-feature-grid">
+                <!-- 左側：主打特仕大卡片 (Main Featured Hero Card) -->
+                <a class="channel-main panel" href="product-detail.html?id=priceboard">
+                    <img src="./static/images/priceboard_mockup.png" alt="客製化白橡木雷雕價目牌">
+                    <div class="channel-overlay">
+                        <span class="tag">HOT BESTSELLER ・ 同人展必備</span>
+                        <h3>【展會必備】客製化白橡木紋防潑水價目牌</h3>
+                        <p>專為 FF、CWT 與文創市集攤位打造。高密度植纖板防潑水耐磨，硬挺不垂軟，立體深雕攤位品項與 QR Code 結帳碼。</p>
+                        <div class="channel-bottom-row">
+                            <span class="channel-price-tag">NT$ 200 / 單件起印</span>
+                            <b>查看規格與實品照 ↗</b>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 右側：三款熱門迷你卡片 (Side Mini Cards) -->
+                <div class="channel-side">
+                    <!-- Mini 1: 軟木杯墊 -->
+                    <a class="channel-mini panel" href="product-detail.html?id=coaster">
+                        <img src="./static/images/coaster_default.png" alt="天然軟木杯墊">
+                        <span>
+                            <b>天然吸水軟木杯墊</b>
+                            <small>凹槽與圓方多款・防燙吸水天然焦香</small>
+                            <span class="mini-price">NT$ 150 起</span>
+                        </span>
+                        <i>↗</i>
+                    </a>
+
+                    <!-- Mini 2: 皮革鑰匙圈 -->
+                    <a class="channel-mini panel" href="product-detail.html?id=keychain">
+                        <img src="./static/images/leather_keychain.jpg" alt="植鞣皮革鑰匙圈">
+                        <span>
+                            <b>植鞣皮革鑰匙圈</b>
+                            <small>厚磅植鞣皮革・溫潤手作感・耐久合金扣</small>
+                            <span class="mini-price">NT$ 150 起</span>
+                        </span>
+                        <i>↗</i>
+                    </a>
+
+                    <!-- Mini 3: 壓克力立牌 -->
+                    <a class="channel-mini panel" href="product-detail.html?id=stand">
+                        <img src="./static/images/mat_acrylic_engraved.png" alt="光學透光壓克力立牌">
+                        <span>
+                            <b>光學透光壓克力立牌</b>
+                            <small>鑽石拋光邊漫射白・附專用卡扣底座</small>
+                            <span class="mini-price">NT$ 450 起</span>
+                        </span>
+                        <i>↗</i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social & Direct Action Pills (ness9s 招牌膠囊列) -->
+            <div class="social-row social-pills-v2" aria-label="社群與快速入口">
+                <a href="https://x.com/arnold__laser" target="_blank" rel="noopener">
+                    <span class="brand-icon icon-x" aria-hidden="true">𝕏</span>
+                    <span>Twitter (X) 私訊討論</span>
+                </a>
+                <a href="booking.html">
+                    <span class="brand-icon" aria-hidden="true">✍</span>
+                    <span>線上接單文字產生器</span>
+                </a>
+                <a href="products.html">
+                    <span class="brand-icon" aria-hidden="true">📋</span>
+                    <span>6 款全品項完整規格表</span>
+                </a>
+                <a href="materials.html">
+                    <span class="brand-icon" aria-hidden="true">🪵</span>
+                    <span>實體材質樣品鑑賞</span>
+                </a>
+                <a href="guidelines.html">
+                    <span class="brand-icon" aria-hidden="true">📐</span>
+                    <span>製圖規範與送印需知</span>
+                </a>
+                <a href="faq.html">
+                    <span class="brand-icon" aria-hidden="true">❓</span>
+                    <span>常見問題解答</span>
+                </a>
             </div>
         </section>
 
@@ -187,7 +258,7 @@
                     <div class="trust-icon"><i class="fas fa-box-open"></i></div>
                     <div class="trust-text">
                         <h4>單件即可製作 (MOQ 1)</h4>
-                        <p>1 件起印，無最低量門檻，大量更享優惠</p>
+                        <p>1 件起印，無最低量門檻，大量更享批發優惠</p>
                     </div>
                 </div>
 
@@ -218,9 +289,9 @@
         </section>
 
         <!-- 首頁分流：五大材質品項快速入口 (TimTech 重點 1 & 2) -->
-        <section class="section-wrapper">
+        <section class="section-wrapper" id="categories">
             <div class="section-header">
-                <span class="section-tag">POPULAR CATEGORIES</span>
+                <span class="kicker">POPULAR CATEGORIES</span>
                 <h2 class="section-title">依據您的需求快速挑選</h2>
                 <p class="section-subtitle">
                     無論是同人展會出攤、文創市集禮贈，或是店家招牌銘版，皆有對應的專業材質解決方案。
@@ -229,7 +300,7 @@
 
             <div class="category-cards-grid">
                 <!-- 展會價目牌 -->
-                <a href="product-detail.html?id=priceboard" class="category-card">
+                <a href="product-detail.html?id=priceboard" class="category-card panel">
                     <div>
                         <div class="category-card-icon"><i class="fas fa-store"></i></div>
                         <h3>展會專用價目牌</h3>
@@ -239,7 +310,7 @@
                 </a>
 
                 <!-- 軟木杯墊 -->
-                <a href="product-detail.html?id=coaster" class="category-card">
+                <a href="product-detail.html?id=coaster" class="category-card panel">
                     <div>
                         <div class="category-card-icon"><i class="fas fa-coffee"></i></div>
                         <h3>天然軟木杯墊</h3>
@@ -249,7 +320,7 @@
                 </a>
 
                 <!-- 皮革鑰匙圈 -->
-                <a href="product-detail.html?id=keychain" class="category-card">
+                <a href="product-detail.html?id=keychain" class="category-card panel">
                     <div>
                         <div class="category-card-icon"><i class="fas fa-key"></i></div>
                         <h3>植鞣皮革鑰匙圈</h3>
@@ -259,7 +330,7 @@
                 </a>
 
                 <!-- 光學壓克力 -->
-                <a href="product-detail.html?id=stand" class="category-card">
+                <a href="product-detail.html?id=stand" class="category-card panel">
                     <div>
                         <div class="category-card-icon"><i class="fas fa-gem"></i></div>
                         <h3>光學壓克力立牌</h3>
@@ -269,7 +340,7 @@
                 </a>
 
                 <!-- 金屬名片銘版 -->
-                <a href="product-detail.html?id=cardcheck" class="category-card">
+                <a href="product-detail.html?id=cardcheck" class="category-card panel">
                     <div>
                         <div class="category-card-icon"><i class="fas fa-id-card"></i></div>
                         <h3>陽極金屬名片 / 銘版</h3>
@@ -281,10 +352,10 @@
         </section>
 
         <!-- 精選商品與透明價格表 (TimTech 重點 3: 價格透明、資訊完整、快速比價) -->
-        <section style="background: var(--bg-surface); border-top: var(--border-subtle); border-bottom: var(--border-subtle); padding: 5rem 1.5rem;">
+        <section class="section-wrapper" id="pricing" style="background: #ffffff; border-top: var(--border-subtle); border-bottom: var(--border-subtle); max-width: 100%; padding-left: clamp(1rem, 4vw, 3rem); padding-right: clamp(1rem, 4vw, 3rem);">
             <div style="max-width: 1240px; margin: 0 auto;">
                 <div class="section-header">
-                    <span class="section-tag">TRANSPARENT PRICING</span>
+                    <span class="kicker">TRANSPARENT PRICING</span>
                     <h2 class="section-title">熱門商品・規格與定價</h2>
                     <p class="section-subtitle">
                         所有品項均標示真實透明定價，絕無隱藏收費。1 件即可下單，量大另享批發優惠。
@@ -293,7 +364,7 @@
 
                 <div class="product-grid">
                     <!-- 商品 1: 價目牌 -->
-                    <div class="product-card">
+                    <div class="product-card panel">
                         <div class="product-thumb-wrap">
                             <img src="./static/images/priceboard_mockup.png" alt="客製化雷雕價目牌">
                             <span class="product-badge-overlay">展會主打 -42%</span>
@@ -313,7 +384,7 @@
                     </div>
 
                     <!-- 商品 2: 軟木杯墊 -->
-                    <div class="product-card">
+                    <div class="product-card panel">
                         <div class="product-thumb-wrap">
                             <img src="./static/images/coaster_default.png" alt="天然軟木杯墊">
                             <span class="product-badge-overlay">防燙吸水</span>
@@ -325,7 +396,7 @@
                             <div class="product-meta-row">
                                 <div class="product-price-block">
                                     <span class="price-hint">單件售價</span>
-                                    <span class="product-price">NT$ 150 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                    <span class="product-price">NT$ 150 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                                 </div>
                                 <a href="product-detail.html?id=coaster" class="product-action-btn">查看規格</a>
                             </div>
@@ -333,7 +404,7 @@
                     </div>
 
                     <!-- 商品 3: 皮革鑰匙圈 -->
-                    <div class="product-card">
+                    <div class="product-card panel">
                         <div class="product-thumb-wrap">
                             <img src="./static/images/leather_keychain.jpg" alt="植鞣皮革鑰匙圈">
                             <span class="product-badge-overlay">溫潤手作感</span>
@@ -345,7 +416,7 @@
                             <div class="product-meta-row">
                                 <div class="product-price-block">
                                     <span class="price-hint">單件售價</span>
-                                    <span class="product-price">NT$ 150 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                    <span class="product-price">NT$ 150 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                                 </div>
                                 <a href="product-detail.html?id=keychain" class="product-action-btn">查看規格</a>
                             </div>
@@ -353,7 +424,7 @@
                     </div>
 
                     <!-- 商品 4: 壓克力立牌 -->
-                    <div class="product-card">
+                    <div class="product-card panel">
                         <div class="product-thumb-wrap">
                             <img src="./static/images/mat_acrylic_engraved.png" alt="光學透光壓克力立牌">
                             <span class="product-badge-overlay">光學鏡面</span>
@@ -365,7 +436,7 @@
                             <div class="product-meta-row">
                                 <div class="product-price-block">
                                     <span class="price-hint">單件售價</span>
-                                    <span class="product-price">NT$ 450 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                    <span class="product-price">NT$ 450 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                                 </div>
                                 <a href="product-detail.html?id=stand" class="product-action-btn">查看規格</a>
                             </div>
@@ -373,7 +444,7 @@
                     </div>
 
                     <!-- 商品 5: 金屬名片銘版 -->
-                    <div class="product-card">
+                    <div class="product-card panel">
                         <div class="product-thumb-wrap">
                             <img src="./static/images/mat_metal_raw_v2.png" alt="陽極金屬名片">
                             <span class="product-badge-overlay">工業質感</span>
@@ -385,7 +456,7 @@
                             <div class="product-meta-row">
                                 <div class="product-price-block">
                                     <span class="price-hint">單件售價</span>
-                                    <span class="product-price">NT$ 300 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                    <span class="product-price">NT$ 300 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                                 </div>
                                 <a href="product-detail.html?id=cardcheck" class="product-action-btn">查看規格</a>
                             </div>
@@ -393,7 +464,7 @@
                     </div>
 
                     <!-- 商品 6: 寵物名牌 -->
-                    <div class="product-card">
+                    <div class="product-card panel">
                         <div class="product-thumb-wrap">
                             <img src="./static/images/mat_metal_engraved_v2.png" alt="金屬寵物吊牌">
                             <span class="product-badge-overlay">304不鏽鋼</span>
@@ -405,7 +476,7 @@
                             <div class="product-meta-row">
                                 <div class="product-price-block">
                                     <span class="price-hint">單件售價</span>
-                                    <span class="product-price">NT$ 200 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</span></span>
+                                    <span class="product-price">NT$ 200 <small style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">起</small></span>
                                 </div>
                                 <a href="product-detail.html?id=tag" class="product-action-btn">查看規格</a>
                             </div>
@@ -414,7 +485,7 @@
                 </div>
 
                 <div style="text-align: center; margin-top: 3.5rem;">
-                    <a href="booking.html" class="btn-primary" style="padding: 0.95rem 2.5rem; font-size: 1.05rem;">
+                    <a href="booking.html" class="btn" style="padding: 1rem 2.6rem; font-size: 1.05rem;">
                         <i class="fas fa-calculator"></i> 直接開啟線上試算與接單文字產生器 &rarr;
                     </a>
                 </div>
@@ -422,9 +493,9 @@
         </section>
 
         <!-- 委託 4 步驟流程：極簡透明 (TimTech 重點 5) -->
-        <section class="section-wrapper">
+        <section class="section-wrapper" id="workflow">
             <div class="section-header">
-                <span class="section-tag">SIMPLE WORKFLOW</span>
+                <span class="kicker">SIMPLE WORKFLOW</span>
                 <h2 class="section-title">委託客製，只需簡單 4 步</h2>
                 <p class="section-subtitle">
                     無需繁瑣的註冊會員手續，線上挑選品項即可產出一鍵複製的標準訂單格式。
@@ -433,48 +504,48 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
                 <!-- Step 1 -->
-                <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.8rem;">
+                <div class="panel" style="padding: 1.8rem;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                         <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading);">01</span>
-                        <i class="fas fa-list-ul" style="color: var(--text-muted); font-size: 1.2rem;"></i>
+                        <i class="fas fa-list-ul" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">線上選取品項規格</h3>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">線上選取品項規格</h3>
                     <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
                         在接單產生器中選取想要的材質、規格與件數，系統自動為您計算透明總金額。
                     </p>
                 </div>
 
                 <!-- Step 2 -->
-                <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.8rem;">
+                <div class="panel" style="padding: 1.8rem;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                         <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading);">02</span>
-                        <i class="fas fa-copy" style="color: var(--text-muted); font-size: 1.2rem;"></i>
+                        <i class="fas fa-copy" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">一鍵複製接單文字</h3>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">一鍵複製接單文字</h3>
                     <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
                         填寫稱呼與備註需求後，點擊按鈕一鍵複製格式化文字，直接貼到 X 私訊或 Email 發送。
                     </p>
                 </div>
 
                 <!-- Step 3 -->
-                <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.8rem;">
+                <div class="panel" style="padding: 1.8rem;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                         <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading);">03</span>
-                        <i class="fas fa-check-double" style="color: var(--text-muted); font-size: 1.2rem;"></i>
+                        <i class="fas fa-check-double" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">合成模擬圖確認</h3>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">合成模擬圖確認</h3>
                     <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
                         工坊將圖樣合成於真實材質照片上，私訊回傳給您確認比例與位置，滿意才安排雕刻。
                     </p>
                 </div>
 
                 <!-- Step 4 -->
-                <div style="background: var(--bg-surface); border: var(--border-subtle); border-radius: var(--radius-md); padding: 1.8rem;">
+                <div class="panel" style="padding: 1.8rem;">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                         <span style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); font-family: var(--font-heading);">04</span>
-                        <i class="fas fa-box" style="color: var(--text-muted); font-size: 1.2rem;"></i>
+                        <i class="fas fa-box" style="color: var(--accent-gold); font-size: 1.2rem;"></i>
                     </div>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">高精雕刻・包裝出貨</h3>
+                    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">高精雕刻・包裝出貨</h3>
                     <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
                         光學治具定位雕刻、除塵除味後妥善包裝，3-5 工作天內超商寄出或展會面交！
                     </p>
@@ -482,12 +553,48 @@
             </div>
         </section>
 
+        <!-- ness9s 故事面板：工坊堅持與實體手作品質 (ABOUT ALE LASER) -->
+        <section class="wrap" id="about">
+            <div class="story-slider panel">
+                <div class="story-copy">
+                    <div class="kicker">ABOUT ALE LASER CRAFT</div>
+                    <h2>諾雕 ALE 的工藝堅持</h2>
+                    <p>
+                        「諾雕 ALE」源於對實體材質雕刻手感的熱愛。我們深知每位創作者對自己作品的珍惜，因此我們打破傳統工廠動輒數百件的開模門檻，<strong>堅持 1 件即可起印製作</strong>。
+                    </p>
+                    <p>
+                        從白橡木紋防潑水價目牌、厚磅植鞣皮革、天然吸水軟木到光學壓克力與不鏽鋼，每一件作品在雕刻前都會進行真實材質對稿，雕刻完成後逐件除塵除毛邊。我們用心雕琢每一道刻痕，讓創作者出攤與個人禮贈皆能展現最專業迷人的質感。
+                    </p>
+                    <div class="hero-actions" style="margin-top: 1.6rem;">
+                        <a href="materials.html" class="btn alt" style="padding: 0.75rem 1.6rem; font-size: 0.92rem;">
+                            <i class="fas fa-layer-group"></i> 檢視材質實品與特點
+                        </a>
+                        <a href="guidelines.html" class="btn alt" style="padding: 0.75rem 1.6rem; font-size: 0.92rem;">
+                            <i class="fas fa-pen-nib"></i> 查看送印與製圖規範
+                        </a>
+                    </div>
+                </div>
+
+                <div class="story-visual-grid">
+                    <div class="story-visual-card">
+                        <img src="./static/images/production.png" alt="光學高精治具雕刻">
+                        <b>高精光學治具雕刻</b>
+                        <small>細緻線條・精準對位</small>
+                    </div>
+                    <div class="story-visual-card">
+                        <img src="./static/images/packaging.png" alt="手工細緻檢查包裝">
+                        <b>出貨前實拍回傳</b>
+                        <small>除塵除味・保護包裝</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 主理人直通諮詢橫幅 (TimTech 重點 6 & 7) -->
-        <section style="padding: 0 1.5rem 5rem 1.5rem; max-width: 1240px; margin: 0 auto;">
-            <div style="
-                background: linear-gradient(135deg, #1b1d24 0%, #15171d 100%);
+        <section class="wrap" style="padding-bottom: 4rem;">
+            <div class="panel" style="
+                background: linear-gradient(135deg, #ffffff 0%, #fdf6ec 100%);
                 border: 1px solid var(--accent-gold-border);
-                border-radius: var(--radius-lg);
                 padding: clamp(2rem, 4vw, 3.5rem);
                 display: flex;
                 align-items: center;
@@ -496,20 +603,20 @@
                 gap: 2rem;
             ">
                 <div style="max-width: 600px;">
-                    <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px;">DIRECT CONSULTATION</span>
-                    <h2 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin: 0.5rem 0 0.8rem 0;">
+                    <div class="kicker">DIRECT CONSULTATION</div>
+                    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin: 0.4rem 0 0.8rem 0;">
                         有特殊規格或同人展會急件需求？
                     </h2>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
-                        歡迎直接透過 Twitter (X) 私訊主理人 <strong style="color: #fff;">@arnold__laser</strong> 洽詢，提供最即時的排程與材質建議！
+                    <p style="color: var(--text-secondary); font-size: 0.96rem; line-height: 1.65;">
+                        歡迎直接透過 Twitter (X) 私訊主理人 <strong style="color: var(--text-primary);">@arnold__laser</strong> 洽詢，提供最即時的排程與材質建議！
                     </p>
                 </div>
 
                 <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                    <a href="https://x.com/arnold__laser" target="_blank" class="btn-primary">
+                    <a href="https://x.com/arnold__laser" target="_blank" class="btn">
                         <i class="fab fa-twitter"></i> 前往 X 私訊討論
                     </a>
-                    <a href="booking.html" class="btn-secondary">
+                    <a href="booking.html" class="btn alt">
                         <i class="fas fa-calculator"></i> 線上試算訂單
                     </a>
                 </div>
@@ -531,13 +638,14 @@
                         display: inline-flex;
                         align-items: center;
                         gap: 8px;
-                        padding: 0.45rem 1rem;
-                        background: rgba(255,255,255,0.05);
-                        border: 1px solid rgba(255,255,255,0.12);
+                        padding: 0.45rem 1.1rem;
+                        background: rgba(255,255,255,0.08);
+                        border: 1px solid rgba(255,255,255,0.18);
                         border-radius: var(--radius-full);
-                        color: white;
+                        color: #ffffff;
                         text-decoration: none;
                         font-size: 0.88rem;
+                        font-weight: 700;
                         transition: all 0.2s;
                     "><i class="fab fa-twitter"></i> @arnold__laser</a>
                 </div>
@@ -551,7 +659,7 @@
                     <li><a href="process.html">委託流程說明</a></li>
                     <li><a href="materials.html">材質實品展示</a></li>
                     <li><a href="faq.html">常見問答 (FAQ)</a></li>
-                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 600;">接單文字產生器 &rarr;</a></li>
+                    <li><a href="booking.html" style="color: var(--accent-gold); font-weight: 700;">接單文字產生器 &rarr;</a></li>
                 </ul>
             </div>
 
@@ -570,7 +678,7 @@
         </div>
     </footer>
 
-    <!-- 手機版常駐行動列 (Mobile Sticky Action Bar - TimTech 重點 6) -->
+    <!-- 手機版常駐行動列 (Mobile Sticky Action Bar) -->
     <div class="mobile-sticky-bar">
         <div class="mobile-sticky-container">
             <a href="booking.html" class="mobile-sticky-btn-primary">
