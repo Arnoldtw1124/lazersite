@@ -1669,3 +1669,35 @@ a {
         padding-bottom: 60px;
     }
 }
+
+/* 商品規格選項按鈕 (Variant Pills - 解決淺色背景對比度問題) */
+.variant-pill {
+    padding: 0.6rem 1.15rem;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border-card);
+    background: #ffffff;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(70, 45, 25, 0.05);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.variant-pill:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    background: var(--bg-pill);
+    transform: translateY(-1px);
+}
+
+.variant-pill.active {
+    border-color: var(--accent-gold) !important;
+    background: var(--accent-gold-light) !important;
+    color: var(--accent-gold) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(184, 115, 51, 0.18) !important;
+}
